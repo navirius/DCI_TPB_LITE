@@ -1,0 +1,9 @@
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\bin\Debug\ServiceCreateXML.exe.config
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\bin\Debug\ServiceCreateXML.exe
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\bin\Debug\ServiceCreateXML.pdb
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\obj\Debug\ServiceCreateXML.csproj.AssemblyReference.cache
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\obj\Debug\ServiceCreateXML.csproj.SuggestedBindingRedirects.cache
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\obj\Debug\ServiceCreateXML.csproj.CoreCompileInputs.cache
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\obj\Debug\ServiceCreateXML.csproj.CopyComplete
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\obj\Debug\ServiceCreateXML.exe
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\obj\Debug\ServiceCreateXML.pdb

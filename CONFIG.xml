@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+	<!--<LocalServer>IDJKTWN1621800</LocalServer>
+	<LocalDatabase>db_ceisa_lite</LocalDatabase>
+	<LocalUser>sa</LocalUser>
+	<LocalPassword>Outbond#01</LocalPassword>
+	<PdfUploadPath>Temp</PdfUploadPath>-->
+	
+	<!--<LocalServer>MYKULWSPC000159,1525</LocalServer>
+	<LocalDatabase>db_ceisa_lite</LocalDatabase>
+	<LocalUser>dhlid</LocalUser>
+	<LocalPassword>Uk4QsVwHq8FSQFK6sTuq</LocalPassword>
+	<PdfUploadPath>Temp</PdfUploadPath>-->
+
+	<LocalServer>MYKULWSPC000088,1525</LocalServer>
+	<LocalDatabase>db_ceisa_lite</LocalDatabase>
+	<LocalUser>dhlid</LocalUser>
+	<LocalPassword>Uk4QsVwHq8FSQFK6sTuq</LocalPassword>
+	<PdfUploadPath>Temp</PdfUploadPath>
+
+	<LocalServerDCI>mykulws1836,1525</LocalServerDCI>
+	<LocalDatabaseDCI>DHL</LocalDatabaseDCI>
+	<LocalUserDCI>dhlid</LocalUserDCI>
+	<LocalPasswordDCI>Uk4QsVwHq8FSQFK6sTuq</LocalPasswordDCI>
+	<Integrated>false</Integrated>
+</Configuration>

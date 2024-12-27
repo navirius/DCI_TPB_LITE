@@ -1,0 +1,10 @@
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\bin\Release\ServiceCreateXML.exe.config
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\bin\Release\ServiceCreateXML.exe
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\bin\Release\ServiceCreateXML.pdb
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\bin\Release\Octopus.Library.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\obj\Release\ServiceCreateXML.csproj.AssemblyReference.cache
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\obj\Release\ServiceCreateXML.csproj.SuggestedBindingRedirects.cache
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\obj\Release\ServiceCreateXML.csproj.CoreCompileInputs.cache
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\obj\Release\ServiceCreateXML.csproj.CopyComplete
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\obj\Release\ServiceCreateXML.exe
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\ServiceCreateXML\obj\Release\ServiceCreateXML.pdb

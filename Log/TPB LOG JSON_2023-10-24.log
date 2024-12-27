@@ -1,0 +1,254 @@
+[11:54:55] Reload data DCI..
+Clean duplicate AWB :
+'1148495084'
+[11:55:38] LOAD DATA BARANG '1148495084' : 1 Rows..
+[11:57:25] LOAD DATA HEADER '1148495084' : 1 Rows..
+[11:57:34] LOAD DATA TARIF '1148495084' : 1 Rows..
+[11:57:34] LOAD DATA ENTITAS '1148495084' : 1 Rows..
+[11:57:34] LOAD DATA KEMASAN '1148495084' : 1 Rows..
+[11:57:44] LOAD DATA PENGANGKUT '1148495084' : 1 Rows..
+[11:57:56] insert into dhl_cs_tpb_barang values (
+                                        '1148495084',
+                                        '2023-10-18',
+                                        '1',
+                                        '2.370000000000000',                                        
+                                        '476.350',
+                                        '7479171.350000',
+                                        '0',
+                                        '470.000',
+                                        '3.980',
+                                        '0',
+                                        '0',
+                                        '470.000',
+                                        '0',
+                                        '1',
+                                        '2.00',
+                                        '',
+                                        '23',
+                                        '11',
+                                        'PK',
+                                        'SE',
+                                        '0',
+                                        'SET',
+                                        '-',
+                                        '15701.0000',
+                                        '0.4500',
+                                        '470.000',
+                                        '0',
+                                        '92099400',
+                                        '1',
+                                        '',
+                                        '-',
+                                        '',
+                                        'EG08 E. 6str. 25,5" 24 frets/set R16 G00517022',
+                                        '0',
+                                        '0'
+                                        )
+
+[11:57:56] insert into dhl_cs_tpb_header values (
+                                        'SUB',
+                                        '1148495084',
+                                        '2023-10-18',
+                                        'S',
+                                        '2.37',
+                                        '0.5000',
+                                        '476.35',
+                                        '470',
+                                        '3.98',
+                                        '0',
+                                        'PPJK',
+                                        '0',
+                                        'LN',
+                                        '23',
+                                        'FOB',
+                                        '071500',
+                                        '070500',
+                                        'IDSUB',
+                                        'SEGOT',
+                                        'SGSIN',
+                                        'JIMP',
+                                        '1',
+                                        '11',
+                                        'USD',
+                                        'SURABAYA',
+                                        'HENDRA WIDJAJA',
+                                        '15701.0000',
+                                        '0.45',
+                                        '0018/KA-A5/111 TAHUN 2019',
+                                        '470.0000',
+                                        '',                                      
+                                        '005624',
+                                        '0001',
+                                        '0',
+                                        '0467',
+                                        '10/21/2023 12:00:00 AM',
+                                        '10/21/2023 12:00:00 AM',
+                                        '2023-10-24',
+                                        '0',
+                                        '0',
+                                        '2',
+                                        'farifin',
+                                        '2023-10-24 11:57:30.942'
+                                        )
+
+[11:57:56] insert into dhl_cs_tpb_barang_tarif values (
+                                        '1148495084',
+                                        '2023-10-18',
+                                        '1',
+                                        '2.00',
+                                        '3',
+                                        'SET',
+                                        'BM',
+                                        '373958.5500',
+                                        '0',
+                                        '373958.5500',
+                                        '1',
+                                        '5',
+                                        '100'                                        
+                                        )
+
+[11:57:56] insert into dhl_cs_tpb_barang_tarif values (
+                                        '1148495084',
+                                        '2023-10-18',
+                                        '1',
+                                        '2.00',
+                                        '3',
+                                        'SET',
+                                        'PPH',
+                                        '196328.2388',
+                                        '0',
+                                        '196328.2388',
+                                        '1',
+                                        '2.5',
+                                        '100'                                        
+                                        )
+
+[11:57:56] insert into dhl_cs_tpb_barang_tarif values (
+                                        '1148495084',
+                                        '2023-10-18',
+                                        '1',
+                                        '2.00',
+                                        '3',
+                                        'SET',
+                                        'PPN',
+                                        '863844.2505',
+                                        '0',
+                                        '863844.2505',
+                                        '1',
+                                        '11',
+                                        '100'                                        
+                                        )
+
+[11:57:56] insert into dhl_cs_tpb_entitas values (
+                                        '1148495084',
+                                        '2023-10-18',
+                                        'KB NGORO INDUSTRI PERSADA G-5/6,NGORO, NGORO,MOJOKERTO JAWA TIMUR,61385',
+                                        '3',
+                                        '',
+                                        '5',
+                                        '',
+                                        'PT CORT INDONESIA',
+                                        '',
+                                        '010827970641000',
+                                        '334/BC/1999',
+                                        '',
+                                        '1',
+                                        '1900-01-01')
+
+[11:57:56] insert into dhl_cs_tpb_entitas values (
+                                        '1148495084',
+                                        '2023-10-18',
+                                        'Industrigatan 7,TROLLHATTAN,TROLLHATTAN SWEDEN',
+                                        '5',
+                                        '',
+                                        '',
+                                        '',
+                                        'TRUE TEMPERAMENT AB',
+                                        '',
+                                        '',
+                                        '',
+                                        'SE',
+                                        '2',
+                                        '')
+
+[11:57:56] insert into dhl_cs_tpb_entitas values (
+                                        '1148495084',
+                                        '2023-10-18',
+                                        'KB NGORO INDUSTRI PERSADA G-5/6,NGORO, NGORO,MOJOKERTO JAWA TIMUR,61385',
+                                        '7',
+                                        '7',
+                                        '5',
+                                        '5',
+                                        'PT CORT INDONESIA',
+                                        '',
+                                        '010827970641000',
+                                        '334/BC/1999',
+                                        '',
+                                        '3',
+                                        '1900-01-01')
+
+[11:57:56] insert into dhl_cs_tpb_entitas values (
+                                        '1148495084',
+                                        '2023-10-18',
+                                        'MULIA BUSINESS PARK BUILDING F JL. MT. HARYONO KAV 58-60, JAKARTA',
+                                        '4',
+                                        '',
+                                        '5',
+                                        '1',
+                                        'PT. BIROTIKA SEMESTA',
+                                        '',
+                                        '013107743062000',
+                                        '',
+                                        '',
+                                        '4',
+                                        '')
+
+[11:57:56] insert into dhl_cs_tpb_kemasan values (
+                                        '1148495084',
+                                        '2023-10-18',
+                                        '1',
+                                        'PK',
+                                        '1',
+                                        'DHL'
+                                        )
+
+[11:57:56] insert into dhl_cs_tpb_dokumen values (
+                                        '1148495084', '2023-10-18', '1',
+                                        '380', 
+                                        '844', '1',
+                                        '2023-10-10'
+                                        )
+
+[11:57:56] insert into dhl_cs_tpb_dokumen values (
+                                        '1148495084', '2023-10-18', '1',
+                                        '740',
+                                        '1148495084', '2',
+                                        '2023-10-18'
+                                        )
+
+[11:57:56] insert into dhl_cs_tpb_dokumen values (
+                                        '1148495084', '2023-10-18', '1',
+                                        '741',
+                                        '58510006356', '3',
+                                        '2023-10-21'
+                                        )
+
+[11:57:56] insert into dhl_cs_tpb_pengangkut values (
+                                        '1148495084', '2023-10-18',
+                                        'ID',
+                                        'My Indo Airlines',
+                                        '2Y0935',
+                                        '4',
+                                        '1'
+                                        )
+
+[15:01:32] LOAD DATA BARANG '9199372906' : 3 Rows..
+[15:01:33] LOAD DATA HEADER '9199372906' : 1 Rows..
+[15:01:34] LOAD DATA TARIF '9199372906' : 3 Rows..
+[15:01:34] Index was outside the bounds of the array.
+[15:02:28] LOAD DATA BARANG '9199372906' : 3 Rows..
+[15:02:28] LOAD DATA HEADER '9199372906' : 1 Rows..
+[15:02:29] LOAD DATA TARIF '9199372906' : 3 Rows..
+[15:02:29] Index was outside the bounds of the array.
+[15:03:17] LOAD DATA BARANG '9199372906' : 3 Rows..
+[15:03:21] LOAD DATA HEADER '9199372906' : 1 Rows..

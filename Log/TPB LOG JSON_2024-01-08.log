@@ -1,0 +1,244 @@
+[09:44:04] Reload data DCI..
+Clean duplicate AWB :
+'4872756545'
+[09:44:05] LOAD DATA BARANG '4872756545' : 1 Rows..
+[09:44:07] LOAD DATA HEADER '4872756545' : 1 Rows..
+[09:44:08] LOAD DATA TARIF '4872756545' : 1 Rows..
+[09:44:08] LOAD DATA ENTITAS '4872756545' : 1 Rows..
+[09:44:08] LOAD DATA KEMASAN '4872756545' : 1 Rows..
+[09:44:09] LOAD DATA PENGANGKUT '4872756545' : 1 Rows..
+[09:44:11] insert into dhl_cs_tpb_barang values (
+                                        '4872756545',
+                                        '2024-01-08',
+                                        '1',
+                                        '0.440000000000000',                                        
+                                        '87.510',
+                                        '1349666.730000',
+                                        '0',
+                                        '54.500',
+                                        '32.570',
+                                        '0',
+                                        '0',
+                                        '54.500',
+                                        '0',
+                                        '1',
+                                        '1.00',
+                                        '',
+                                        '23',
+                                        '11',
+                                        'PK',
+                                        'VN',
+                                        '0',
+                                        'PCE',
+                                        '-',
+                                        '15423.0000',
+                                        '7.0470',
+                                        '54.500',
+                                        '0',
+                                        '60069000',
+                                        '1',
+                                        '',
+                                        '-',
+                                        '',
+                                        'materials',
+                                        '0',
+                                        '0'
+                                        )
+
+[09:44:11] insert into dhl_cs_tpb_header values (
+                                        'JKT',
+                                        '4872756545',
+                                        '2024-01-05',
+                                        'S',
+                                        '0.44',
+                                        '7.8300',
+                                        '87.51',
+                                        '54.5',
+                                        '32.57',
+                                        '0',
+                                        'PPJK',
+                                        '0',
+                                        'LN',
+                                        '23',
+                                        'FOB',
+                                        '050600',
+                                        '050100',
+                                        'IDCGK',
+                                        'VNSGN',
+                                        'SGSIN',
+                                        'GJDC',
+                                        '1',
+                                        '11',
+                                        'USD',
+                                        'JAKARTA',
+                                        'BARTOLOMEUS EKO VATAR',
+                                        '15423.0000',
+                                        '7.047',
+                                        '0018/KA-A5/111 TAHUN 2019',
+                                        '54.5000',
+                                        '',                                      
+                                        '000650',
+                                        '0001',
+                                        '0',
+                                        '0194',
+                                        '1/5/2024 12:00:00 AM',
+                                        '1/5/2024 12:00:00 AM',
+                                        '2024-01-08',
+                                        '0',
+                                        '0',
+                                        '2',
+                                        'farifin',
+                                        '2024-01-08 09:44:07.776'
+                                        )
+
+[09:44:11] insert into dhl_cs_tpb_barang_tarif values (
+                                        '4872756545',
+                                        '2024-01-08',
+                                        '1',
+                                        '1.00',
+                                        '3',
+                                        'PCE',
+                                        'BM',
+                                        '202450.0500',
+                                        '0',
+                                        '202450.0500',
+                                        '1',
+                                        '15',
+                                        '100'                                        
+                                        )
+
+[09:44:11] insert into dhl_cs_tpb_barang_tarif values (
+                                        '4872756545',
+                                        '2024-01-08',
+                                        '1',
+                                        '1.00',
+                                        '3',
+                                        'PCE',
+                                        'PPH',
+                                        '38802.9263',
+                                        '0',
+                                        '38802.9263',
+                                        '1',
+                                        '2.5',
+                                        '100'                                        
+                                        )
+
+[09:44:11] insert into dhl_cs_tpb_barang_tarif values (
+                                        '4872756545',
+                                        '2024-01-08',
+                                        '1',
+                                        '1.00',
+                                        '3',
+                                        'PCE',
+                                        'PPN',
+                                        '170732.8755',
+                                        '0',
+                                        '170732.8755',
+                                        '1',
+                                        '11',
+                                        '100'                                        
+                                        )
+
+[09:44:11] insert into dhl_cs_tpb_entitas values (
+                                        '4872756545',
+                                        '2024-01-08',
+                                        'JL. RAYA LELES, KP. KARANGMEKAR RT.02/ RW.08 DESA CIBURIAL, KEC. LELES KAB. GARUT, JAWA BARAT',
+                                        '3',
+                                        '',
+                                        '5',
+                                        '',
+                                        'PT CHANGSHIN REKSA JAYA',
+                                        '',
+                                        '312977754443000',
+                                        '448/KM.4/2018',
+                                        '',
+                                        '1',
+                                        '1900-01-01')
+
+[09:44:11] insert into dhl_cs_tpb_entitas values (
+                                        '4872756545',
+                                        '2024-01-08',
+                                        'Lot no 7-Rd, 5A Nhon Trach II, Industrial Zone, Nhon Trach District,Dong Nai Province, Viet Nam 815 956,VIETNAM',
+                                        '5',
+                                        '',
+                                        '',
+                                        '',
+                                        'VIET NAM DONA GOLD LONG JOHN INTL CO.,LTD',
+                                        '',
+                                        '',
+                                        '',
+                                        'VN',
+                                        '2',
+                                        '')
+
+[09:44:11] insert into dhl_cs_tpb_entitas values (
+                                        '4872756545',
+                                        '2024-01-08',
+                                        'JL. RAYA LELES, KP. KARANGMEKAR RT.02/ RW.08 DESA CIBURIAL, KEC. LELES KAB. GARUT, JAWA BARAT',
+                                        '7',
+                                        '7',
+                                        '5',
+                                        '5',
+                                        'PT CHANGSHIN REKSA JAYA',
+                                        '',
+                                        '312977754443000',
+                                        '448/KM.4/2018',
+                                        '',
+                                        '3',
+                                        '1900-01-01')
+
+[09:44:11] insert into dhl_cs_tpb_entitas values (
+                                        '4872756545',
+                                        '2024-01-08',
+                                        'MULIA BUSINESS PARK BUILDING F JL. MT. HARYONO KAV 58-60, JAKARTA',
+                                        '4',
+                                        '',
+                                        '5',
+                                        '1',
+                                        'PT. BIROTIKA SEMESTA',
+                                        '',
+                                        '013107743062000',
+                                        '',
+                                        '',
+                                        '4',
+                                        '')
+
+[09:44:11] insert into dhl_cs_tpb_kemasan values (
+                                        '4872756545',
+                                        '2024-01-08',
+                                        '1',
+                                        'PK',
+                                        '1',
+                                        'DHL'
+                                        )
+
+[09:44:11] insert into dhl_cs_tpb_dokumen values (
+                                        '4872756545', '2024-01-05', '1',
+                                        '380', 
+                                        'NN', '1',
+                                        '2024-01-02'
+                                        )
+
+[09:44:11] insert into dhl_cs_tpb_dokumen values (
+                                        '4872756545', '2024-01-05', '1',
+                                        '740',
+                                        '4872756545', '2',
+                                        '2024-01-08'
+                                        )
+
+[09:44:11] insert into dhl_cs_tpb_dokumen values (
+                                        '4872756545', '2024-01-05', '1',
+                                        '741',
+                                        '11901146375', '3',
+                                        '2024-01-05'
+                                        )
+
+[09:44:11] insert into dhl_cs_tpb_pengangkut values (
+                                        '4872756545', '2024-01-08',
+                                        'TH',
+                                        'K MILE AIR',
+                                        '8K0804',
+                                        '4',
+                                        '1'
+                                        )
+

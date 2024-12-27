@@ -1,0 +1,993 @@
+[11:43:36] {
+  "asalData": "S",
+  "asuransi": 0.64,
+  "bruto": 12.6,
+  "cif": 0.0,
+  "disclaimer": "1",
+  "kodeJenisProsedur": "1",
+  "kodeJenisImpor": "1",
+  "kodeJenisEkspor": "",
+  "flagVd": "T",
+  "fob": 150.0,
+  "freight": 17.01,
+  "hargaPenyerahan": 0.0,
+  "idPengguna": "hwidjaja",
+  "jabatanTtd": "Importir/PPJK",
+  "jumlahKontainer": 0,
+  "jumlahTandaPengaman": "",
+  "kodeAsuransi": "LN",
+  "kodeCaraBayar": "1",
+  "kodeDokumen": "20",
+  "kodeIncoterm": "FOB",
+  "kodeJenisNilai": "NTR",
+  "kodeKantor": "070500",
+  "kodePelMuat": "SGSIN",
+  "kodePelTujuan": "IDBTH",
+  "kodeTps": "CIMP",
+  "kodeTutupPu": "11",
+  "kodeValuta": "SGD",
+  "kotaTtd": "JAKARTA PUSAT",
+  "namaTtd": "FAHMI ARIFIN",
+  "ndpbm": 10483.22,
+  "netto": 12.6,
+  "nilaiBarang": 2117700.0,
+  "nilaiIncoterm": 0.0,
+  "nilaiMaklon": 0.0,
+  "nomorAju": "07000000187520211102000006",
+  "nomorBc11": "023208",
+  "posBc11": "0001",
+  "seri": "",
+  "subposBc11": "0193",
+  "tanggalAju": "2021-11-02",
+  "tanggalBc11": "2021-10-27",
+  "tanggalTiba": "2021-10-27",
+  "tanggalTtd": "2021-11-02",
+  "totalDanaSawit": 0.0,
+  "volume": 0,
+  "biayaTambahan": 0,
+  "biayaPengurang": 0,
+  "barang": [
+    {
+      "asuransi": 0.0,
+      "bruto": 0,
+      "cif": 150.0,
+      "cifRupiah": 2357847.0,
+      "diskon": 0,
+      "fob": 150.0,
+      "freight": 17.01,
+      "hargaEkspor": 0,
+      "hargaPatokan": 0,
+      "hargaPenyerahan": 0,
+      "hargaPerolehan": 0,
+      "hargaSatuan": 50.0,
+      "hjeCukai": 0,
+      "isiPerKemasan": 0,
+      "jumlahBahanBaku": 0,
+      "jumlahDilekatkan": 0,
+      "jumlahKemasan": 1,
+      "jumlahPitaCukai": 0,
+      "jumlahRealisasi": 0,
+      "jumlahSatuan": 3.0,
+      "kapasitasSilinder": 0,
+      "kodeJenisKemasan": "PK",
+      "kodeKondisiBarang": "1",
+      "kodeNegaraAsal": "SG",
+      "kodeSatuanBarang": "NPR",
+      "merk": "-",
+      "ndpbm": 10483.0,
+      "netto": 10.0,
+      "nilaiBarang": 0,
+      "nilaiDanaSawit": 0,
+      "nilaiDevisa": 0,
+      "nilaiTambah": 0,
+      "pernyataanLartas": "T",
+      "persentaseImpor": 0,
+      "posTarif": "62105090",
+      "saldoAwal": 0,
+      "saldoAkhir": 0,
+      "seriBarang": 1,
+      "seriBarangDokAsal": "",
+      "seriIjin": "",
+      "tahunPembuatan": "",
+      "tarifCukai": 0,
+      "tipe": "-",
+      "uraian": "safety boots & clothings",
+      "volume": 0,
+      "barangVd": [],
+      "barangTarif": [
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "BM",
+          "nilaiBayar": 364329.2,
+          "seriBarang": 1,
+          "tarif": 20.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "CUKAI",
+          "nilaiBayar": 0.0,
+          "seriBarang": 1,
+          "tarif": 0.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "PPN",
+          "nilaiBayar": 218597.52,
+          "seriBarang": 1,
+          "tarif": 10.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "PPNBM",
+          "nilaiBayar": 0.0,
+          "seriBarang": 1,
+          "tarif": 0.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "PPH",
+          "nilaiBayar": 68054.41,
+          "seriBarang": 1,
+          "tarif": 2.5,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        }
+      ],
+      "barangDokumen": [],
+      "barangSpekKhusus": [],
+      "barangPemilik": []
+    }
+  ],
+  "entitas": [
+    {
+      "alamatEntitas": "JL. BAWAL KAV. V,KEL. BATU MERAH,KEC. BATU AMPAR,BATAM",
+      "kodeEntitas": "1",
+      "kodeJenisApi": "01",
+      "kodeJenisIdentitas": "5",
+      "kodeStatus": "LAI",
+      "namaEntitas": "PT. PROFAB INDONESIA",
+      "nibEntitas": "8120018102018",
+      "nomorIdentitas": "010850741217000",
+      "seriEntitas": "1"
+    },
+    {
+      "alamatEntitas": "JL. BAWAL KAV. V,KEL. BATU MERAH,KEC. BATU AMPAR,BATAM",
+      "kodeEntitas": "7",
+      "kodeJenisIdentitas": "5",
+      "namaEntitas": "PT. PROFAB INDONESIA",
+      "nomorIdentitas": "010850741217000",
+      "seriEntitas": "2"
+    },
+    {
+      "alamatEntitas": "3A International Business Park Road,#12-06/09 Tower A ICON@IBP,SINGAPORE",
+      "kodeEntitas": "9",
+      "kodeNegara": "SG",
+      "namaEntitas": "NOV CAPS PTE LTD",
+      "seriEntitas": "3"
+    },
+    {
+      "alamatEntitas": "3A International Business Park Road,#12-06/09 Tower A ICON@IBP,SINGAPORE",
+      "kodeEntitas": "10",
+      "kodeNegara": "SG",
+      "namaEntitas": "NOV CAPS PTE LTD",
+      "seriEntitas": "4"
+    },
+    {
+      "alamatEntitas": "JL. BAWAL KAV. V,KEL. BATU MERAH,KEC. BATU AMPAR,BATAM",
+      "kodeEntitas": "11",
+      "kodeJenisIdentitas": "5",
+      "namaEntitas": "NOV CAPS PTE LTD",
+      "nomorIdentitas": "010850741217000",
+      "seriEntitas": "5"
+    },
+    {
+      "alamatEntitas": "MULIA BUSINESS PARK BUILDING F JL. MT. HARYONO KAV 58-60, JAKARTA",
+      "kodeEntitas": "4",
+      "kodeJenisIdentitas": "5",
+      "namaEntitas": "PT. BIROTIKA SEMESTA",
+      "nomorIdentitas": "013107743062000",
+      "seriEntitas": "6"
+    }
+  ],
+  "kemasan": [
+    {
+      "jumlahKemasan": 1,
+      "kodeJenisKemasan": "PK",
+      "merkKemasan": "DHL",
+      "seriKemasan": 1
+    }
+  ],
+  "kontainer": [],
+  "dokumen": [
+    {
+      "kodeDokumen": "380",
+      "nomorDokumen": "REF AWB",
+      "seriDokumen": "1",
+      "tanggalDokumen": "2021-10-26"
+    },
+    {
+      "kodeDokumen": "741",
+      "nomorDokumen": "00000190984",
+      "seriDokumen": "2",
+      "tanggalDokumen": "2021-10-27"
+    },
+    {
+      "kodeDokumen": "740",
+      "nomorDokumen": "1954078033",
+      "seriDokumen": "3",
+      "tanggalDokumen": "2021-10-26"
+    }
+  ],
+  "pengangkut": [
+    {
+      "kodeBendera": "ID",
+      "namaPengangkut": "",
+      "nomorPengangkut": "B303A",
+      "kodeCaraAngkut": "1",
+      "seriPengangkut": "1"
+    }
+  ]
+}
+[11:45:57] {
+  "asalData": "S",
+  "asuransi": 1.61,
+  "bruto": 41.2,
+  "cif": 0.0,
+  "disclaimer": "1",
+  "kodeJenisProsedur": "1",
+  "kodeJenisImpor": "1",
+  "kodeJenisEkspor": "",
+  "flagVd": "T",
+  "fob": 2.0,
+  "freight": 319.38,
+  "hargaPenyerahan": 0.0,
+  "idPengguna": "hwidjaja",
+  "jabatanTtd": "Importir/PPJK",
+  "jumlahKontainer": 0,
+  "jumlahTandaPengaman": "",
+  "kodeAsuransi": "LN",
+  "kodeCaraBayar": "1",
+  "kodeDokumen": "20",
+  "kodeIncoterm": "FOB",
+  "kodeJenisNilai": "NTR",
+  "kodeKantor": "070500",
+  "kodePelMuat": "JPNRT",
+  "kodePelTujuan": "IDBTH",
+  "kodeTps": "CIMP",
+  "kodeTutupPu": "11",
+  "kodeValuta": "USD",
+  "kotaTtd": "JAKARTA PUSAT",
+  "namaTtd": "FAHMI ARIFIN",
+  "ndpbm": 14118.0,
+  "netto": 41.2,
+  "nilaiBarang": 28236.0,
+  "nilaiIncoterm": 0.0,
+  "nilaiMaklon": 0.0,
+  "nomorAju": "07000000187520211102000006",
+  "nomorBc11": "023208",
+  "posBc11": "0001",
+  "seri": "",
+  "subposBc11": "0154",
+  "tanggalAju": "2021-11-02",
+  "tanggalBc11": "2021-10-27",
+  "tanggalTiba": "2021-10-27",
+  "tanggalTtd": "2021-11-02",
+  "totalDanaSawit": 0.0,
+  "volume": 0,
+  "biayaTambahan": 0,
+  "biayaPengurang": 0,
+  "barang": [
+    {
+      "asuransi": 0.0,
+      "bruto": 0,
+      "cif": 2.0,
+      "cifRupiah": 4537243.0,
+      "diskon": 0,
+      "fob": 2.0,
+      "freight": 319.38,
+      "hargaEkspor": 0,
+      "hargaPatokan": 0,
+      "hargaPenyerahan": 0,
+      "hargaPerolehan": 0,
+      "hargaSatuan": 1.0,
+      "hjeCukai": 0,
+      "isiPerKemasan": 0,
+      "jumlahBahanBaku": 0,
+      "jumlahDilekatkan": 0,
+      "jumlahKemasan": 1,
+      "jumlahPitaCukai": 0,
+      "jumlahRealisasi": 0,
+      "jumlahSatuan": 2.0,
+      "kapasitasSilinder": 0,
+      "kodeJenisKemasan": "PK",
+      "kodeKondisiBarang": "1",
+      "kodeNegaraAsal": "ID",
+      "kodeSatuanBarang": "BX",
+      "merk": "-",
+      "ndpbm": 14118.0,
+      "netto": 40.0,
+      "nilaiBarang": 0,
+      "nilaiDanaSawit": 0,
+      "nilaiDevisa": 0,
+      "nilaiTambah": 0,
+      "pernyataanLartas": "T",
+      "persentaseImpor": 0,
+      "posTarif": "85389019",
+      "saldoAwal": 0,
+      "saldoAkhir": 0,
+      "seriBarang": 1,
+      "seriBarangDokAsal": "",
+      "seriIjin": "",
+      "tahunPembuatan": "",
+      "tarifCukai": 0,
+      "tipe": "-",
+      "uraian": "SAMPLE OF GUM BASE",
+      "volume": 0,
+      "barangVd": [],
+      "barangTarif": [
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "BM",
+          "nilaiBayar": 227998.65,
+          "seriBarang": 1,
+          "tarif": 5.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "CUKAI",
+          "nilaiBayar": 0.0,
+          "seriBarang": 1,
+          "tarif": 0.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "PPN",
+          "nilaiBayar": 478797.17,
+          "seriBarang": 1,
+          "tarif": 10.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "PPNBM",
+          "nilaiBayar": 0.0,
+          "seriBarang": 1,
+          "tarif": 0.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "PPH",
+          "nilaiBayar": 119131.04,
+          "seriBarang": 1,
+          "tarif": 2.5,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        }
+      ],
+      "barangDokumen": [],
+      "barangSpekKhusus": [],
+      "barangPemilik": []
+    }
+  ],
+  "entitas": [
+    {
+      "alamatEntitas": "KAWASAN INDUSTRI SEKUPANG, JL. SEI HARAPAN,SUNGAI HARAPAN SEKUPANG,BATAM",
+      "kodeEntitas": "1",
+      "kodeJenisApi": "01",
+      "kodeJenisIdentitas": "5",
+      "kodeStatus": "LAI",
+      "namaEntitas": "PT TONGFONG INDONESIA",
+      "nibEntitas": "",
+      "nomorIdentitas": "010808152215000",
+      "seriEntitas": "1"
+    },
+    {
+      "alamatEntitas": "KAWASAN INDUSTRI SEKUPANG, JL. SEI HARAPAN,SUNGAI HARAPAN SEKUPANG,BATAM",
+      "kodeEntitas": "7",
+      "kodeJenisIdentitas": "5",
+      "namaEntitas": "PT TONGFONG INDONESIA",
+      "nomorIdentitas": "010808152215000",
+      "seriEntitas": "2"
+    },
+    {
+      "alamatEntitas": "LOTTE CO., LTD. Central laboratory,1-1, Numakage 3-Chome, Minami-ku,SAITAMA JAPAN",
+      "kodeEntitas": "9",
+      "kodeNegara": "JP",
+      "namaEntitas": "LOTTE CO., LTD.",
+      "seriEntitas": "3"
+    },
+    {
+      "alamatEntitas": "LOTTE CO., LTD. Central laboratory,1-1, Numakage 3-Chome, Minami-ku,SAITAMA JAPAN",
+      "kodeEntitas": "10",
+      "kodeNegara": "JP",
+      "namaEntitas": "LOTTE CO., LTD.",
+      "seriEntitas": "4"
+    },
+    {
+      "alamatEntitas": "KAWASAN INDUSTRI SEKUPANG, JL. SEI HARAPAN,SUNGAI HARAPAN SEKUPANG,BATAM",
+      "kodeEntitas": "11",
+      "kodeJenisIdentitas": "5",
+      "namaEntitas": "LOTTE CO., LTD.",
+      "nomorIdentitas": "010808152215000",
+      "seriEntitas": "5"
+    },
+    {
+      "alamatEntitas": "MULIA BUSINESS PARK BUILDING F JL. MT. HARYONO KAV 58-60, JAKARTA",
+      "kodeEntitas": "4",
+      "kodeJenisIdentitas": "5",
+      "namaEntitas": "PT. BIROTIKA SEMESTA",
+      "nomorIdentitas": "013107743062000",
+      "seriEntitas": "6"
+    }
+  ],
+  "kemasan": [
+    {
+      "jumlahKemasan": 2,
+      "kodeJenisKemasan": "PK",
+      "merkKemasan": "DHL",
+      "seriKemasan": 1
+    }
+  ],
+  "kontainer": [],
+  "dokumen": [
+    {
+      "kodeDokumen": "380",
+      "nomorDokumen": "REF AWB",
+      "seriDokumen": "1",
+      "tanggalDokumen": "2021-10-29"
+    },
+    {
+      "kodeDokumen": "741",
+      "nomorDokumen": "00000190984",
+      "seriDokumen": "2",
+      "tanggalDokumen": "2021-10-27"
+    },
+    {
+      "kodeDokumen": "740",
+      "nomorDokumen": "5735842744",
+      "seriDokumen": "3",
+      "tanggalDokumen": "2021-10-25"
+    }
+  ],
+  "pengangkut": [
+    {
+      "kodeBendera": "ID",
+      "namaPengangkut": "",
+      "nomorPengangkut": "B303A",
+      "kodeCaraAngkut": "1",
+      "seriPengangkut": "1"
+    }
+  ]
+}
+[11:48:52] {
+  "asalData": "S",
+  "asuransi": 7.16,
+  "bruto": 3.0,
+  "cif": 0.0,
+  "disclaimer": "1",
+  "kodeJenisProsedur": "1",
+  "kodeJenisImpor": "1",
+  "kodeJenisEkspor": "",
+  "flagVd": "T",
+  "fob": 1428.0,
+  "freight": 4.05,
+  "hargaPenyerahan": 0.0,
+  "idPengguna": "hwidjaja",
+  "jabatanTtd": "Importir/PPJK",
+  "jumlahKontainer": 0,
+  "jumlahTandaPengaman": "",
+  "kodeAsuransi": "LN",
+  "kodeCaraBayar": "1",
+  "kodeDokumen": "20",
+  "kodeIncoterm": "FOB",
+  "kodeJenisNilai": "NTR",
+  "kodeKantor": "070500",
+  "kodePelMuat": "SGSIN",
+  "kodePelTujuan": "IDBTH",
+  "kodeTps": "CIMP",
+  "kodeTutupPu": "11",
+  "kodeValuta": "USD",
+  "kotaTtd": "JAKARTA PUSAT",
+  "namaTtd": "FAHMI ARIFIN",
+  "ndpbm": 14118.0,
+  "netto": 3.0,
+  "nilaiBarang": 20160504.0,
+  "nilaiIncoterm": 0.0,
+  "nilaiMaklon": 0.0,
+  "nomorAju": "07000000187520211102000006",
+  "nomorBc11": "023208",
+  "posBc11": "0001",
+  "seri": "",
+  "subposBc11": "0189",
+  "tanggalAju": "2021-11-02",
+  "tanggalBc11": "2021-10-27",
+  "tanggalTiba": "2021-10-27",
+  "tanggalTtd": "2021-11-02",
+  "totalDanaSawit": 0.0,
+  "volume": 0,
+  "biayaTambahan": 0,
+  "biayaPengurang": 0,
+  "barang": [
+    {
+      "asuransi": 0.0,
+      "bruto": 0,
+      "cif": 1428.0,
+      "cifRupiah": 20217682.0,
+      "diskon": 0,
+      "fob": 1428.0,
+      "freight": 4.05,
+      "hargaEkspor": 0,
+      "hargaPatokan": 0,
+      "hargaPenyerahan": 0,
+      "hargaPerolehan": 0,
+      "hargaSatuan": 1428.0,
+      "hjeCukai": 0,
+      "isiPerKemasan": 0,
+      "jumlahBahanBaku": 0,
+      "jumlahDilekatkan": 0,
+      "jumlahKemasan": 1,
+      "jumlahPitaCukai": 0,
+      "jumlahRealisasi": 0,
+      "jumlahSatuan": 1.0,
+      "kapasitasSilinder": 0,
+      "kodeJenisKemasan": "PK",
+      "kodeKondisiBarang": "1",
+      "kodeNegaraAsal": "KR",
+      "kodeSatuanBarang": "PCE",
+      "merk": "-",
+      "ndpbm": 14118.0,
+      "netto": 3.0,
+      "nilaiBarang": 0,
+      "nilaiDanaSawit": 0,
+      "nilaiDevisa": 0,
+      "nilaiTambah": 0,
+      "pernyataanLartas": "T",
+      "persentaseImpor": 0,
+      "posTarif": "85299099",
+      "saldoAwal": 0,
+      "saldoAkhir": 0,
+      "seriBarang": 1,
+      "seriBarangDokAsal": "",
+      "seriIjin": "",
+      "tahunPembuatan": "",
+      "tarifCukai": 0,
+      "tipe": "-",
+      "uraian": "Antenna spare parts - RMA 75783",
+      "volume": 0,
+      "barangVd": [],
+      "barangTarif": [
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "BM",
+          "nilaiBayar": 0.0,
+          "seriBarang": 1,
+          "tarif": 0.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "CUKAI",
+          "nilaiBayar": 0.0,
+          "seriBarang": 1,
+          "tarif": 0.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "PPN",
+          "nilaiBayar": 2031876.7,
+          "seriBarang": 1,
+          "tarif": 10.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "PPNBM",
+          "nilaiBayar": 0.0,
+          "seriBarang": 1,
+          "tarif": 0.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "PPH",
+          "nilaiBayar": 505442.05,
+          "seriBarang": 1,
+          "tarif": 2.5,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        }
+      ],
+      "barangDokumen": [],
+      "barangSpekKhusus": [],
+      "barangPemilik": []
+    }
+  ],
+  "entitas": [
+    {
+      "alamatEntitas": "JL DUYUNG PERTOKOAN CITRA PERMAI BLOK B NO.09,SUNGAI JODOH BATU AMPAR,BATAM,28826",
+      "kodeEntitas": "1",
+      "kodeJenisApi": "01",
+      "kodeJenisIdentitas": "5",
+      "kodeStatus": "LAI",
+      "namaEntitas": "PT SNEPAC SHIPPING",
+      "nibEntitas": "",
+      "nomorIdentitas": "023201585217000",
+      "seriEntitas": "1"
+    },
+    {
+      "alamatEntitas": "JL DUYUNG PERTOKOAN CITRA PERMAI BLOK B NO.09,SUNGAI JODOH BATU AMPAR,BATAM,28826",
+      "kodeEntitas": "7",
+      "kodeJenisIdentitas": "5",
+      "namaEntitas": "PT SNEPAC SHIPPING",
+      "nomorIdentitas": "023201585217000",
+      "seriEntitas": "2"
+    },
+    {
+      "alamatEntitas": "26 BOON LAY WAY #01-87 TRADEHUB 21,SINGAPORE",
+      "kodeEntitas": "9",
+      "kodeNegara": "SG",
+      "namaEntitas": "INTELLIAN SINGAPORE PTE. LTD.",
+      "seriEntitas": "3"
+    },
+    {
+      "alamatEntitas": "26 BOON LAY WAY #01-87 TRADEHUB 21,SINGAPORE",
+      "kodeEntitas": "10",
+      "kodeNegara": "SG",
+      "namaEntitas": "INTELLIAN SINGAPORE PTE. LTD.",
+      "seriEntitas": "4"
+    },
+    {
+      "alamatEntitas": "JL DUYUNG PERTOKOAN CITRA PERMAI BLOK B NO.09,SUNGAI JODOH BATU AMPAR,BATAM,28826",
+      "kodeEntitas": "11",
+      "kodeJenisIdentitas": "5",
+      "namaEntitas": "INTELLIAN SINGAPORE PTE. LTD.",
+      "nomorIdentitas": "023201585217000",
+      "seriEntitas": "5"
+    },
+    {
+      "alamatEntitas": "MULIA BUSINESS PARK BUILDING F JL. MT. HARYONO KAV 58-60, JAKARTA",
+      "kodeEntitas": "4",
+      "kodeJenisIdentitas": "5",
+      "namaEntitas": "PT. BIROTIKA SEMESTA",
+      "nomorIdentitas": "013107743062000",
+      "seriEntitas": "6"
+    }
+  ],
+  "kemasan": [
+    {
+      "jumlahKemasan": 1,
+      "kodeJenisKemasan": "PK",
+      "merkKemasan": "DHL",
+      "seriKemasan": 1
+    }
+  ],
+  "kontainer": [],
+  "dokumen": [
+    {
+      "kodeDokumen": "380",
+      "nomorDokumen": "80028781 RMA 75783",
+      "seriDokumen": "1",
+      "tanggalDokumen": "2021-10-26"
+    },
+    {
+      "kodeDokumen": "741",
+      "nomorDokumen": "00000190984",
+      "seriDokumen": "2",
+      "tanggalDokumen": "2021-10-27"
+    },
+    {
+      "kodeDokumen": "740",
+      "nomorDokumen": "3803088424",
+      "seriDokumen": "3",
+      "tanggalDokumen": "2021-10-26"
+    }
+  ],
+  "pengangkut": [
+    {
+      "kodeBendera": "ID",
+      "namaPengangkut": "",
+      "nomorPengangkut": "B303A",
+      "kodeCaraAngkut": "1",
+      "seriPengangkut": "1"
+    }
+  ]
+}
+[11:58:43] {
+  "asalData": "S",
+  "asuransi": 0.64,
+  "bruto": 12.6,
+  "cif": 0.0,
+  "disclaimer": "1",
+  "kodeJenisProsedur": "1",
+  "kodeJenisImpor": "1",
+  "kodeJenisEkspor": "",
+  "flagVd": "T",
+  "fob": 150.0,
+  "freight": 17.01,
+  "hargaPenyerahan": 0.0,
+  "idPengguna": "hwidjaja",
+  "jabatanTtd": "Importir/PPJK",
+  "jumlahKontainer": 0,
+  "jumlahTandaPengaman": "",
+  "kodeAsuransi": "LN",
+  "kodeCaraBayar": "1",
+  "kodeDokumen": "20",
+  "kodeIncoterm": "FOB",
+  "kodeJenisNilai": "NTR",
+  "kodeKantor": "070500",
+  "kodePelMuat": "SGSIN",
+  "kodePelTujuan": "IDBTH",
+  "kodeTps": "CIMP",
+  "kodeTutupPu": "11",
+  "kodeValuta": "SGD",
+  "kotaTtd": "JAKARTA PUSAT",
+  "namaTtd": "FAHMI ARIFIN",
+  "ndpbm": 10483.22,
+  "netto": 12.6,
+  "nilaiBarang": 2117700.0,
+  "nilaiIncoterm": 0.0,
+  "nilaiMaklon": 0.0,
+  "nomorAju": "07000000187520211102000006",
+  "nomorBc11": "023208",
+  "posBc11": "0001",
+  "seri": "",
+  "subposBc11": "0193",
+  "tanggalAju": "2021-11-02",
+  "tanggalBc11": "2021-10-27",
+  "tanggalTiba": "2021-10-27",
+  "tanggalTtd": "2021-11-02",
+  "totalDanaSawit": 0.0,
+  "volume": 0,
+  "biayaTambahan": 0,
+  "biayaPengurang": 0,
+  "barang": [
+    {
+      "asuransi": 0.0,
+      "bruto": 0,
+      "cif": 150.0,
+      "cifRupiah": 2357847.0,
+      "diskon": 0,
+      "fob": 150.0,
+      "freight": 17.01,
+      "hargaEkspor": 0,
+      "hargaPatokan": 0,
+      "hargaPenyerahan": 0,
+      "hargaPerolehan": 0,
+      "hargaSatuan": 50.0,
+      "hjeCukai": 0,
+      "isiPerKemasan": 0,
+      "jumlahBahanBaku": 0,
+      "jumlahDilekatkan": 0,
+      "jumlahKemasan": 1,
+      "jumlahPitaCukai": 0,
+      "jumlahRealisasi": 0,
+      "jumlahSatuan": 3.0,
+      "kapasitasSilinder": 0,
+      "kodeJenisKemasan": "PK",
+      "kodeKondisiBarang": "1",
+      "kodeNegaraAsal": "SG",
+      "kodeSatuanBarang": "NPR",
+      "merk": "-",
+      "ndpbm": 10483.0,
+      "netto": 10.0,
+      "nilaiBarang": 0,
+      "nilaiDanaSawit": 0,
+      "nilaiDevisa": 0,
+      "nilaiTambah": 0,
+      "pernyataanLartas": "T",
+      "persentaseImpor": 0,
+      "posTarif": "62105090",
+      "saldoAwal": 0,
+      "saldoAkhir": 0,
+      "seriBarang": 1,
+      "seriBarangDokAsal": "",
+      "seriIjin": "",
+      "tahunPembuatan": "",
+      "tarifCukai": 0,
+      "tipe": "-",
+      "uraian": "safety boots & clothings",
+      "volume": 0,
+      "barangVd": [],
+      "barangTarif": [
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "BM",
+          "nilaiBayar": 364329.2,
+          "seriBarang": 1,
+          "tarif": 20.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "CUKAI",
+          "nilaiBayar": 0.0,
+          "seriBarang": 1,
+          "tarif": 0.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "PPN",
+          "nilaiBayar": 218597.52,
+          "seriBarang": 1,
+          "tarif": 10.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "PPNBM",
+          "nilaiBayar": 0.0,
+          "seriBarang": 1,
+          "tarif": 0.0,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        },
+        {
+          "kodeJenisTarif": "1",
+          "jumlahSatuan": 1,
+          "kodeFasilitasTarif": "1",
+          "kodeJenisPungutan": "PPH",
+          "nilaiBayar": 68054.41,
+          "seriBarang": 1,
+          "tarif": 2.5,
+          "tarifFasilitas": 0,
+          "nilaiFasilitas": 0
+        }
+      ],
+      "barangDokumen": [],
+      "barangSpekKhusus": [],
+      "barangPemilik": []
+    }
+  ],
+  "entitas": [
+    {
+      "alamatEntitas": "JL. BAWAL KAV. V,KEL. BATU MERAH,KEC. BATU AMPAR,BATAM",
+      "kodeEntitas": "1",
+      "kodeJenisApi": "01",
+      "kodeJenisIdentitas": "5",
+      "kodeStatus": "LAI",
+      "namaEntitas": "PT. PROFAB INDONESIA",
+      "nibEntitas": "8120018102018",
+      "nomorIdentitas": "010850741217000",
+      "seriEntitas": "1"
+    },
+    {
+      "alamatEntitas": "JL. BAWAL KAV. V,KEL. BATU MERAH,KEC. BATU AMPAR,BATAM",
+      "kodeEntitas": "7",
+      "kodeJenisIdentitas": "5",
+      "namaEntitas": "PT. PROFAB INDONESIA",
+      "nomorIdentitas": "010850741217000",
+      "seriEntitas": "2"
+    },
+    {
+      "alamatEntitas": "3A International Business Park Road,#12-06/09 Tower A ICON@IBP,SINGAPORE",
+      "kodeEntitas": "9",
+      "kodeNegara": "SG",
+      "namaEntitas": "NOV CAPS PTE LTD",
+      "seriEntitas": "3"
+    },
+    {
+      "alamatEntitas": "3A International Business Park Road,#12-06/09 Tower A ICON@IBP,SINGAPORE",
+      "kodeEntitas": "10",
+      "kodeNegara": "SG",
+      "namaEntitas": "NOV CAPS PTE LTD",
+      "seriEntitas": "4"
+    },
+    {
+      "alamatEntitas": "JL. BAWAL KAV. V,KEL. BATU MERAH,KEC. BATU AMPAR,BATAM",
+      "kodeEntitas": "11",
+      "kodeJenisIdentitas": "5",
+      "namaEntitas": "NOV CAPS PTE LTD",
+      "nomorIdentitas": "010850741217000",
+      "seriEntitas": "5"
+    },
+    {
+      "alamatEntitas": "MULIA BUSINESS PARK BUILDING F JL. MT. HARYONO KAV 58-60, JAKARTA",
+      "kodeEntitas": "4",
+      "kodeJenisIdentitas": "5",
+      "namaEntitas": "PT. BIROTIKA SEMESTA",
+      "nomorIdentitas": "013107743062000",
+      "seriEntitas": "6"
+    }
+  ],
+  "kemasan": [
+    {
+      "jumlahKemasan": 1,
+      "kodeJenisKemasan": "PK",
+      "merkKemasan": "DHL",
+      "seriKemasan": 1
+    }
+  ],
+  "kontainer": [],
+  "dokumen": [
+    {
+      "kodeDokumen": "380",
+      "nomorDokumen": "REF AWB",
+      "seriDokumen": "1",
+      "tanggalDokumen": "2021-10-26"
+    },
+    {
+      "kodeDokumen": "741",
+      "nomorDokumen": "00000190984",
+      "seriDokumen": "2",
+      "tanggalDokumen": "2021-10-27"
+    },
+    {
+      "kodeDokumen": "740",
+      "nomorDokumen": "1954078033",
+      "seriDokumen": "3",
+      "tanggalDokumen": "2021-10-26"
+    }
+  ],
+  "pengangkut": [
+    {
+      "kodeBendera": "ID",
+      "namaPengangkut": "",
+      "nomorPengangkut": "B303A",
+      "kodeCaraAngkut": "1",
+      "seriPengangkut": "1"
+    }
+  ]
+}
+[12:00:23] The operation has timed out

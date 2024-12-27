@@ -1,0 +1,109 @@
+C:\Users\farifin\Documents\Projects\E-Ceisa\obj\Debug\OfficialCeisaLite.csproj.CoreCompileInputs.cache
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\OfficialCeisaLite.dll.config
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\OfficialCeisaLite.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\OfficialCeisaLite.pdb
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\csc.exe
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\csc.exe.config
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\csc.rsp
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\csi.exe
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\csi.rsp
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\System.AppContext.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\vbc.exe
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\vbc.exe.config
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\vbc.rsp
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\VBCSCompiler.exe
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\Antlr3.Runtime.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\Newtonsoft.Json.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\System.Web.Optimization.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\WebGrease.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\System.Web.Optimization.xml
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\Newtonsoft.Json.xml
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\Antlr3.Runtime.pdb
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\farifin\Documents\Projects\E-Ceisa\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\farifin\Documents\Projects\E-Ceisa\obj\Debug\OfficialCeisaLite.csproj.CopyComplete
+C:\Users\farifin\Documents\Projects\E-Ceisa\obj\Debug\OfficialCeisaLite.dll
+C:\Users\farifin\Documents\Projects\E-Ceisa\obj\Debug\OfficialCeisaLite.pdb
+C:\Users\farifin\Documents\Projects\E-Ceisa\obj\Debug\OfficialCeisaLite.csproj.AssemblyReference.cache
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\OfficialCeisaLite.dll.config
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\OfficialCeisaLite.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\OfficialCeisaLite.pdb
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\csc.exe
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\csc.exe.config
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\csc.rsp
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\csi.exe
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\csi.rsp
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\System.AppContext.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\vbc.exe
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\vbc.exe.config
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\vbc.rsp
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\VBCSCompiler.exe
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\Antlr3.Runtime.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\Newtonsoft.Json.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\System.Web.Optimization.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\WebGrease.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\System.Web.Optimization.xml
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\Newtonsoft.Json.xml
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\Antlr3.Runtime.pdb
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\obj\Debug\OfficialCeisaLite.csproj.AssemblyReference.cache
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\obj\Debug\OfficialCeisaLite.csproj.CoreCompileInputs.cache
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\obj\Debug\OfficialCeisaLite.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\obj\Debug\OfficialCeisaLite.pdb
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\EntityFramework.xml
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\EntityFramework.SqlServer.xml
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\CrystalDecisions.ReportSource.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\CrystalDecisions.Shared.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\bin\CrystalDecisions.Web.dll
+C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\obj\Debug\Official.477D91D2.Up2Date

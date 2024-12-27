@@ -1,0 +1,294 @@
+[11:56:29] response aju 00002303122520231009000138
+{"dataStatus":[{"nomorAju":"00002303122520231009000138","nomorDaftar":"902981","tanggalDaftar":"09-10-2023","kodeProses":"001","waktuStatus":"2023-10-09 21:24:25","keterangan":"Perekaman Dokumen","kodeDokumen":"23"},{"nomorAju":"00002303122520231009000138","nomorDaftar":"902981","tanggalDaftar":"09-10-2023","kodeProses":"230","waktuStatus":"2023-10-09 22:07:29.803","keterangan":"Siap Jalur","kodeDokumen":"23"},{"nomorAju":"00002303122520231009000138","nomorDaftar":"902981","tanggalDaftar":"09-10-2023","kodeProses":"501","waktuStatus":"2023-10-09 22:08:00.069","keterangan":"Gate Out TPS","kodeDokumen":"23"},{"nomorAju":"00002303122520231009000138","nomorDaftar":"902981","tanggalDaftar":"09-10-2023","kodeProses":"110","waktuStatus":"2023-10-09 22:07:24.646","keterangan":"Validasi","kodeDokumen":"23"},{"nomorAju":"00002303122520231009000138","nomorDaftar":"902981","tanggalDaftar":"09-10-2023","kodeProses":"240","waktuStatus":"2023-10-09 22:07:30.342","keterangan":"Penjaluran","kodeDokumen":"23"}],"dataRespon":[{"nomorAju":"00002303122520231009000138","kodeRespon":"2303","nomorDaftar":"902981","tanggalDaftar":"2023-10-09 22:00:03","nomorRespon":"902981/KBC.1008/2023","tanggalRespon":"2023-10-09 22:00:03","waktuRespon":"2023-10-09 22:00:03","keterangan":"SPPB","pesan":[],"pdf":"respon/2023/10/9/22/bbb42732-0ff0-404f-8078-195a47729e2d-respon-4e3240ed-24cd-45d1-99a6-90c47f6ee4ed.pdf","kodeDokumen":"23"}],"status":"Success","message":"Data Ditemukan"}
+[11:56:29] insert data status success
+[11:56:37] InternalServerError. File not found.
+[11:56:37] Could not find file 'C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\Temp\SPPB_00002303122520231009000138.pdf'.
+[12:56:37] response aju 00002303122520231009000138
+{"dataStatus":[{"nomorAju":"00002303122520231009000138","nomorDaftar":"902981","tanggalDaftar":"09-10-2023","kodeProses":"001","waktuStatus":"2023-10-09 21:24:25","keterangan":"Perekaman Dokumen","kodeDokumen":"23"},{"nomorAju":"00002303122520231009000138","nomorDaftar":"902981","tanggalDaftar":"09-10-2023","kodeProses":"230","waktuStatus":"2023-10-09 22:07:29.803","keterangan":"Siap Jalur","kodeDokumen":"23"},{"nomorAju":"00002303122520231009000138","nomorDaftar":"902981","tanggalDaftar":"09-10-2023","kodeProses":"501","waktuStatus":"2023-10-09 22:08:00.069","keterangan":"Gate Out TPS","kodeDokumen":"23"},{"nomorAju":"00002303122520231009000138","nomorDaftar":"902981","tanggalDaftar":"09-10-2023","kodeProses":"110","waktuStatus":"2023-10-09 22:07:24.646","keterangan":"Validasi","kodeDokumen":"23"},{"nomorAju":"00002303122520231009000138","nomorDaftar":"902981","tanggalDaftar":"09-10-2023","kodeProses":"240","waktuStatus":"2023-10-09 22:07:30.342","keterangan":"Penjaluran","kodeDokumen":"23"}],"dataRespon":[{"nomorAju":"00002303122520231009000138","kodeRespon":"2303","nomorDaftar":"902981","tanggalDaftar":"2023-10-09 22:00:03","nomorRespon":"902981/KBC.1008/2023","tanggalRespon":"2023-10-09 22:00:03","waktuRespon":"2023-10-09 22:00:03","keterangan":"SPPB","pesan":[],"pdf":"respon/2023/10/9/22/bbb42732-0ff0-404f-8078-195a47729e2d-respon-4e3240ed-24cd-45d1-99a6-90c47f6ee4ed.pdf","kodeDokumen":"23"}],"status":"Success","message":"Data Ditemukan"}
+[12:56:37] insert data status success
+[12:56:44] InternalServerError. File not found.
+[14:47:33] LOAD DATA BARANG '9240468005' : 1 Rows..
+[14:48:00] Object reference not set to an instance of an object.
+[14:52:08] LOAD DATA BARANG '9240468005' : 1 Rows..
+[14:52:09] LOAD DATA HEADER '9240468005' : 1 Rows..
+[14:52:09] LOAD DATA TARIF '9240468005' : 1 Rows..
+[14:52:09] Index was outside the bounds of the array.
+[14:53:11] LOAD DATA BARANG '9240468005' : 1 Rows..
+[14:53:12] LOAD DATA HEADER '9240468005' : 1 Rows..
+[14:53:12] LOAD DATA TARIF '9240468005' : 1 Rows..
+[14:53:12] Index was outside the bounds of the array.
+[14:57:43] LOAD DATA BARANG '9240468005' : 1 Rows..
+[14:57:44] LOAD DATA HEADER '9240468005' : 1 Rows..
+[14:57:44] LOAD DATA TARIF '9240468005' : 1 Rows..
+[14:57:47] LOAD DATA ENTITAS '9240468005' : 1 Rows..
+[14:57:47] LOAD DATA KEMASAN '9240468005' : 1 Rows..
+[14:57:48] LOAD DATA DOKUMEN '9240468005' : 1 Rows..
+[14:57:48] LOAD DATA PENGANGKUT '9240468005' : 1 Rows..
+[14:57:50] insert into dhl_cs_tpb_barang values (
+                                        '9240468005',
+                                        '2023-09-27',
+                                        '1',
+                                        '0.240000000000000',                                        
+                                        '48.290',
+                                        '746998.010000',
+                                        '0',
+                                        '20.000',
+                                        '28.050',
+                                        '0',
+                                        '0',
+                                        '20.000',
+                                        '0',
+                                        '1',
+                                        '2.00',
+                                        '',
+                                        '23',
+                                        '11',
+                                        'PK',
+                                        'CN',
+                                        '0',
+                                        'PCE',
+                                        '-',
+                                        '15469.0000',
+                                        '3.6270',
+                                        '20.000',
+                                        '0',
+                                        '39191099',
+                                        '1',
+                                        '',
+                                        '-',
+                                        '',
+                                        'ADHESIVE FILM',
+                                        '0',
+                                        '0'
+                                        )
+
+[14:57:50] insert into dhl_cs_tpb_header values (
+                                        'SRG',
+                                        '9240468005',
+                                        '2023-09-27',
+                                        'S',
+                                        '0.24',
+                                        '4.0300',
+                                        '48.29',
+                                        '20',
+                                        '28.05',
+                                        '0',
+                                        'PPJK',
+                                        '0',
+                                        'LN',
+                                        '23',
+                                        'FOB',
+                                        '060700',
+                                        '060100',
+                                        'IDSRG',
+                                        'CNSHA',
+                                        'SGSIN',
+                                        'GDHL',
+                                        '1',
+                                        '11',
+                                        'USD',
+                                        'SEMARANG',
+                                        'ZETRO TAMPUBOLON',
+                                        '15469.0000',
+                                        '3.627',
+                                        '0018/KA-A5/111 TAHUN 2019',
+                                        '20.0000',
+                                        '',                                      
+                                        '001329',
+                                        '0001',
+                                        '0',
+                                        '0041',
+                                        '10/4/2023 12:00:00 AM',
+                                        '10/4/2023 12:00:00 AM',
+                                        '2023-10-10',
+                                        '0',
+                                        '0',
+                                        '2',
+                                        'farifin',
+                                        '2023-10-10 14:57:44.420'
+                                        )
+
+[14:57:50] insert into dhl_cs_tpb_barang_tarif values (
+                                        '9240468005',
+                                        '2023-09-27',
+                                        '1',
+                                        '2.00',
+                                        '3',
+                                        'PCE',
+                                        'BM',
+                                        '0.0000',
+                                        '0',
+                                        '0.0000',
+                                        '1',
+                                        '5',
+                                        '100'                                        
+                                        )
+
+[14:57:50] insert into dhl_cs_tpb_barang_tarif values (
+                                        '9240468005',
+                                        '2023-09-27',
+                                        '1',
+                                        '2.00',
+                                        '3',
+                                        'PCE',
+                                        'PPH',
+                                        '18674.9500',
+                                        '0',
+                                        '18674.9500',
+                                        '1',
+                                        '2.5',
+                                        '100'                                        
+                                        )
+
+[14:57:50] insert into dhl_cs_tpb_barang_tarif values (
+                                        '9240468005',
+                                        '2023-09-27',
+                                        '1',
+                                        '2.00',
+                                        '3',
+                                        'PCE',
+                                        'PPN',
+                                        '0.0000',
+                                        '0',
+                                        '0.0000',
+                                        '1',
+                                        '11',
+                                        '100'                                        
+                                        )
+
+[14:57:50] insert into dhl_cs_tpb_entitas values (
+                                        '9240468005',
+                                        '2023-09-27',
+                                        'JL.PEMUDA, KLODRAN-KADIROJO JONGGRANGAN,KEL.BANTUL KEC.BANTUL KAB.BANTUL,DI YOGYAKARTA,55711',
+                                        '3',
+                                        '',
+                                        '5',
+                                        '',
+                                        'PT BUSANAREMAJA AGRACIPTA (BRA-2)',
+                                        '8120106822685',
+                                        '016010043073000',
+                                        '952/KM.4/2016',
+                                        '',
+                                        '1',
+                                        '1900-01-01')
+
+[14:57:50] insert into dhl_cs_tpb_entitas values (
+                                        '9240468005',
+                                        '2023-09-27',
+                                        'ROOM 01C, FLOOR 2, BUILDING 6, NO.1,ROAD (XINQIAO CREATIVE INDUSTRY PAR,SHANGHAI CHINA CHINA',
+                                        '5',
+                                        '',
+                                        '',
+                                        '',
+                                        'SHANGHAI INTERNATIONAL BONDING TECHNOLOGY CO.',
+                                        '',
+                                        '',
+                                        '',
+                                        'CN',
+                                        '2',
+                                        '')
+
+[14:57:50] insert into dhl_cs_tpb_entitas values (
+                                        '9240468005',
+                                        '2023-09-27',
+                                        'JL.PEMUDA, KLODRAN-KADIROJO JONGGRANGAN,KEL.BANTUL KEC.BANTUL KAB.BANTUL,DI YOGYAKARTA,55711',
+                                        '7',
+                                        '7',
+                                        '5',
+                                        '5',
+                                        'PT BUSANAREMAJA AGRACIPTA (BRA-2)',
+                                        '',
+                                        '016010043073000',
+                                        '952/KM.4/2016',
+                                        '',
+                                        '3',
+                                        '1900-01-01')
+
+[14:57:50] insert into dhl_cs_tpb_entitas values (
+                                        '9240468005',
+                                        '2023-09-27',
+                                        'MULIA BUSINESS PARK BUILDING F JL. MT. HARYONO KAV 58-60, JAKARTA',
+                                        '4',
+                                        '',
+                                        '5',
+                                        '1',
+                                        'PT. BIROTIKA SEMESTA',
+                                        '',
+                                        '013107743062000',
+                                        '',
+                                        '',
+                                        '4',
+                                        '')
+
+[14:57:50] insert into dhl_cs_tpb_kemasan values (
+                                        '9240468005',
+                                        '2023-09-27',
+                                        '1',
+                                        'PK',
+                                        '1',
+                                        'DHL'
+                                        )
+
+[14:57:50] insert into dhl_cs_tpb_dokumen values (
+                                        '9240468005', '2023-09-27', '1',
+                                        '380', 
+                                        'BdT115', '1',
+                                        ''
+                                        )
+
+[14:57:50] insert into dhl_cs_tpb_dokumen values (
+                                        '9240468005', '2023-09-27', '1',
+                                        '740',
+                                        '9240468005', '2',
+                                        '2023-09-27'
+                                        )
+
+[14:57:50] insert into dhl_cs_tpb_dokumen values (
+                                        '9240468005', '2023-09-27', '1',
+                                        '741',
+                                        '58510005682', '3',
+                                        '2023-10-04'
+                                        )
+
+[14:57:50] insert into dhl_cs_tpb_pengangkut values (
+                                        '9240468005', '2023-09-27',
+                                        'ID',
+                                        'My Indo Airlines',
+                                        '2Y-935',
+                                        '4',
+                                        '1'
+                                        )
+
+[16:30:57] Reload data DCI..
+Clean duplicate AWB :
+'6315692386'
+'9531034752'
+'5452294680'
+'2783052285'
+'4854321485'
+'4910028200'
+'6474269686'
+'4909739936'
+'7125697025'
+'3599755585'
+'4446266230'
+'2780687361'
+'6333227552'
+'7011344620'
+'4887553311'
+'6595661940'
+'4122213863'
+'7369368510'
+'4972626245'
+'4959474645'
+'3395256104'
+'2772763932'
+'1759902966'
+'2486454902'
+'3543646083'
+'3799448936'
+'5551692860'
+'7125686794'
+'4072519360'
+'1287577583'
+[16:31:02] LOAD DATA BARANG '6315692386','9531034752','5452294680','2783052285','4854321485','4910028200','6474269686','4909739936','7125697025','3599755585','4446266230','2780687361','6333227552','7011344620','4887553311','6595661940','4122213863','7369368510','4972626245','4959474645','3395256104','2772763932','1759902966','2486454902','3543646083','3799448936','5551692860','7125686794','4072519360','1287577583' : 42 Rows..

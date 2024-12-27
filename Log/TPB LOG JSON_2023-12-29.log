@@ -1,0 +1,464 @@
+[20:32:22] LOAD DATA BARANG '4027315876' : 1 Rows..
+[20:32:24] LOAD DATA HEADER '4027315876' : 1 Rows..
+[20:32:25] LOAD DATA TARIF '4027315876' : 1 Rows..
+[20:32:25] LOAD DATA ENTITAS '4027315876' : 1 Rows..
+[20:32:25] LOAD DATA KEMASAN '4027315876' : 1 Rows..
+[20:32:27] LOAD DATA PENGANGKUT '4027315876' : 1 Rows..
+[20:32:29] insert into dhl_cs_tpb_barang values (
+                                        '4027315876',
+                                        '2023-12-28',
+                                        '1',
+                                        '2.705000000000000',                                        
+                                        '543.615',
+                                        '8432555.880000',
+                                        '0',
+                                        '395.240',
+                                        '145.670',
+                                        '0',
+                                        '0',
+                                        '395.240',
+                                        '0',
+                                        '1',
+                                        '1.00',
+                                        '',
+                                        '23',
+                                        '11',
+                                        'PK',
+                                        'VN',
+                                        '0',
+                                        'FTK',
+                                        '-',
+                                        '15512.0000',
+                                        '24.3000',
+                                        '395.240',
+                                        '0',
+                                        '41079900',
+                                        '1',
+                                        '',
+                                        '-',
+                                        '',
+                                        'COW SPLIT LEATHER + TKHQ 306102618750',
+                                        '0',
+                                        '0'
+                                        )
+
+[20:32:29] insert into dhl_cs_tpb_header values (
+                                        'JKT',
+                                        '4027315876',
+                                        '2023-12-28',
+                                        'S',
+                                        '2.705',
+                                        '27.0000',
+                                        '543.615',
+                                        '395.24',
+                                        '145.67',
+                                        '0',
+                                        'PPJK',
+                                        '0',
+                                        'LN',
+                                        '23',
+                                        'FOB',
+                                        '061000',
+                                        '050100',
+                                        'IDCGK',
+                                        'VNSGN',
+                                        'HKHKG',
+                                        'GJDC',
+                                        '1',
+                                        '11',
+                                        'USD',
+                                        'JAKARTA',
+                                        'BARTOLOMEUS EKO VATAR',
+                                        '15512.0000',
+                                        '24.3',
+                                        '0018/KA-A5/111 TAHUN 2019',
+                                        '395.2400',
+                                        '00002303006520231229003062',                                      
+                                        '049798',
+                                        '0004',
+                                        '0',
+                                        '0600',
+                                        '12/29/2023 12:00:00 AM',
+                                        '12/29/2023 12:00:00 AM',
+                                        '2023-12-29',
+                                        '0',
+                                        '0',
+                                        '2',
+                                        'farifin',
+                                        '2023-12-29 20:32:24.873'
+                                        )
+
+[20:32:29] insert into dhl_cs_tpb_barang_tarif values (
+                                        '4027315876',
+                                        '2023-12-28',
+                                        '1',
+                                        '1.00',
+                                        '3',
+                                        'FTK',
+                                        'BM',
+                                        '0.0000',
+                                        '0',
+                                        '0.0000',
+                                        '1',
+                                        '0',
+                                        '100'                                        
+                                        )
+
+[20:32:29] insert into dhl_cs_tpb_barang_tarif values (
+                                        '4027315876',
+                                        '2023-12-28',
+                                        '1',
+                                        '1.00',
+                                        '3',
+                                        'FTK',
+                                        'PPH',
+                                        '210813.7250',
+                                        '0',
+                                        '210813.7250',
+                                        '1',
+                                        '2.5',
+                                        '100'                                        
+                                        )
+
+[20:32:29] insert into dhl_cs_tpb_barang_tarif values (
+                                        '4027315876',
+                                        '2023-12-28',
+                                        '1',
+                                        '1.00',
+                                        '3',
+                                        'FTK',
+                                        'PPN',
+                                        '927580.3900',
+                                        '0',
+                                        '927580.3900',
+                                        '1',
+                                        '11',
+                                        '100'                                        
+                                        )
+
+[20:32:29] insert into dhl_cs_tpb_entitas values (
+                                        '4027315876',
+                                        '2023-12-28',
+                                        'JL CENDRAWASIH TENGGULI NO.6 KM.20 KEL TENGGULI KEC TANJUNG,',
+                                        '3',
+                                        '',
+                                        '5',
+                                        '',
+                                        'PT BINTANG INDOKARYA GEMILANG',
+                                        '8120013112185',
+                                        '029884624501000',
+                                        '180/WBC.10/2020',
+                                        '',
+                                        '1',
+                                        '1900-01-01')
+
+[20:32:29] insert into dhl_cs_tpb_entitas values (
+                                        '4027315876',
+                                        '2023-12-28',
+                                        'NHON TRACH III INDUSTRIAL,NHON TRACH,VIETNAM VIETNAM',
+                                        '5',
+                                        '',
+                                        '',
+                                        '',
+                                        'WEITAI VN LEATHER CO.,LTD',
+                                        '',
+                                        '',
+                                        '',
+                                        'VN',
+                                        '2',
+                                        '')
+
+[20:32:29] insert into dhl_cs_tpb_entitas values (
+                                        '4027315876',
+                                        '2023-12-28',
+                                        'JL CENDRAWASIH TENGGULI NO.6 KM.20 KEL TENGGULI KEC TANJUNG,',
+                                        '7',
+                                        '7',
+                                        '5',
+                                        '5',
+                                        'PT BINTANG INDOKARYA GEMILANG',
+                                        '',
+                                        '029884624501000',
+                                        '180/WBC.10/2020',
+                                        '',
+                                        '3',
+                                        '1900-01-01')
+
+[20:32:29] insert into dhl_cs_tpb_entitas values (
+                                        '4027315876',
+                                        '2023-12-28',
+                                        'MULIA BUSINESS PARK BUILDING F JL. MT. HARYONO KAV 58-60, JAKARTA',
+                                        '4',
+                                        '',
+                                        '5',
+                                        '1',
+                                        'PT. BIROTIKA SEMESTA',
+                                        '',
+                                        '013107743062000',
+                                        '',
+                                        '',
+                                        '4',
+                                        '')
+
+[20:32:29] insert into dhl_cs_tpb_kemasan values (
+                                        '4027315876',
+                                        '2023-12-28',
+                                        '1',
+                                        'PK',
+                                        '1',
+                                        'DHL'
+                                        )
+
+[20:32:29] insert into dhl_cs_tpb_dokumen values (
+                                        '4027315876', '2023-12-28', '1',
+                                        '380', 
+                                        'BIG-231228SP-011', '1',
+                                        '2023-12-28'
+                                        )
+
+[20:32:29] insert into dhl_cs_tpb_dokumen values (
+                                        '4027315876', '2023-12-28', '1',
+                                        '740',
+                                        '4027315876', '2',
+                                        '2023-12-28'
+                                        )
+
+[20:32:29] insert into dhl_cs_tpb_dokumen values (
+                                        '4027315876', '2023-12-28', '1',
+                                        '741',
+                                        '53906376532', '3',
+                                        '2023-12-29'
+                                        )
+
+[20:32:29] insert into dhl_cs_tpb_pengangkut values (
+                                        '4027315876', '2023-12-28',
+                                        'MY',
+                                        'Raya Airways',
+                                        'TH1021',
+                                        '4',
+                                        '1'
+                                        )
+
+[20:36:11] row item excel ke-2, column ke-0
+[20:36:11] row item excel ke-2, column ke-1
+[20:36:11] row item excel ke-2, column ke-2
+[20:36:11] row item excel ke-2, column ke-3
+[20:36:11] row item excel ke-2, column ke-4
+[20:36:11] row item excel ke-2, column ke-5
+[20:36:11] row item excel ke-2, column ke-6
+[20:36:11] row item excel ke-2, column ke-7
+[20:36:11] row item excel ke-2, column ke-8
+[20:36:11] row item excel ke-2, column ke-9
+[20:36:11] row item excel ke-2, column ke-10
+[20:36:11] row item excel ke-2, column ke-11
+[20:36:11] row item excel ke-2, column ke-12
+[20:36:11] row item excel ke-2, column ke-13
+[20:36:11] row item excel ke-2, column ke-14
+[20:36:11] row item excel ke-2, column ke-15
+[20:36:11] row item excel ke-2, column ke-16
+[20:36:11] row item excel ke-2, column ke-17
+[20:36:11] row item excel ke-2, column ke-18
+[20:36:11] row item excel ke-2, column ke-19
+[20:36:11] row item excel ke-2, column ke-20
+[20:36:11] row item excel ke-2, column ke-21
+[20:36:11] row item excel ke-2, column ke-22
+[20:36:11] row item excel ke-2, column ke-23
+[20:36:11] row item excel ke-2, column ke-24
+[20:36:11] row item excel ke-2, column ke-25
+[20:36:11] row item excel ke-2, column ke-26
+[20:36:11] row item excel ke-3, column ke-0
+[20:36:11] row item excel ke-3, column ke-1
+[20:36:11] row item excel ke-3, column ke-2
+[20:36:11] row item excel ke-3, column ke-3
+[20:36:11] row item excel ke-3, column ke-4
+[20:36:11] row item excel ke-3, column ke-5
+[20:36:11] row item excel ke-3, column ke-6
+[20:36:11] row item excel ke-3, column ke-7
+[20:36:11] row item excel ke-3, column ke-8
+[20:36:11] row item excel ke-3, column ke-9
+[20:36:11] row item excel ke-3, column ke-10
+[20:36:11] row item excel ke-3, column ke-11
+[20:36:11] row item excel ke-3, column ke-12
+[20:36:11] row item excel ke-3, column ke-13
+[20:36:11] row item excel ke-3, column ke-14
+[20:36:11] row item excel ke-3, column ke-15
+[20:36:11] row item excel ke-3, column ke-16
+[20:36:11] row item excel ke-3, column ke-17
+[20:36:11] row item excel ke-3, column ke-18
+[20:36:11] row item excel ke-3, column ke-19
+[20:36:11] row item excel ke-3, column ke-20
+[20:36:11] row item excel ke-3, column ke-21
+[20:36:11] row item excel ke-3, column ke-22
+[20:36:11] row item excel ke-3, column ke-23
+[20:36:11] row item excel ke-3, column ke-24
+[20:36:11] row item excel ke-3, column ke-25
+[20:36:11] row item excel ke-3, column ke-26
+[20:36:11] row item excel ke-4, column ke-0
+[20:36:11] row item excel ke-4, column ke-1
+[20:36:11] row item excel ke-4, column ke-2
+[20:36:11] row item excel ke-4, column ke-3
+[20:36:11] row item excel ke-4, column ke-4
+[20:36:11] row item excel ke-4, column ke-5
+[20:36:11] row item excel ke-4, column ke-6
+[20:36:11] row item excel ke-4, column ke-7
+[20:36:11] row item excel ke-4, column ke-8
+[20:36:11] row item excel ke-4, column ke-9
+[20:36:11] row item excel ke-4, column ke-10
+[20:36:11] row item excel ke-4, column ke-11
+[20:36:11] row item excel ke-4, column ke-12
+[20:36:11] row item excel ke-4, column ke-13
+[20:36:11] row item excel ke-4, column ke-14
+[20:36:11] row item excel ke-4, column ke-15
+[20:36:11] row item excel ke-4, column ke-16
+[20:36:11] row item excel ke-4, column ke-17
+[20:36:11] row item excel ke-4, column ke-18
+[20:36:11] row item excel ke-4, column ke-19
+[20:36:11] row item excel ke-4, column ke-20
+[20:36:11] row item excel ke-4, column ke-21
+[20:36:11] row item excel ke-4, column ke-22
+[20:36:11] row item excel ke-4, column ke-23
+[20:36:11] row item excel ke-4, column ke-24
+[20:36:11] row item excel ke-4, column ke-25
+[20:36:11] row item excel ke-4, column ke-26
+[20:36:11] row item excel ke-5, column ke-0
+[20:36:11] row item excel ke-5, column ke-1
+[20:36:11] row item excel ke-5, column ke-2
+[20:36:11] row item excel ke-5, column ke-3
+[20:36:11] row item excel ke-5, column ke-4
+[20:36:11] row item excel ke-5, column ke-5
+[20:36:11] row item excel ke-5, column ke-6
+[20:36:11] row item excel ke-5, column ke-7
+[20:36:11] row item excel ke-5, column ke-8
+[20:36:11] row item excel ke-5, column ke-9
+[20:36:11] row item excel ke-5, column ke-10
+[20:36:11] row item excel ke-5, column ke-11
+[20:36:11] row item excel ke-5, column ke-12
+[20:36:11] row item excel ke-5, column ke-13
+[20:36:11] row item excel ke-5, column ke-14
+[20:36:11] row item excel ke-5, column ke-15
+[20:36:11] row item excel ke-5, column ke-16
+[20:36:11] row item excel ke-5, column ke-17
+[20:36:11] row item excel ke-5, column ke-18
+[20:36:11] row item excel ke-5, column ke-19
+[20:36:11] row item excel ke-5, column ke-20
+[20:36:11] row item excel ke-5, column ke-21
+[20:36:11] row item excel ke-5, column ke-22
+[20:36:11] row item excel ke-5, column ke-23
+[20:36:11] row item excel ke-5, column ke-24
+[20:36:11] row item excel ke-5, column ke-25
+[20:36:11] row item excel ke-5, column ke-26
+[20:36:11] row item excel ke-6, column ke-0
+[20:36:11] row item excel ke-6, column ke-1
+[20:36:11] row item excel ke-6, column ke-2
+[20:36:11] row item excel ke-6, column ke-3
+[20:36:11] row item excel ke-6, column ke-4
+[20:36:11] row item excel ke-6, column ke-5
+[20:36:11] row item excel ke-6, column ke-6
+[20:36:11] row item excel ke-6, column ke-7
+[20:36:11] row item excel ke-6, column ke-8
+[20:36:11] row item excel ke-6, column ke-9
+[20:36:11] row item excel ke-6, column ke-10
+[20:36:11] row item excel ke-6, column ke-11
+[20:36:11] row item excel ke-6, column ke-12
+[20:36:11] row item excel ke-6, column ke-13
+[20:36:11] row item excel ke-6, column ke-14
+[20:36:11] row item excel ke-6, column ke-15
+[20:36:11] row item excel ke-6, column ke-16
+[20:36:11] row item excel ke-6, column ke-17
+[20:36:11] row item excel ke-6, column ke-18
+[20:36:11] row item excel ke-6, column ke-19
+[20:36:11] row item excel ke-6, column ke-20
+[20:36:11] row item excel ke-6, column ke-21
+[20:36:11] row item excel ke-6, column ke-22
+[20:36:11] row item excel ke-6, column ke-23
+[20:36:11] row item excel ke-6, column ke-24
+[20:36:11] row item excel ke-6, column ke-25
+[20:36:11] row item excel ke-6, column ke-26
+[20:36:11] row item excel ke-7, column ke-0
+[20:36:11] row item excel ke-7, column ke-1
+[20:36:11] row item excel ke-7, column ke-2
+[20:36:11] row item excel ke-7, column ke-3
+[20:36:11] row item excel ke-7, column ke-4
+[20:36:11] row item excel ke-7, column ke-5
+[20:36:11] row item excel ke-7, column ke-6
+[20:36:11] row item excel ke-7, column ke-7
+[20:36:11] row item excel ke-7, column ke-8
+[20:36:11] row item excel ke-7, column ke-9
+[20:36:11] row item excel ke-7, column ke-10
+[20:36:11] row item excel ke-7, column ke-11
+[20:36:11] row item excel ke-7, column ke-12
+[20:36:11] row item excel ke-7, column ke-13
+[20:36:11] row item excel ke-7, column ke-14
+[20:36:11] row item excel ke-7, column ke-15
+[20:36:11] row item excel ke-7, column ke-16
+[20:36:11] row item excel ke-7, column ke-17
+[20:36:11] row item excel ke-7, column ke-18
+[20:36:11] row item excel ke-7, column ke-19
+[20:36:11] row item excel ke-7, column ke-20
+[20:36:11] row item excel ke-7, column ke-21
+[20:36:11] row item excel ke-7, column ke-22
+[20:36:11] row item excel ke-7, column ke-23
+[20:36:11] row item excel ke-7, column ke-24
+[20:36:11] row item excel ke-7, column ke-25
+[20:36:11] row item excel ke-7, column ke-26
+[20:36:11] row item excel ke-8, column ke-0
+[20:36:11] row item excel ke-8, column ke-1
+[20:36:11] row item excel ke-8, column ke-2
+[20:36:11] row item excel ke-8, column ke-3
+[20:36:11] row item excel ke-8, column ke-4
+[20:36:11] row item excel ke-8, column ke-5
+[20:36:11] row item excel ke-8, column ke-6
+[20:36:11] row item excel ke-8, column ke-7
+[20:36:11] row item excel ke-8, column ke-8
+[20:36:11] row item excel ke-8, column ke-9
+[20:36:11] row item excel ke-8, column ke-10
+[20:36:11] row item excel ke-8, column ke-11
+[20:36:11] row item excel ke-8, column ke-12
+[20:36:11] row item excel ke-8, column ke-13
+[20:36:11] row item excel ke-8, column ke-14
+[20:36:11] row item excel ke-8, column ke-15
+[20:36:11] row item excel ke-8, column ke-16
+[20:36:11] row item excel ke-8, column ke-17
+[20:36:11] row item excel ke-8, column ke-18
+[20:36:11] row item excel ke-8, column ke-19
+[20:36:11] row item excel ke-8, column ke-20
+[20:36:11] row item excel ke-8, column ke-21
+[20:36:11] row item excel ke-8, column ke-22
+[20:36:11] row item excel ke-8, column ke-23
+[20:36:11] row item excel ke-8, column ke-24
+[20:36:11] row item excel ke-8, column ke-25
+[20:36:11] row item excel ke-8, column ke-26
+[20:36:11] row item excel ke-9, column ke-0
+[20:36:11] row item excel ke-9, column ke-1
+[20:36:11] row item excel ke-9, column ke-2
+[20:36:11] row item excel ke-9, column ke-3
+[20:36:11] row item excel ke-9, column ke-4
+[20:36:11] row item excel ke-9, column ke-5
+[20:36:11] row item excel ke-9, column ke-6
+[20:36:11] row item excel ke-9, column ke-7
+[20:36:11] row item excel ke-9, column ke-8
+[20:36:11] row item excel ke-9, column ke-9
+[20:36:11] row item excel ke-9, column ke-10
+[20:36:11] row item excel ke-9, column ke-11
+[20:36:11] row item excel ke-9, column ke-12
+[20:36:11] row item excel ke-9, column ke-13
+[20:36:11] row item excel ke-9, column ke-14
+[20:36:11] row item excel ke-9, column ke-15
+[20:36:11] row item excel ke-9, column ke-16
+[20:36:11] row item excel ke-9, column ke-17
+[20:36:11] row item excel ke-9, column ke-18
+[20:36:11] row item excel ke-9, column ke-19
+[20:36:11] row item excel ke-9, column ke-20
+[20:36:11] row item excel ke-9, column ke-21
+[20:36:11] row item excel ke-9, column ke-22
+[20:36:11] row item excel ke-9, column ke-23
+[20:36:11] row item excel ke-9, column ke-24
+[20:36:11] row item excel ke-9, column ke-25
+[20:36:11] row item excel ke-9, column ke-26
+[20:38:52] Token Access: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzbXo1OTYwdE9MbkhhT0JLTHRQSG15N2VmT0plQVo5UmVZdkJMOGxVZDhFIn0.eyJleHAiOjE3MDM4Njc5MjEsImlhdCI6MTcwMzg1NzEyMSwianRpIjoiODAzZmIxZjktNmViYy00ZmRlLWEyYjUtM2QzYzk5Yzg0ZjQ2IiwiaXNzIjoiaHR0cHM6Ly9zc28tc3NvLXBvcnRhbC5hcHBzLnByb2RkYy5jdXN0b21zLmdvLmlkL2F1dGgvcmVhbG1zL3BvcnRhbF9oMmgiLCJzdWIiOiI5YjI4OWU0MS01OGM5LTRhNDUtYjdkMi1hZTI4OTEyZjY2NWUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWxfaDJoX2NsaWVudCIsInNlc3Npb25fc3RhdGUiOiIwNDQwNmUzZC00ODc1LTRhODEtOTMwYi02YzcwYzRjNjgyYWMiLCJhY3IiOiIxIiwic2NvcGUiOiJvcGVuaWQgZW1haWwgcHJvZmlsZSIsInNpZCI6IjA0NDA2ZTNkLTQ4NzUtNGE4MS05MzBiLTZjNzBjNGM2ODJhYyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IkFndXMgU2FlcHVkaW4iLCJpZGVudGl0YXMiOiIwMTMxMDc3NDMwNjIwMDAiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhc2FlcHVkaW4iLCJnaXZlbl9uYW1lIjoiQWd1cyBTYWVwdWRpbiIsImZhbWlseV9uYW1lIjoiIiwiZW1haWwiOiJhZ3VzLnNhZXB1ZGluQGRobC5jb20ifQ.Uk_WH5mWzctMyFZXOZ-aymn8v_GuuXJl4jitLIDXFGLJYawR_c7J7OWrOTyyCMKj0Tgvo397B29taeupJRKrG9H7C9IhG1gzz4DmlIxXMniu5AtTo15Rxm1mD6TeGgfRICcrAb-YQ3tprTfV3qTZdkyTUnnwvviu0C52aO2zi3graDh_cPCYm_lt3LJEqgbMuDiCblwNGqhOwd2WHlPoD12lBPFDiB_9pe-FzDPqUXrNbqvDqjNNquBFI8ZjG6k8hk5fNsh2DPsVLnv08pmNYvCFfNHyuWIGPyCQ51xPbCzgVClN3wlAKd21DOSnuihdXt0k6qJl_Lxi8oMumEb7SQ
+[20:38:52] Token ID: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzbXo1OTYwdE9MbkhhT0JLTHRQSG15N2VmT0plQVo5UmVZdkJMOGxVZDhFIn0.eyJleHAiOjE3MDM4Njc5MjEsImlhdCI6MTcwMzg1NzEyMSwiYXV0aF90aW1lIjowLCJqdGkiOiJlZWUxNzVkNS0xYjVlLTRkZWUtYWU5Yy1kZTY0ZGIwOTMwZGQiLCJpc3MiOiJodHRwczovL3Nzby1zc28tcG9ydGFsLmFwcHMucHJvZGRjLmN1c3RvbXMuZ28uaWQvYXV0aC9yZWFsbXMvcG9ydGFsX2gyaCIsImF1ZCI6InBvcnRhbF9oMmhfY2xpZW50Iiwic3ViIjoiOWIyODllNDEtNThjOS00YTQ1LWI3ZDItYWUyODkxMmY2NjVlIiwidHlwIjoiSUQiLCJhenAiOiJwb3J0YWxfaDJoX2NsaWVudCIsInNlc3Npb25fc3RhdGUiOiIwNDQwNmUzZC00ODc1LTRhODEtOTMwYi02YzcwYzRjNjgyYWMiLCJhdF9oYXNoIjoiR3BBZjBkbEhRTVBXV2FoQ3BjVE1odyIsImFjciI6IjEiLCJzaWQiOiIwNDQwNmUzZC00ODc1LTRhODEtOTMwYi02YzcwYzRjNjgyYWMiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJBZ3VzIFNhZXB1ZGluIiwiaWRlbnRpdGFzIjoiMDEzMTA3NzQzMDYyMDAwIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYXNhZXB1ZGluIiwiZ2l2ZW5fbmFtZSI6IkFndXMgU2FlcHVkaW4iLCJmYW1pbHlfbmFtZSI6IiIsImVtYWlsIjoiYWd1cy5zYWVwdWRpbkBkaGwuY29tIn0.Bzv94ykbc1mO_dSl8RhreTqtGHmbS_XsqMHGIr25hXmLGXt_8CkB2dtQbEGO_LVr-cxJOFxSt8rDY5_bGvOv1GJlw5WnZ7TLL2351lt7CUClkWBToOniSEFPKiT3aP5TUoBGsqKs_iOkrY9irCyIcm1lHqATl08dlFhcQgTw49BDdhYSIluxz0wpIBMRpSwSYu7nIdXXZPdaYw1tLejNIvge90xnhunwv0f2_w6cFIzyAopN6jw893dRo6GZ8UKbCmPHdCrzKmO-DmOs7_daVAP5xore95gjVXBW3Pk4F_G2zLy45M6lteWQIIg14la71L_jPP4SeOmHCT3PxVSPlA
+[20:38:53] sequence gateway JKT updated from 799 to 800..
+[20:39:01] {"asalData":"S","asuransi":2.05,"bruto":27.0,"cif":410.51,"fob":395.24,"freight":13.22,"hargaPenyerahan":0,"jabatanTtd":"PPJK","jumlahKontainer":0,"kodeAsuransi":"LN","kodeDokumen":"23","kodeIncoterm":"FOB","kodeKantor":"061000","kodeKantorBongkar":"050100","kodePelBongkar":"IDCGK","kodePelMuat":"VNSGN","kodePelTransit":"HKHKG","kodeTps":"GJDC","kodeTujuanTpb":"1","kodeTutupPu":"11","kodeValuta":"USD","kotaTtd":"JAKARTA","namaTtd":"BARTOLOMEUS EKO VATAR","ndpbm":15512.0,"netto":24.3,"nik":"0018/KA-A5/111 TAHUN 2019","nilaiBarang":395.24,"nomorAju":"00002303006520231229000798","nomorBc11":"049798","posBc11":"0004","seri":0,"subposBc11":"06000000","tanggalBc11":"2023-12-29","tanggalTiba":"2023-12-29","tanggalTtd":"2023-12-29","biayaTambahan":0,"biayaPengurang":0,"kodeKenaPajak":"1","barang":[{"idBarang":"1","asuransi":0.185,"cif":37.244,"diskon":0,"fob":35.86,"freight":1.199,"hargaEkspor":0,"hargaPenyerahan":0,"hargaSatuan":1.66,"isiPerKemasan":0,"jumlahKemasan":1,"jumlahSatuan":21.6,"kodeBarang":"D-CVE90030","kodeDokumen":"23","kodeKategoriBarang":"11","kodeJenisKemasan":"PK","kodeNegaraAsal":"VN","kodePerhitungan":"0","kodeSatuanBarang":"FTK","merk":"-","netto":3.0375,"nilaiBarang":35.86,"nilaiTambah":0,"posTarif":"41079900","seriBarang":1,"spesifikasiLain":"-","tipe":"-","ukuran":"-","uraian":"COW SPLIT LEATHER + TKHQ 306102618750","ndpbm":15512.0,"cifRupiah":577740.46,"hargaPerolehan":0,"kodeAsalBahanBaku":"0","barangTarif":[{"kodeJenisTarif":"1","jumlahSatuan":21.6,"kodeFasilitasTarif":"3","kodeSatuanBarang":"FTK","kodeJenisPungutan":"BM","nilaiBayar":0.0,"nilaiFasilitas":0.0,"nilaiSudahDilunasi":0.0,"seriBarang":1,"tarif":0.0,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":21.6,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPH","nilaiBayar":0.0,"nilaiFasilitas":14443.23,"nilaiSudahDilunasi":0.0,"seriBarang":1,"tarif":2.5,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":21.6,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPN","nilaiBayar":0.0,"nilaiFasilitas":63550.19,"nilaiSudahDilunasi":0.0,"seriBarang":1,"tarif":11.0,"tarifFasilitas":100}],"barangDokumen":[{"seriDokumen":"1"}]},{"idBarang":"2","asuransi":0.197,"cif":39.654,"diskon":0,"fob":38.18,"freight":1.277,"hargaEkspor":0,"hargaPenyerahan":0,"hargaSatuan":1.66,"isiPerKemasan":0,"jumlahKemasan":0,"jumlahSatuan":23.0,"kodeBarang":"D-CVE60201","kodeDokumen":"23","kodeKategoriBarang":"11","kodeJenisKemasan":"PK","kodeNegaraAsal":"VN","kodePerhitungan":"0","kodeSatuanBarang":"FTK","merk":"-","netto":3.0375,"nilaiBarang":38.18,"nilaiTambah":0,"posTarif":"41079900","seriBarang":2,"spesifikasiLain":"-","tipe":"-","ukuran":"-","uraian":"COW SPLIT LEATHER + TKHQ 306102618750","ndpbm":15512.0,"cifRupiah":615117.99,"hargaPerolehan":0,"kodeAsalBahanBaku":"0","barangTarif":[{"kodeJenisTarif":"1","jumlahSatuan":23.0,"kodeFasilitasTarif":"3","kodeSatuanBarang":"FTK","kodeJenisPungutan":"BM","nilaiBayar":0.0,"nilaiFasilitas":0.0,"nilaiSudahDilunasi":0.0,"seriBarang":2,"tarif":0.0,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":23.0,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPH","nilaiBayar":0.0,"nilaiFasilitas":15377.83,"nilaiSudahDilunasi":0.0,"seriBarang":2,"tarif":2.5,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":23.0,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPN","nilaiBayar":0.0,"nilaiFasilitas":67662.43,"nilaiSudahDilunasi":0.0,"seriBarang":2,"tarif":11.0,"tarifFasilitas":100}],"barangDokumen":[{"seriDokumen":"1"}]},{"idBarang":"3","asuransi":0.192,"cif":38.616,"diskon":0,"fob":37.18,"freight":1.244,"hargaEkspor":0,"hargaPenyerahan":0,"hargaSatuan":1.53,"isiPerKemasan":0,"jumlahKemasan":0,"jumlahSatuan":24.3,"kodeBarang":"D-CHA0005","kodeDokumen":"23","kodeKategoriBarang":"11","kodeJenisKemasan":"PK","kodeNegaraAsal":"VN","kodePerhitungan":"0","kodeSatuanBarang":"FTK","merk":"-","netto":3.0375,"nilaiBarang":37.18,"nilaiTambah":0,"posTarif":"41079900","seriBarang":3,"spesifikasiLain":"-","tipe":"-","ukuran":"-","uraian":"COW SPLIT LEATHER + TKHQ 306102618750","ndpbm":15512.0,"cifRupiah":599006.98,"hargaPerolehan":0,"kodeAsalBahanBaku":"0","barangTarif":[{"kodeJenisTarif":"1","jumlahSatuan":24.3,"kodeFasilitasTarif":"3","kodeSatuanBarang":"FTK","kodeJenisPungutan":"BM","nilaiBayar":0.0,"nilaiFasilitas":0.0,"nilaiSudahDilunasi":0.0,"seriBarang":3,"tarif":0.0,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":24.3,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPH","nilaiBayar":0.0,"nilaiFasilitas":14975.28,"nilaiSudahDilunasi":0.0,"seriBarang":3,"tarif":2.5,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":24.3,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPN","nilaiBayar":0.0,"nilaiFasilitas":65891.21,"nilaiSudahDilunasi":0.0,"seriBarang":3,"tarif":11.0,"tarifFasilitas":100}],"barangDokumen":[{"seriDokumen":"1"}]},{"idBarang":"4","asuransi":0.192,"cif":38.616,"diskon":0,"fob":37.18,"freight":1.244,"hargaEkspor":0,"hargaPenyerahan":0,"hargaSatuan":1.66,"isiPerKemasan":0,"jumlahKemasan":0,"jumlahSatuan":22.4,"kodeBarang":"D-CVE90070","kodeDokumen":"23","kodeKategoriBarang":"11","kodeJenisKemasan":"PK","kodeNegaraAsal":"VN","kodePerhitungan":"0","kodeSatuanBarang":"FTK","merk":"-","netto":3.0375,"nilaiBarang":37.18,"nilaiTambah":0,"posTarif":"41079900","seriBarang":4,"spesifikasiLain":"-","tipe":"-","ukuran":"-","uraian":"COW SPLIT LEATHER + TKHQ 306102618750","ndpbm":15512.0,"cifRupiah":599006.98,"hargaPerolehan":0,"kodeAsalBahanBaku":"0","barangTarif":[{"kodeJenisTarif":"1","jumlahSatuan":22.4,"kodeFasilitasTarif":"3","kodeSatuanBarang":"FTK","kodeJenisPungutan":"BM","nilaiBayar":0.0,"nilaiFasilitas":0.0,"nilaiSudahDilunasi":0.0,"seriBarang":4,"tarif":0.0,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":22.4,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPH","nilaiBayar":0.0,"nilaiFasilitas":14975.28,"nilaiSudahDilunasi":0.0,"seriBarang":4,"tarif":2.5,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":22.4,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPN","nilaiBayar":0.0,"nilaiFasilitas":65891.21,"nilaiSudahDilunasi":0.0,"seriBarang":4,"tarif":11.0,"tarifFasilitas":100}],"barangDokumen":[{"seriDokumen":"1"}]},{"idBarang":"5","asuransi":0.461,"cif":92.583,"diskon":0,"fob":89.14,"freight":2.982,"hargaEkspor":0,"hargaPenyerahan":0,"hargaSatuan":1.66,"isiPerKemasan":0,"jumlahKemasan":0,"jumlahSatuan":53.7,"kodeBarang":"D-CVE50004","kodeDokumen":"23","kodeKategoriBarang":"11","kodeJenisKemasan":"PK","kodeNegaraAsal":"VN","kodePerhitungan":"0","kodeSatuanBarang":"FTK","merk":"-","netto":3.0375,"nilaiBarang":89.14,"nilaiTambah":0,"posTarif":"41079900","seriBarang":5,"spesifikasiLain":"-","tipe":"-","ukuran":"-","uraian":"COW SPLIT LEATHER + TKHQ 306102618750","ndpbm":15512.0,"cifRupiah":1436134.55,"hargaPerolehan":0,"kodeAsalBahanBaku":"0","barangTarif":[{"kodeJenisTarif":"1","jumlahSatuan":53.7,"kodeFasilitasTarif":"3","kodeSatuanBarang":"FTK","kodeJenisPungutan":"BM","nilaiBayar":0.0,"nilaiFasilitas":0.0,"nilaiSudahDilunasi":0.0,"seriBarang":5,"tarif":0.0,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":53.7,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPH","nilaiBayar":0.0,"nilaiFasilitas":35903.68,"nilaiSudahDilunasi":0.0,"seriBarang":5,"tarif":2.5,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":53.7,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPN","nilaiBayar":0.0,"nilaiFasilitas":157976.17,"nilaiSudahDilunasi":0.0,"seriBarang":5,"tarif":11.0,"tarifFasilitas":100}],"barangDokumen":[{"seriDokumen":"1"}]},{"idBarang":"6","asuransi":0.172,"cif":34.482,"diskon":0,"fob":33.2,"freight":1.11,"hargaEkspor":0,"hargaPenyerahan":0,"hargaSatuan":1.66,"isiPerKemasan":0,"jumlahKemasan":0,"jumlahSatuan":20.0,"kodeBarang":"D-CVE60030","kodeDokumen":"23","kodeKategoriBarang":"11","kodeJenisKemasan":"PK","kodeNegaraAsal":"VN","kodePerhitungan":"0","kodeSatuanBarang":"FTK","merk":"-","netto":3.0375,"nilaiBarang":33.2,"nilaiTambah":0,"posTarif":"41079900","seriBarang":6,"spesifikasiLain":"-","tipe":"-","ukuran":"-","uraian":"COW SPLIT LEATHER + TKHQ 306102618750","ndpbm":15512.0,"cifRupiah":534885.2,"hargaPerolehan":0,"kodeAsalBahanBaku":"0","barangTarif":[{"kodeJenisTarif":"1","jumlahSatuan":20.0,"kodeFasilitasTarif":"3","kodeSatuanBarang":"FTK","kodeJenisPungutan":"BM","nilaiBayar":0.0,"nilaiFasilitas":0.0,"nilaiSudahDilunasi":0.0,"seriBarang":6,"tarif":0.0,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":20.0,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPH","nilaiBayar":0.0,"nilaiFasilitas":13372.13,"nilaiSudahDilunasi":0.0,"seriBarang":6,"tarif":2.5,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":20.0,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPN","nilaiBayar":0.0,"nilaiFasilitas":58837.35,"nilaiSudahDilunasi":0.0,"seriBarang":6,"tarif":11.0,"tarifFasilitas":100}],"barangDokumen":[{"seriDokumen":"1"}]},{"idBarang":"7","asuransi":0.176,"cif":35.344,"diskon":0,"fob":34.03,"freight":1.138,"hargaEkspor":0,"hargaPenyerahan":0,"hargaSatuan":1.66,"isiPerKemasan":0,"jumlahKemasan":0,"jumlahSatuan":20.5,"kodeBarang":"D-CVE60101","kodeDokumen":"23","kodeKategoriBarang":"11","kodeJenisKemasan":"PK","kodeNegaraAsal":"VN","kodePerhitungan":"0","kodeSatuanBarang":"FTK","merk":"-","netto":3.0375,"nilaiBarang":34.03,"nilaiTambah":0,"posTarif":"41079900","seriBarang":7,"spesifikasiLain":"-","tipe":"-","ukuran":"-","uraian":"COW SPLIT LEATHER + TKHQ 306102618750","ndpbm":15512.0,"cifRupiah":548257.33,"hargaPerolehan":0,"kodeAsalBahanBaku":"0","barangTarif":[{"kodeJenisTarif":"1","jumlahSatuan":20.5,"kodeFasilitasTarif":"3","kodeSatuanBarang":"FTK","kodeJenisPungutan":"BM","nilaiBayar":0.0,"nilaiFasilitas":0.0,"nilaiSudahDilunasi":0.0,"seriBarang":7,"tarif":0.0,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":20.5,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPH","nilaiBayar":0.0,"nilaiFasilitas":13706.4,"nilaiSudahDilunasi":0.0,"seriBarang":7,"tarif":2.5,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":20.5,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPN","nilaiBayar":0.0,"nilaiFasilitas":60308.16,"nilaiSudahDilunasi":0.0,"seriBarang":7,"tarif":11.0,"tarifFasilitas":100}],"barangDokumen":[{"seriDokumen":"1"}]},{"idBarang":"8","asuransi":0.467,"cif":93.963,"diskon":0,"fob":90.47,"freight":3.026,"hargaEkspor":0,"hargaPenyerahan":0,"hargaSatuan":1.66,"isiPerKemasan":0,"jumlahKemasan":0,"jumlahSatuan":54.5,"kodeBarang":"D-CVE10070","kodeDokumen":"23","kodeKategoriBarang":"11","kodeJenisKemasan":"PK","kodeNegaraAsal":"VN","kodePerhitungan":"0","kodeSatuanBarang":"FTK","merk":"-","netto":3.0375,"nilaiBarang":90.47,"nilaiTambah":0,"posTarif":"41079900","seriBarang":8,"spesifikasiLain":"-","tipe":"-","ukuran":"-","uraian":"COW SPLIT LEATHER + TKHQ 306102618750","ndpbm":15512.0,"cifRupiah":1457562.18,"hargaPerolehan":0,"kodeAsalBahanBaku":"0","barangTarif":[{"kodeJenisTarif":"1","jumlahSatuan":54.5,"kodeFasilitasTarif":"3","kodeSatuanBarang":"FTK","kodeJenisPungutan":"BM","nilaiBayar":0.0,"nilaiFasilitas":0.0,"nilaiSudahDilunasi":0.0,"seriBarang":8,"tarif":0.0,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":54.5,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPH","nilaiBayar":0.0,"nilaiFasilitas":36438.85,"nilaiSudahDilunasi":0.0,"seriBarang":8,"tarif":2.5,"tarifFasilitas":100},{"kodeJenisTarif":"1","jumlahSatuan":54.5,"kodeFasilitasTarif":"6","kodeSatuanBarang":"FTK","kodeJenisPungutan":"PPN","nilaiBayar":0.0,"nilaiFasilitas":160330.94,"nilaiSudahDilunasi":0.0,"seriBarang":8,"tarif":11.0,"tarifFasilitas":100}],"barangDokumen":[{"seriDokumen":"1"}]}],"entitas":[{"alamatEntitas":"JL CENDRAWASIH TENGGULI NO.6 KM.20 KEL TENGGULI KEC TANJUNG,","kodeEntitas":"3","kodeJenisIdentitas":"5","namaEntitas":"PT BINTANG INDOKARYA GEMILANG","nibEntitas":"8120013112185","nomorIdentitas":"029884624501000","tanggalIjinEntitas":"1900-01-01","nomorIjinEntitas":"180/WBC.10/2020","seriEntitas":1},{"alamatEntitas":"NHON TRACH III INDUSTRIAL,NHON TRACH,VIETNAM VIETNAM","kodeEntitas":"5","kodeNegara":"VN","namaEntitas":"WEITAI VN LEATHER CO.,LTD","seriEntitas":2},{"alamatEntitas":"JL CENDRAWASIH TENGGULI NO.6 KM.20 KEL TENGGULI KEC TANJUNG,","kodeEntitas":"7","kodeJenisApi":"7","kodeJenisIdentitas":"5","kodeStatus":"5","namaEntitas":"PT BINTANG INDOKARYA GEMILANG","nomorIdentitas":"029884624501000","nomorIjinEntitas":"180/WBC.10/2020","tanggalIjinEntitas":"1900-01-01","seriEntitas":3},{"alamatEntitas":"MULIA BUSINESS PARK BUILDING F JL. MT. HARYONO KAV 58-60, JAKARTA","kodeEntitas":"4","kodeJenisIdentitas":"5","kodeStatus":"1","namaEntitas":"PT. BIROTIKA SEMESTA","nomorIdentitas":"013107743062000","seriEntitas":4}],"kemasan":[{"jumlahKemasan":1,"kodeJenisKemasan":"PK","seriKemasan":1,"merkKemasan":"DHL"}],"dokumen":[{"idDokumen":"1","kodeDokumen":"380","nomorDokumen":"BIG-231228SP-011","seriDokumen":1,"tanggalDokumen":"2023-12-28"},{"idDokumen":"1","kodeDokumen":"740","nomorDokumen":"4027315876","seriDokumen":2,"tanggalDokumen":"2023-12-28"},{"idDokumen":"1","kodeDokumen":"741","nomorDokumen":"53906376532","seriDokumen":3,"tanggalDokumen":"2023-12-29"}],"pengangkut":[{"kodeBendera":"MY","namaPengangkut":"Raya Airways","nomorPengangkut":"TH1021","kodeCaraAngkut":"4","seriPengangkut":1}]}
+[20:39:02] response [kirim dokumen tpb - 00002303006520231229000798]
+{"status":"OK","message":"Sukses, Data Berhasil Ditambahkan","idHeader":"b58895c9-a657-487b-be86-2d82aa89d3c1"}
+[20:39:03] Send data success, 1 nomor aju created

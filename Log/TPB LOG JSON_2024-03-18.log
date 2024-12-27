@@ -1,0 +1,9 @@
+[12:51:34] LOAD DATA BARANG '6047824565' : 2 Rows..
+[12:51:40] LOAD DATA HEADER '6047824565' : 1 Rows..
+[12:51:40] LOAD DATA TARIF '6047824565' : 2 Rows..
+[12:51:40] LOAD DATA ENTITAS '6047824565' : 1 Rows..
+[12:51:41] LOAD DATA KEMASAN '6047824565' : 1 Rows..
+[12:51:41] LOAD DATA PENGANGKUT '6047824565' : 1 Rows..
+[12:51:58] Thread was being aborted.
+[12:59:59] Thread was being aborted.
+[13:13:16] Thread was being aborted.

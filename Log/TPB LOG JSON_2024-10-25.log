@@ -1,0 +1,7 @@
+[14:00:05] LOAD DATA BARANG '8602253284' : 1 Rows..
+[14:00:33] LOAD DATA HEADER '8602253284' : 1 Rows..
+[14:01:01] Object cannot be cast from DBNull to other types.
+{   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at OfficialCeisaLite.Views.RequestTPB.LoadDataDCI(String hawb, String gateway, String update_by, Boolean is_draft) in C:\Users\farifin\OneDrive - DPDHL\Documents\Projects\E-Ceisa\Views\RequestTPB.aspx.cs:line 3959}
+
+[14:02:40] LOAD DATA BARANG '8602253284' : 1 Rows..
