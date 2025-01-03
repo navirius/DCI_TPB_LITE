@@ -443,7 +443,7 @@ namespace OfficialCeisaLite.Views
                                 concat(ALAMAT1, ' ', isnull(ALAMAT2, '')) as ALAMAT,
                                 NONIB as NIB
                                 from CUSTOMER 
-                                where replace(replace(isnull(NPWP, ''),'.',''),'-','') = '{npwp}'
+                                where '0'+replace(replace(isnull(NPWP, ''),'.',''),'-','')+'000000' = '{npwp}'
                                 --and isnull(skkb, '') != ''
                                 order by NAMACUSTOMER asc";
                 DataTable dt = DbOfficialDCI.getRecords(query);
@@ -504,7 +504,7 @@ namespace OfficialCeisaLite.Views
                                 concat(ALAMAT1, ' ', isnull(ALAMAT2, '')) as ALAMAT,
                                 NONIB as NIB
                                 from CUSTOMER 
-                                where replace(replace(isnull(NPWP, ''),'.',''),'-','') = '{NPWP}'
+                                where '0'+replace(replace(isnull(NPWP, ''),'.',''),'-','')+'000000' = '{NPWP}'
                                 and isnull(skkb, '') = '{NO_SKEP}' ";
                 DataRow row = DbOfficialDCI.getRow(query);
                 if (row != null)
@@ -4728,7 +4728,7 @@ namespace OfficialCeisaLite.Views
                 string query = $@"select top 1 
                                 isnull(convert(varchar(10),tgl_skkb,20),'2000-01-01') as TGL_SKEP
                                 from CUSTOMER 
-                                where replace(replace(isnull(NPWP, ''),'.',''),'-','') = '{NPWP}'
+                                where '0'+replace(replace(isnull(NPWP, ''),'.',''),'-','')+'000000' = '{NPWP}'
                                 and isnull(skkb, '') = '{NO_SKEP}'";
                 DataRow row = DbOfficialDCI.getRow(query);
                 if (row != null) retval = row["TGL_SKEP"].ToString();
@@ -4747,7 +4747,7 @@ namespace OfficialCeisaLite.Views
                 string query = $@"select top 1 
                                 isnull(NONIB,'') as NIB
                                 from CUSTOMER 
-                                where replace(replace(isnull(NPWP, ''),'.',''),'-','') = '{NPWP}'
+                                where '0'+replace(replace(isnull(NPWP, ''),'.',''),'-','')+'000000' = '{NPWP}'
                                 and isnull(skkb, '') = '{NO_SKEP}'";
                 DataRow row = DbOfficialDCI.getRow(query);
                 if (row != null) retval = row["NIB"].ToString();

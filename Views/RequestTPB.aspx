@@ -811,7 +811,7 @@
                                                     <label class="col-sm-3 control-label">NPWP</label>
 
                                                     <div class="col-sm-9">
-                                                        <asp:TextBox ID="inputNomorIdentitas" runat="server" CssClass="form-control" MaxLength="15" OnTextChanged="inputNomorIdentitas_TextChanged" AutoPostBack="true" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"></asp:TextBox>
+                                                        <asp:TextBox ID="inputNomorIdentitas" runat="server" CssClass="form-control" MaxLength="22" OnTextChanged="inputNomorIdentitas_TextChanged" AutoPostBack="true" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"></asp:TextBox>
                                                     </div>
                                                 </div>
 
