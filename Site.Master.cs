@@ -91,6 +91,12 @@ namespace OfficialCeisaLite
                                                                 <span>Master Skep</span>
                                                             </a>
                                                         </li>
+                                                        <li>
+                                                            <a href='/Views/ReportStatusGate.aspx'>
+                                                                <i class='fa fa-book'></i> 
+                                                                <span>Report Status Gate</span>
+                                                            </a>
+                                                        </li>
                                                       </ul>";
                             break;
                         default: //admin
@@ -129,6 +135,12 @@ namespace OfficialCeisaLite
                                                             <a href='/Views/MasterSkep.aspx'>
                                                                 <i class='fa fa-shield'></i> 
                                                                 <span>Master Skep</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href='/Views/ReportStatusGate.aspx'>
+                                                                <i class='fa fa-book'></i> 
+                                                                <span>Report Status Gate</span>
                                                             </a>
                                                         </li>
                                                       </ul>";

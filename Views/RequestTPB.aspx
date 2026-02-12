@@ -123,6 +123,7 @@
                                     OnRowCommand="GV_DataDCI_RowCommand"
                                     OnPageIndexChanging="GV_DataDCI_PageIndexChanging"
                                     OnPageIndexChanged="GV_DataDCI_PageIndexChanged"
+                                    OnRowDataBound="GV_DataDCI_RowDataBound"
                                     PagerStyle-CssClass="arn-pagination"
                                     CssClass="table box table-hover table-striped table-bordered"
                                     PageSize="15"
@@ -189,6 +190,18 @@
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                         <asp:BoundField DataField="No Aju" HeaderText="No Aju" Visible="True"/>
+                                        <asp:TemplateField HeaderText="Profect Freight">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblProfectFreight" runat="server" 
+                                                           Text='<%# Eval("Profect Freight Rp") %>'>
+                                                </asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:BoundField DataField="Nilai Currency" HeaderText="Nilai Currency" Visible="True"/>
+                                        <asp:BoundField DataField="FOB" HeaderText="FOB" Visible="True"/>
+                                        <asp:BoundField DataField="Freight" HeaderText="Freight" Visible="True"/>
+                                        <asp:BoundField DataField="Asuransi" HeaderText="Asuransi" Visible="True"/>
+                                        <asp:BoundField DataField="Curr" HeaderText="Curr" Visible="True"/>
                                         <asp:TemplateField HeaderText="Nama Penerima">
                                             <ItemTemplate>
                                                 <div style="width: 400px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis">
@@ -261,11 +274,7 @@
                                                     <%# Eval("Tgl Nopen")%>
                                                 </div>
                                             </ItemTemplate>
-                                        </asp:TemplateField>
-                                        <asp:BoundField DataField="FOB" HeaderText="FOB" Visible="True"/>
-                                        <asp:BoundField DataField="Freight" HeaderText="Freight" Visible="True"/>
-                                        <asp:BoundField DataField="Asuransi" HeaderText="Asuransi" Visible="True"/>
-                                        <asp:BoundField DataField="Curr" HeaderText="Curr" Visible="True"/>
+                                        </asp:TemplateField>                                        
                                         <asp:TemplateField HeaderText="Latest Response Time">
                                             <ItemTemplate>
                                                 <div style="width: 150px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis">
@@ -934,24 +943,6 @@
                     format: 'yyyy-mm-dd',
                     autoclose: true
                 });
-
-                <%--$('#<%=btnSaveHAWB.ClientID %>').click(function () {
-
-                    var HAWB = $('#<%=inputHAWB.ClientID%>').val();
-
-                    if (HAWB != "") {
-                        $('#Loader').modal();
-                    }
-                });--%>
-
-                <%--$('#<%=btnSend.ClientID %>').click(function () {
-
-                    var HAWB = $('#<%=sendHAWB.ClientID%>').val();
-
-                    if (HAWB != "") {
-                        $('#Loader').modal();
-                    }
-                });--%>
 
                 $('#<%=btnSendDCI.ClientID %>').click(function () {
 

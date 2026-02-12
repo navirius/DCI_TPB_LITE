@@ -116,7 +116,12 @@ namespace OfficialCeisaLite.Views
                                 (select distinct g.latest_response_note from dhl_cs_response_header g
                                 where g.HAWB = a.HAWB and g.TGL_HAWB = a.TGL_HAWB) as [Latest Response Description],
                                 update_by as [Update By],
-                                convert(varchar,update_time,120) as [Update Time]
+                                convert(varchar,update_time,120) as [Update Time],
+                                ISNULL((select distinct ISNULL(Freight,0) as freight from dhl_cs_tpb_profect g
+                                where g.HAWB = a.HAWB),0) as [Profect Freight],
+                                FORMAT(ISNULL((select distinct ISNULL(FreightRupiah,0) as freightRp from dhl_cs_tpb_profect g
+                                where g.HAWB = a.HAWB),0),'N0') as [Profect Freight Rp],
+                                FORMAT(ndpbm,'N2') as [Nilai Currency]
                                 from dhl_cs_tpb_header a
                                 where a.gateway = '{gateway}'
                                 order by [ID] desc";
@@ -341,6 +346,50 @@ namespace OfficialCeisaLite.Views
                         {
                             chkRowData.Checked = false;
                             chkAll.Checked = false;
+                        }
+                    }
+                }
+            }
+        }
+        protected void GV_DataDCI_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            // Check if the row is a data row (not header/footer)
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                // Find the label control
+                Label lblProfectFreight = e.Row.FindControl("lblProfectFreight") as Label;
+
+                if (lblProfectFreight != null)
+                {
+                    // Get the data item
+                    DataRowView rowView = e.Row.DataItem as DataRowView;
+
+                    if (rowView != null)
+                    {
+                        // Get the Profect Freight value
+                        string profectFreightValue = rowView["Profect Freight"].ToString();
+
+                        // Try to parse as decimal or double
+                        if (decimal.TryParse(profectFreightValue, out decimal profectFreight))
+                        {
+                            // Apply yellow background if value > 0
+                            if (profectFreight > 0)
+                            {
+                                lblProfectFreight.BackColor = System.Drawing.Color.Yellow;
+                                // Optional: Add some padding or styling
+                                lblProfectFreight.Style.Add("font-weight", "bold");
+                                lblProfectFreight.Style.Add("padding", "2px 5px");
+                            }
+                        }
+                        else if (double.TryParse(profectFreightValue, out double profectFreightDouble))
+                        {
+                            // Apply yellow background if value > 0
+                            if (profectFreightDouble > 0)
+                            {
+                                lblProfectFreight.BackColor = System.Drawing.Color.Yellow;
+                                lblProfectFreight.Style.Add("font-weight", "bold");
+                                lblProfectFreight.Style.Add("padding", "2px 5px");
+                            }
                         }
                     }
                 }
@@ -600,7 +649,12 @@ namespace OfficialCeisaLite.Views
                                 (select distinct g.latest_response_note from dhl_cs_response_header g
                                 where g.HAWB = a.HAWB and g.TGL_HAWB = a.TGL_HAWB) as [Latest Response Description],
                                 update_by as [Update By],
-                                convert(varchar,update_time,120) as [Update Time]
+                                convert(varchar,update_time,120) as [Update Time],
+                                ISNULL((select distinct ISNULL(Freight,0) as freight from dhl_cs_tpb_profect g
+                                where g.HAWB = a.HAWB),0) as [Profect Freight],
+                                FORMAT(ISNULL((select distinct ISNULL(FreightRupiah,0) as freightRp from dhl_cs_tpb_profect g
+                                where g.HAWB = a.HAWB),0),'N0') as [Profect Freight Rp],
+                                FORMAT(ndpbm,'N2') as [Nilai Currency]
                                 from dhl_cs_tpb_header a
                                 where gateway = '{gateway}'";
                 string hawb = srcHAWB.Text.Trim();
@@ -3599,6 +3653,8 @@ namespace OfficialCeisaLite.Views
                 string queryEntitas = $@"delete from dhl_cs_tpb_entitas where hawb in";
                 string queryDokumen = $@"delete from dhl_cs_tpb_dokumen where hawb in";
                 string queryPengangkut = $@"delete from dhl_cs_tpb_pengangkut where hawb in";
+                string queryStatusXML = $@"delete from dhl_cs_tpb_status_xml where hawb in";
+                string queryProfect = $@"delete from dhl_cs_tpb_profect where hawb in";
 
                 string queryResponData = $@"delete from dhl_cs_response_data where hawb in";
                 string queryResponHeader = $@"delete from dhl_cs_response_header where hawb in";
@@ -3617,6 +3673,8 @@ namespace OfficialCeisaLite.Views
                         listDelete.Add($"{queryEntitas} ({item})");
                         listDelete.Add($"{queryDokumen} ({item})");
                         listDelete.Add($"{queryPengangkut} ({item})");
+                        listDelete.Add($"{queryStatusXML} ({item})");
+                        listDelete.Add($"{queryProfect} ({item})");
                         listDelete.Add($"{queryResponData} ({item})");
                         listDelete.Add($"{queryResponHeader} ({item})");
                         listDelete.Add($"{queryResponStatus} ({item})");
@@ -3638,6 +3696,7 @@ namespace OfficialCeisaLite.Views
                 DataTable dt = new DataTable();
                 List<string> listQuery = new List<string>();
                 string query = string.Empty;
+                string ndpbm_global = string.Empty;
 
                 #region load setting [kode kantor, kode gudang]
                 //query = $@"select kode_kantor, kode_gudang from dhl_cs_sequence_aju where gateway = '{gateway}'";
@@ -3937,7 +3996,7 @@ namespace OfficialCeisaLite.Views
                         }
 
                         totalNetto = $"{netto}";
-
+                        ndpbm_global = $"{ndpbm}";
                         //if (DbOfficialCeisa.runCommand(listQuery) == 0)
                         //    retval = listQuery.Count;
                     }
@@ -4546,6 +4605,31 @@ namespace OfficialCeisaLite.Views
 
                     //if (DbOfficialCeisa.runCommand(listQuery) == 0)
                     //    retval = listQuery.Count;
+                }
+                #endregion
+
+                #region load data profect
+                query = $@"select 
+                        T1.HAWB,
+                        T2.TGLHAWB as TGLHAWB,
+                        FORMAT(TOTAL_FREIGHT,'N0') as FreightRupiah,
+                        FORMAT(TOTAL_FREIGHT/{ndpbm_global},'N2') AS Freight
+                        from PROFECTFREIGHT T1 LEFT JOIN BILLINGREPORT T2
+                        ON T1.HAWB = T2.HAWB
+                        where T1.HAWB in ({hawb})
+                        AND T2.TGLHAWB >= '{DateTime.Now.AddDays(-90).ToString("yyyy-MM-dd")}'";
+                dt = DbOfficialDCI.getRecords(query);
+                if (dt.Rows.Count > 0)
+                {
+                    logger.Log($"LOAD DATA PROFECT {hawb} : {dt.Rows.Count} Rows..");
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        listQuery.Add($@"insert into dhl_cs_tpb_profect (HAWB,TGL_HAWB,FreightRupiah,Freight) values (
+                                        '{dr["HAWB"]}', '{Convert.ToDateTime(dr["TGLHAWB"]).ToString("yyyy-MM-dd")}',
+                                        '{dr["FreightRupiah"].ToString().Replace(",","")}',
+                                        '{dr["Freight"].ToString().Replace(",", "")}'
+                                        )");
+                    }
                 }
                 #endregion
 
@@ -5995,8 +6079,7 @@ namespace OfficialCeisaLite.Views
             ScriptManager.RegisterStartupScript(this, GetType(), "Open PreviewReport.aspx", js, true);
             //Response.Write("<script>window.open('PreviewPDF.aspx/Views/PreviewReport?HAWB=" + HAWB + "&TGL=" + TGL_HAWB +"','_blank');</script>");
         }
+
         #endregion
-
-
     }
 }
