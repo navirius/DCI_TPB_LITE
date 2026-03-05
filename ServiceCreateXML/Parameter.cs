@@ -14,5 +14,6 @@ namespace ServiceCreateXML
         public static string EMAIL;
         public static string UPLOADPATH;
         public static string BUILDPATH;
+        public static string UPLOAD_SPPB_PATH;
     }
 }

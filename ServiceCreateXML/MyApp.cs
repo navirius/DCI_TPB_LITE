@@ -19,8 +19,9 @@ namespace ServiceCreateXML
             DbSql._DATABASE = cfg.GetValue("REMOTE_DATABASE", "db_ceisa_lite");
             DbSql._USER = cfg.GetValue("REMOTE_USERNAME", "dhlid");
             DbSql._PSWD = cfg.GetValue("REMOTE_PASSWORD", "awCr1*f9E+1c2DujHLO8");
-            Parameter.UPLOADPATH = cfg.GetValue("UPLOAD_PATH", @"\\MYKULWSPC000030\ShareFolderDeployment\WCO\");
+            Parameter.UPLOADPATH = cfg.GetValue("UPLOAD_PATH", @"\\MYKULWSPC000156\wcoresp\work\");
             Parameter.BUILDPATH = cfg.GetValue("BUILD_PATH", AppDomain.CurrentDomain.BaseDirectory + @"\WCO\build\");
+            Parameter.UPLOAD_SPPB_PATH = cfg.GetValue("UPLOAD_SPPB_PATH", @"\\MYKULWSPC000028\work\");
             DbDCI.LoadParameter();
         }
 
@@ -119,6 +120,7 @@ namespace ServiceCreateXML
                             string MAWB = GetMawb(rowXML["HAWB"].ToString(), Convert.ToDateTime(rowXML["TGL_HAWB"]).ToString("yyyy-MM-dd"));
                             string KETERANGAN = $"NOMOR AJU : {rowXML["NO_AJU"]}, NOMOR DAFTAR : {rowXML["nomorDaftar"]}, TANGGAL DAFTAR : {Convert.ToDateTime(rowXML["tanggalDaftar"]).ToString("yyyy-MM-dd")}";
                             CreateXMLForDCERelease(rowXML["HAWB"].ToString(), Convert.ToDateTime(rowXML["TGL_HAWB"]).ToString("yyyy-MM-dd"), rowXML["kodeRespon"].ToString(), KETERANGAN, rowXML["KANTOR"].ToString(), MAWB);
+                            UploadFileSPPB(rowXML["HAWB"].ToString(), Convert.ToDateTime(rowXML["TGL_HAWB"]).ToString("yyyy-MM-dd"));
                         }
                     }
                 }
@@ -128,7 +130,6 @@ namespace ServiceCreateXML
                 Utils.Logger(ex.Message);
             }
         }
-
         public void CreateXMLForDCERelease(string HAWB, string TGLHAWB, string KODERESPON, string KETERANGAN, string KODEKANTOR, string MAWB)
         {
             var settings = new XmlWriterSettings();
@@ -262,7 +263,6 @@ namespace ServiceCreateXML
                 Utils.Logger($"Error Create XML for DCE release : {ex.Message}");
             }
         }
-
         public string GetGateway(string KODEKANTOR)
         {
             string retval = "JKT";
@@ -278,7 +278,6 @@ namespace ServiceCreateXML
             }
             return retval;
         }
-
         public string GetMawb(string hawb, string tgl_hawb)
         {
             string retval = "";
@@ -294,7 +293,6 @@ namespace ServiceCreateXML
             }
             return retval;
         }
-
         public int IsSppbExist(string hawb, string tgl_hawb)
         {
             int retval = 0; //default datanya ada - skip
@@ -320,6 +318,64 @@ namespace ServiceCreateXML
                 Utils.Logger($"{ex.Message}, {ex.StackTrace}");
             }
             return retval;
+        }
+        public void UploadFileSPPB(string HAWB, string TGLHAWB)
+        {
+            try
+            {
+                string queryGetPdf = $@"select top 1 encode_pdf, 
+                            (select top 1 gateway from dhl_cs_tpb_header T2 where T1.HAWB = T2.HAWB and T1.TGL_HAWB = T2.TGL_HAWB) as gateway
+                            from dhl_cs_response_data T1 where HAWB = '{HAWB}' and TGL_HAWB = '{TGLHAWB}'";
+                DataRow row = DbSql.getRow(queryGetPdf);
+
+                if (row == null)
+                {
+                    Utils.Logger($"Data not found for HAWB {HAWB}");
+                    return;
+                }
+
+                string encode_pdf = row["encode_pdf"]?.ToString() ?? string.Empty;
+
+                // Validasi encode_pdf tidak null, tidak kosong, dan tidak hanya whitespace
+                if (!string.IsNullOrWhiteSpace(encode_pdf))
+                {
+                    try
+                    {
+                        byte[] pdfBytes = Convert.FromBase64String(encode_pdf);
+
+                        // Validasi tambahan: cek apakah byte array tidak kosong
+                        if (pdfBytes != null && pdfBytes.Length > 0)
+                        {
+                            string date = DateTime.UtcNow.AddHours(7).ToString("yyyyMMdd");
+                            string time = DateTime.UtcNow.AddHours(7).ToString("HHmmss");
+                            string fileName = $@"{HAWB}" +
+                                                $@"^^^FRML" +
+                                                $@"^CUSDEC" +
+                                                $@"^TPB" +
+                                                $@"^SPPB_ENT_{row["gateway"]}_GTW_DCI_{date}_{time}.pdf";
+
+                            File.WriteAllBytes($@"{Parameter.UPLOAD_SPPB_PATH}{fileName}", pdfBytes);
+                            Utils.Logger($"Upload File SPPB To This Path -> {Parameter.UPLOAD_SPPB_PATH}{fileName}");
+                        }
+                        else
+                        {
+                            Utils.Logger($"PDF bytes is empty after conversion | HAWB {HAWB}");
+                        }
+                    }
+                    catch (FormatException fex)
+                    {
+                        Utils.Logger($"Invalid Base64 format for HAWB {HAWB}: {fex.Message}");
+                    }
+                }
+                else
+                {
+                    Utils.Logger($"File SPPB is Empty | HAWB {HAWB}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Utils.Logger($"{ex.Message},{ex.StackTrace}");
+            }
         }
     }
 }

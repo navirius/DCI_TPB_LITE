@@ -436,11 +436,6 @@ namespace OfficialCeisaLite.Views
                 //display data
                 string js = "window.open('EditBarang.aspx', '_blank');";
                 ScriptManager.RegisterStartupScript(this, GetType(), "Open EditBarang.aspx", js, true);
-
-                //string tempUrl = ResolveUrl($"~/Views/EditBarang.aspx?HAWB={HAWB}&TGLHAWB={TGLHAWB}");
-
-                //string script = "$(document).ready(function () { window.location.href = '" + tempUrl + "'; });";
-                //ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectScript", script, true);
             }
             catch (Exception ex)
             {
@@ -1061,21 +1056,6 @@ namespace OfficialCeisaLite.Views
                                 listAju.Add($"{NO_AJU}|{HAWB}|{TGL_HAWB}");
                             }
                         }
-
-                        //DataTable dt = (DataTable)ViewState["ListDataDCI"];
-                        //if (dt.Rows.Count > 0)
-                        //{
-                        //    foreach (DataRow row in dt.Rows)
-                        //    {
-                        //        string NO_AJU = row["No Aju"].ToString();
-                        //        if (string.IsNullOrEmpty(NO_AJU)) continue;
-
-                        //        string HAWB = row["HAWB"].ToString();
-                        //        string TGL_HAWB = row["Tgl HAWB"].ToString();
-
-                        //        listAju.Add($"{NO_AJU}|{HAWB}|{TGL_HAWB}");
-                        //    }
-                        //}
                     }
                 }
                 else
@@ -1088,25 +1068,6 @@ namespace OfficialCeisaLite.Views
 
                 if (listAju.Count > 0)
                 {
-                    //get user password for request token
-                    //string query = $@"select username, password from dhl_cs_settings where gateway = '{gateway}'";
-                    //DataRow row = DbOfficialCeisa.getRow(query);
-                    //if (row == null)
-                    //{
-                    //    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('Please fill username & password on gateway settings.');", true);
-                    //    return;
-                    //}
-
-                    //string userCeisa = row["username"].ToString();
-                    //string passwordCeisa = row["password"].ToString();
-
-                    //ResponseToken response = JsonConvert.DeserializeObject<ResponseToken>(GetRequestToken(userCeisa, passwordCeisa));
-                    //if (response.status != "success")
-                    //{
-                    //    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('{response.message}');", true);
-                    //    return;
-                    //}
-
                     foreach (var ajuItems in listAju)
                     {
                         string json = string.Empty;
@@ -1116,7 +1077,6 @@ namespace OfficialCeisaLite.Views
                         string TGL_HAWB = item_array[2];
 
                         string Url = $@"https://apis-gw.beacukai.go.id/openapi/status/{no_aju}";
-                        //string Url = $@"https://apisdev-gw.beacukai.go.id/openapi/status/{no_aju}";
                         Uri myUri = new Uri(Url, UriKind.Absolute);
 
                         WebRequest requestObjGet = WebRequest.Create(myUri);
@@ -1379,27 +1339,7 @@ namespace OfficialCeisaLite.Views
                 if (user != null) { username = user.username; gateway = user.location; }
                 else Response.Redirect("~/Auth/Login.aspx");
 
-                //get user password for request token
-                //string query = $@"select username, password from dhl_cs_settings where gateway = '{gateway}'";
-                //DataRow row = DbOfficialCeisa.getRow(query);
-                //if (row == null)
-                //{
-                //    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('Gateway not found, please fill on gateway settings.');", true);
-                //    return;
-                //}
-
-                //string userCeisa = row["username"].ToString();
-                //string passwordCeisa = row["password"].ToString();
-
-                //ResponseToken response = JsonConvert.DeserializeObject<ResponseToken>(GetRequestToken(userCeisa, passwordCeisa));
-                //if (response.status != "success")
-                //{
-                //    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('{response.message}');", true);
-                //    return;
-                //}
-
                 string Url = $@"https://apis-gw.beacukai.go.id/openapi/status/{nomorAju}";
-                //string Url = $@"https://apisdev-gw.beacukai.go.id/openapi/status/{nomorAju}";
                 Uri myUri = new Uri(Url, UriKind.Absolute);
 
                 WebRequest requestObjGet = WebRequest.Create(myUri);
@@ -1626,7 +1566,6 @@ namespace OfficialCeisaLite.Views
                 }
                 LoadSummary();
                 InitDropdown();
-                //Response.Redirect("~/Views/RequestTPB.aspx");
             }
             catch (Exception ex)
             {
@@ -1639,7 +1578,6 @@ namespace OfficialCeisaLite.Views
             try
             {
                 string linkUrl = $@"https://apis-gw.beacukai.go.id/openapi/download-respon?path={url_pdf}";
-                //string linkUrl = $@"https://apisdev-gw.beacukai.go.id/openapi/download-respon?path={url_pdf}";
 
                 string localPath = AppDomain.CurrentDomain.BaseDirectory + @"\Temp";
 
@@ -1699,8 +1637,6 @@ namespace OfficialCeisaLite.Views
         #region send data request AJU
         protected void btnSendDCI_Click(object sender, EventArgs e)
         {
-            //ClearFormDCI();
-            //ShowModalSend();
             try
             {
                 //validate session
@@ -1783,8 +1719,6 @@ namespace OfficialCeisaLite.Views
 
                 if (listHAWB_Resend.Count > 0)
                 {
-                    //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Message", "if(confirm('Nomor aju sudah pernah dikirim ke CEISA 4.0 (" + listHAWB_Resend.Count + @") apakah yakin ingin kirim ulang?\n\n" + String.Join(@"\n", list_resend_aju.ToArray()) + "')){ alert('" + SendData(list_resend_aju) + "');} else { alert('NO'); }", true);
-
                     CloseModalLoader();
                     ClearFormDCI();
 
@@ -1803,31 +1737,11 @@ namespace OfficialCeisaLite.Views
 
                     ViewState["isFinal"] = false;
 
-                    //ScriptManager.RegisterStartupScript(this, this.GetType(), "confirm", "Confirm('Nomor aju sudah pernah dikirim ke CEISA 4.0 (" + listHAWB_Resend.Count + @") apakah yakin ingin kirim ulang?\n\n" + String.Join(@"\n", list_resend_aju.ToArray()) + "');", true);
                     return;
                 }
 
                 if (listHAWB.Count > 0)
                 {
-                    //get user password for request token
-                    //string query = $@"select username, password from dhl_cs_settings where gateway = '{gateway}'";
-                    //DataRow row = DbOfficialCeisa.getRow(query);
-                    //if (row == null)
-                    //{
-                    //    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('Please fill username & password on gateway settings.');", true);
-                    //    return;
-                    //}
-
-                    //string userCeisa = row["username"].ToString();
-                    //string passwordCeisa = row["password"].ToString();
-
-                    //ResponseToken response = JsonConvert.DeserializeObject<ResponseToken>(GetRequestToken(userCeisa, passwordCeisa));
-                    //if (response.status != "success")
-                    //{
-                    //    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('{response.message}');", true);
-                    //    return;
-                    //}
-
                     //remove duplicate
                     listHAWB = listHAWB.Distinct().ToList();
 
@@ -1865,8 +1779,6 @@ namespace OfficialCeisaLite.Views
         }
         protected void btnSendFinalDCI_Click(object sender, EventArgs e)
         {
-            //ClearFormDCI();
-            //ShowModalSend();
             try
             {
                 //validate session
@@ -1945,12 +1857,6 @@ namespace OfficialCeisaLite.Views
                     CloseModalLoader();
                     return;
                 }
-
-                //testing loader
-                //for (int i = 0; i < 9999; i++)
-                //{
-                //    logger.Log($"delay {i} second...");
-                //}
 
                 if (listHAWB_Resend.Count > 0)
                 {
@@ -2133,25 +2039,6 @@ namespace OfficialCeisaLite.Views
                 if (user != null) { username = user.username; gateway = user.location; }
                 else Response.Redirect("~/Auth/Login.aspx");
 
-                //get user password for request token
-                //string query = $@"select username, password from dhl_cs_settings where update_by = '{username}'";
-                //DataRow row = DbOfficialCeisa.getRow(query);
-                //if (row == null)
-                //{
-                //    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('Please fill username & password on data settings.');", true);
-                //    return;
-                //}
-
-                //string userCeisa = row["username"].ToString();
-                //string passwordCeisa = row["password"].ToString();
-
-                //ResponseToken response = JsonConvert.DeserializeObject<ResponseToken>(GetRequestToken(userCeisa, passwordCeisa));
-                //if (response.status != "success")
-                //{
-                //    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('{response.message}');", true);
-                //    return;
-                //}
-
                 string queryHeader = $@"select
                                     asuransi, bruto, 
                                     fob + freight + asuransi as [cif],
@@ -2249,8 +2136,6 @@ namespace OfficialCeisaLite.Views
                 try
                 {
                     string Url = $@"https://apis-gw.beacukai.go.id/openapi/document";
-                    //string Url = $@"https://apisdev-gw.beacukai.go.id/openapi/document";
-                    //string Url = $@"https://apisdev-gw.beacukai.go.id/openapi/document?isFinal=true";
                     Uri myUri = new Uri(Url, UriKind.Absolute);
 
                     WebRequest requestObjPost = WebRequest.Create(myUri);
@@ -2285,11 +2170,6 @@ namespace OfficialCeisaLite.Views
                             if (responseAju.status == "OK")
                             {
                                 //update nomor aju [CHANGE FLOW 21 DEC 2023 | AJU WILL UPDATED FIRST BEFORE GET RESPONSE]
-                                //int sequenceAju = Convert.ToInt32(req.nomorAju.Substring(req.nomorAju.Length - 6));
-                                //string tanggalAju = GetDateAju(req.nomorAju.Substring(req.nomorAju.Length - 14, 8));
-                                //listQuery.Add($@"update dhl_cs_sequence_aju set
-                                //                sequence_aju = {sequenceAju} where
-                                //                gateway = '{gateway}'");
                                 listQuery.Add($@"update dhl_cs_tpb_header set
                                                 nomorAju = '{req.nomorAju}'
                                                 where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}'");
@@ -2303,11 +2183,6 @@ namespace OfficialCeisaLite.Views
                                     if (responseAju.message.ToLower() == "Gagal, Nomor Aju Sudah Ada.")
                                     {
                                         //update nomor aju [CHANGE FLOW 21 DEC 2023 | AJU WILL UPDATED FIRST BEFORE GET RESPONSE]
-                                        //int sequenceAju = Convert.ToInt32(req.nomorAju.Substring(req.nomorAju.Length - 6));
-                                        //string query = $@"update dhl_cs_sequence_aju set
-                                        //sequence_aju = {sequenceAju} where
-                                        //gateway = '{gateway}'";
-                                        //DbOfficialCeisa.runCommand(query);
 
                                         ScriptManager.RegisterStartupScript(this, GetType(), "alert", $"alert('Send data failed, no.aju {req.nomorAju} already exists, please try send again.')", true);
                                     }
@@ -2458,8 +2333,6 @@ namespace OfficialCeisaLite.Views
                     if (isFinal) Url = $@"https://apis-gw.beacukai.go.id/openapi/document?isFinal=true";
                     else Url = $@"https://apis-gw.beacukai.go.id/openapi/document";
 
-                    //string Url = $@"https://apisdev-gw.beacukai.go.id/openapi/document";
-                    //string Url = $@"https://apisdev-gw.beacukai.go.id/openapi/document?isFinal=false";
                     Uri myUri = new Uri(Url, UriKind.Absolute);
 
                     WebRequest requestObjPost = WebRequest.Create(myUri);
@@ -2494,15 +2367,6 @@ namespace OfficialCeisaLite.Views
                             if (responseAju.status == "OK")
                             {
                                 //update nomor aju [CHANGE FLOW 21 DEC 2023 | AJU WILL UPDATED FIRST BEFORE GET RESPONSE]
-                                //int sequenceAju = Convert.ToInt32(req.nomorAju.Substring(req.nomorAju.Length - 6));
-                                //string tanggalAju = GetDateAju(req.nomorAju.Substring(req.nomorAju.Length - 14, 8));
-                                //listQuery.Add($@"update dhl_cs_sequence_aju set
-                                //                sequence_aju = {sequenceAju} where
-                                //                gateway = '{gateway}'");
-                                //listQuery.Add($@"update dhl_cs_tpb_header set
-                                //                nomorAju = '{req.nomorAju}'
-                                //                where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}'");
-                                //DbOfficialCeisa.runCommand(listQuery);
                                 retval = 1;
                             }
                             else
@@ -2512,11 +2376,6 @@ namespace OfficialCeisaLite.Views
                                     if (responseAju.message.ToLower() == "gagal, nomor aju sudah ada.")
                                     {
                                         //update nomor aju [CHANGE FLOW 21 DEC 2023 | AJU WILL UPDATED FIRST BEFORE GET RESPONSE]
-                                        //int sequenceAju = Convert.ToInt32(req.nomorAju.Substring(req.nomorAju.Length - 6));
-                                        //query = $@"update dhl_cs_sequence_aju set
-                                        //sequence_aju = {sequenceAju} where
-                                        //gateway = '{gateway}'";
-                                        //DbOfficialCeisa.runCommand(query);
 
                                         ScriptManager.RegisterStartupScript(this, GetType(), "alert", $"alert('Send data failed, no.aju {req.nomorAju} already exists, please try send again.')", true);
                                     }
@@ -2589,70 +2448,6 @@ namespace OfficialCeisaLite.Views
             catch { }
             return retval;
         }
-        private string GetRequestToken(string username, string password)
-        {
-            string json = string.Empty;
-            try
-            {
-                System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate (object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
-
-                RequestToken req = new RequestToken();
-                req.username = username;
-                req.password = password;
-                string reqJson = Newtonsoft.Json.JsonConvert.SerializeObject(req);
-
-#if DEBUG
-                //string Url = $@"https://apisdev-gw.beacukai.go.id/amws/v1/user/login";
-                string Url = $@"https://apis-gw.beacukai.go.id/v2/amws/v1/user/login";
-#else
-                string Url = $@"https://apis-gw.beacukai.go.id/v2/amws/v1/user/login";
-                //string Url = $@"https://apisdev-gw.beacukai.go.id/amws/v1/user/login";
-#endif
-                Uri myUri = new Uri(Url, UriKind.Absolute);
-
-                WebRequest requestObjPost = WebRequest.Create(myUri);
-                requestObjPost.Method = "POST";
-                requestObjPost.ContentType = "application/json";
-
-#if DEBUG
-#else
-                WebProxy myproxy = new WebProxy("b2b-http.dhl.com", 8080);
-                myproxy.BypassProxyOnLocal = false;
-                requestObjPost.Proxy = myproxy;
-#endif
-
-                using (var streamWriter = new StreamWriter(requestObjPost.GetRequestStream()))
-                {
-                    streamWriter.Write(reqJson);
-                    streamWriter.Flush();
-                    streamWriter.Close();
-
-                    var response = (HttpWebResponse)requestObjPost.GetResponse();
-
-                    using (var streamReader = new StreamReader(response.GetResponseStream()))
-                    {
-                        json = streamReader.ReadToEnd();
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                WebException we = ex as WebException;
-                if (we != null && we.Response is HttpWebResponse)
-                {
-                    HttpWebResponse response = (HttpWebResponse)we.Response;
-
-                    // it can be 404, 500 etc...
-                    //Console.WriteLine(response.StatusCode);
-                    using (var streamReader = new StreamReader(response.GetResponseStream()))
-                    {
-                        json = streamReader.ReadToEnd();
-                    }
-                }
-            }
-            return json;
-        }
         private string GetAccessToken()
         {
             string retval = string.Empty;
@@ -2684,78 +2479,6 @@ namespace OfficialCeisaLite.Views
             catch (Exception ex)
             {
                 logger.Log($"err func GetIdToken: {ex.Message}");
-            }
-            return retval;
-        }
-        private string GetKurs(string valuta, string token, string ndpbm)
-        {
-            string retval = ndpbm;
-            try
-            {
-                string Url = $@"https://apis-gw.beacukai.go.id/openapi/kurs/{valuta}";
-                Uri myUri = new Uri(Url, UriKind.Absolute);
-
-                WebRequest requestObjGet = WebRequest.Create(myUri);
-                requestObjGet.Method = "GET";
-                requestObjGet.Headers.Add("Authorization", $"Bearer {token}");
-
-#if DEBUG
-#else
-                WebProxy myproxy = new WebProxy("b2b-http.dhl.com", 8080);
-                myproxy.BypassProxyOnLocal = false;
-                requestObjGet.Proxy = myproxy;
-#endif
-
-                string json = string.Empty;
-                try
-                {
-                    var responseAju = (HttpWebResponse)requestObjGet.GetResponse();
-
-                    using (var streamReader = new StreamReader(responseAju.GetResponseStream()))
-                    {
-                        json = streamReader.ReadToEnd();
-                        logger.Log($"response kurs {valuta}" + Environment.NewLine + json);
-
-                        ResponseKurs responseKurs = JsonConvert.DeserializeObject<ResponseKurs>(json);
-                        if (responseKurs.status == "true" || responseKurs.message == "success")
-                        {
-                            Data[] list_kurs = responseKurs.data.ToArray();
-
-                            if (list_kurs.Length > 0)
-                            {
-                                foreach (var item in list_kurs)
-                                {
-                                    retval = item.nilaiKurs;
-                                }
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    WebException we = ex as WebException;
-                    if (we != null && we.Response is HttpWebResponse)
-                    {
-                        HttpWebResponse responseAju = (HttpWebResponse)we.Response;
-
-                        // it can be 404, 500 etc...
-                        //Console.WriteLine(response.StatusCode);
-                        using (var streamReader = new StreamReader(responseAju.GetResponseStream()))
-                        {
-                            json = streamReader.ReadToEnd();
-                            logger.Log($"response kurs {valuta}" + Environment.NewLine + json);
-                        }
-                    }
-                    else
-                    {
-                        logger.Log($"response kurs {valuta}" + Environment.NewLine + we.Message);
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                logger.Log(ex.Message);
             }
             return retval;
         }
@@ -3698,14 +3421,6 @@ namespace OfficialCeisaLite.Views
                 string query = string.Empty;
                 string ndpbm_global = string.Empty;
 
-                #region load setting [kode kantor, kode gudang]
-                //query = $@"select kode_kantor, kode_gudang from dhl_cs_sequence_aju where gateway = '{gateway}'";
-                //DataRow rowSetting = DbOfficialCeisa.getRow(query);
-
-                //query = $"select username, jabatan, kota_ttd, nama_ttd from dhl_cs_settings where gateway = '{gateway}'";
-                //DataRow rowHeader = DbOfficialCeisa.getRow(query);
-                #endregion
-
                 #region load data barang & header
                 query = $@"select 
                             db.HAWB,
@@ -3889,29 +3604,6 @@ namespace OfficialCeisaLite.Views
                         string fob = string.Empty;
                         string freight = string.Empty;
 
-                        //get user password for request token
-                        //query = $@"select username, password from dhl_cs_settings where gateway = '{gateway}'";
-                        //string userCeisa = string.Empty;
-                        //string passwordCeisa = string.Empty;
-                        //DataRow row = DbOfficialCeisa.getRow(query);
-                        //if (row == null)
-                        //{
-                        //    userCeisa = "asaepudin";
-                        //    passwordCeisa = "Nadia@1234";
-                        //}
-                        //else
-                        //{
-                        //    userCeisa = row["username"].ToString();
-                        //    passwordCeisa = row["password"].ToString();
-                        //}
-
-                        //ResponseToken response = JsonConvert.DeserializeObject<ResponseToken>(GetRequestToken(userCeisa, passwordCeisa));
-                        //if (response.status != "success")
-                        //{
-                        //    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('{response.message}');", true);
-                        //    return retval;
-                        //}
-
                         int jml_kemasan = 0; //diambil hanya row pertama saja
                         bool isInsertedJmlKemasan = false;
                         foreach (DataRow dr in dt.Rows)
@@ -3919,30 +3611,11 @@ namespace OfficialCeisaLite.Views
                             netto += Convert.ToDouble(dr["netto"]);
                             valuta = dr["valuta"].ToString();
 
-#if DEBUG
-                            if (valuta == "USD" || valuta == "IDR")
-                            {
-                                ndpbm = $"{dr["ndpbm"]}";
-                                cif = $"{dr["cif"]}";
-                                asuransi = $"{dr["asuransi"]}";
-                                fob = $"{dr["fob"]}";
-                                freight = $"{dr["freight"]}";
-                            }
-                            else
-                            {
-                                ndpbm = GetKurs(valuta, GetAccessToken(), $"{dr["ndpbm"]}");
-                                asuransi = GetValCurrFinal(ndpbm, $"{dr["ndpbm"]}", $"{dr["asuransi"]}");
-                                fob = $"{dr["fob"]}";
-                                freight = GetValCurrFinal(ndpbm, $"{dr["ndpbm"]}", $"{dr["freight"]}");
-                                cif = $"{Math.Round(Convert.ToDouble(asuransi) + Convert.ToDouble(fob) + Convert.ToDouble(freight), 2, MidpointRounding.AwayFromZero)}";
-                            }
-#else
                             ndpbm = $"{dr["ndpbm"]}";
                             cif = $"{dr["cif"]}";
                             asuransi = $"{dr["asuransi"]}";
                             fob = $"{dr["fob"]}";
                             freight = $"{dr["freight"]}";
-#endif
 
                             totalCif += Convert.ToDouble(cif);
                             totalAsuransi += Convert.ToDouble(asuransi);
@@ -3997,8 +3670,6 @@ namespace OfficialCeisaLite.Views
 
                         totalNetto = $"{netto}";
                         ndpbm_global = $"{ndpbm}";
-                        //if (DbOfficialCeisa.runCommand(listQuery) == 0)
-                        //    retval = listQuery.Count;
                     }
                     #endregion
 
@@ -4111,9 +3782,6 @@ namespace OfficialCeisaLite.Views
                                         '{DateTime.UtcNow.AddHours(7).ToString("yyyy-MM-dd HH:mm:ss.fff")}'
                                         )");
                         }
-
-                        //if (DbOfficialCeisa.runCommand(listQuery) == 0)
-                        //    retval = listQuery.Count;
                     }
                     #endregion 
                 }
@@ -4315,9 +3983,6 @@ namespace OfficialCeisaLite.Views
                         }
 
                     }
-
-                    //if (DbOfficialCeisa.runCommand(listQuery) == 0)
-                    //    retval = listQuery.Count;
                 }
                 #endregion
 
@@ -4456,9 +4121,6 @@ namespace OfficialCeisaLite.Views
                             }
                         }
                     }
-
-                    //if (DbOfficialCeisa.runCommand(listQuery) == 0)
-                    //    retval = listQuery.Count;
                 }
                 #endregion
 
@@ -4490,9 +4152,6 @@ namespace OfficialCeisaLite.Views
                                         '{dr["merkKemasan"]}'
                                         )");
                     }
-
-                    //if (DbOfficialCeisa.runCommand(listQuery) == 0)
-                    //    retval = listQuery.Count;
                 }
                 #endregion
 
@@ -4602,9 +4261,6 @@ namespace OfficialCeisaLite.Views
                                         '{dr["seriPengangkut"]}'
                                         )");
                     }
-
-                    //if (DbOfficialCeisa.runCommand(listQuery) == 0)
-                    //    retval = listQuery.Count;
                 }
                 #endregion
 
@@ -4635,11 +4291,6 @@ namespace OfficialCeisaLite.Views
 
                 if (DbOfficialCeisa.runCommand(listQuery) == 0)
                     retval = listQuery.Count;
-
-                //foreach (var item in listQuery)
-                //{
-                //    logger.Log(item + "\n");
-                //}
             }
             catch (Exception ex)
             {
@@ -4995,6 +4646,22 @@ namespace OfficialCeisaLite.Views
         {
             try
             {
+                //validate session
+                string update_by = string.Empty;
+                string gateway = string.Empty;
+                LoginData user = SessionUtils.GetUserData(this.Page);
+                if (user != null)
+                {
+                    update_by = user.username;
+                    gateway = user.location;
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('Session user expired, please login again.');", true);
+                    Response.Redirect("~/Auth/Login.aspx");
+                    return;
+                }
+
                 if (uploadBarang.HasFile)
                 {
                     //get filename only
@@ -5005,7 +4672,7 @@ namespace OfficialCeisaLite.Views
 
                     //process file
                     //ProcessFileBarang(filePath, fileName);
-                    ProcessExcelBarang(filePath, fileName);
+                    ProcessExcelBarang(filePath, fileName, update_by);
                 }
                 else
                 {
@@ -5021,6 +4688,22 @@ namespace OfficialCeisaLite.Views
         {
             try
             {
+                //validate session
+                string update_by = string.Empty;
+                string gateway = string.Empty;
+                LoginData user = SessionUtils.GetUserData(this.Page);
+                if (user != null)
+                {
+                    update_by = user.username;
+                    gateway = user.location;
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('Session user expired, please login again.');", true);
+                    Response.Redirect("~/Auth/Login.aspx");
+                    return;
+                }
+
                 if (uploadDokumen.HasFile)
                 {
                     //get filename only
@@ -5030,7 +4713,7 @@ namespace OfficialCeisaLite.Views
                     uploadDokumen.SaveAs(filePath);
 
                     //process file
-                    ProcessExcelDokumen(filePath, fileName);
+                    ProcessExcelDokumen(filePath, fileName, update_by);
                 }
                 else
                 {
@@ -5042,267 +4725,7 @@ namespace OfficialCeisaLite.Views
                 throw new ArgumentException(ex.Message);
             }
         }
-        private void ProcessFileBarang(string filePath, string fileName)
-        {
-            //read file
-            string[] lines = File.ReadAllLines(filePath);
-            List<string> listQuery = new List<string>();
-            int idx = 0;
-            string HAWB = string.Empty;
-            string TGL_HAWB = string.Empty;
-            double asuransi = 0;
-            double fob = 0;
-            double freight = 0;
-
-            #region barang
-            foreach (string line in lines)
-            {
-                ++idx;
-
-                if (idx == 1) continue;
-
-                string[] arr = new string[0];
-
-                if (line.Contains(';'))
-                {
-                    arr = line.Split(';');
-
-                    //validate file
-                    if (arr.Length == 21)
-                    {
-                        double BM_Items = 0.0;
-                        double CUKAI_Items = 0.0;
-                        double PPN_Items = 0.0;
-                        double PPNBM_Items = 0.0;
-                        double PPH_Items = 0.0;
-                        double CIF_Items = 0.0;
-
-                        #region array model
-                        UploadBarang ub = new UploadBarang();
-                        ub.HAWB = arr[0];
-                        ub.TGL_HAWB = arr[1];
-                        ub.ASURANSI = Math.Round(Convert.ToDouble(arr[2]), 2);
-                        ub.CIF = Math.Round(Convert.ToDouble(arr[3]), 2);
-                        ub.CIF_RUPIAH = Math.Round(Convert.ToDouble(arr[4]), 2);
-                        ub.FOB = Math.Round(Convert.ToDouble(arr[5]), 2);
-                        ub.FREIGHT = Math.Round(Convert.ToDouble(arr[6]), 2);
-                        ub.HARGA_SATUAN = Math.Round(Convert.ToDouble(arr[7]), 2);
-                        ub.JUMLAH_SATUAN = Math.Round(Convert.ToDouble(arr[8]), 2);
-                        ub.KODE_NEGARA_ASAL = arr[9];
-                        ub.KODE_SATUAN_BARANG = arr[10];
-                        ub.NDPBM = Math.Round(Convert.ToDouble(arr[11]), 2);
-                        ub.NETTO = Math.Round(Convert.ToDouble(arr[12]), 2);
-                        ub.POS_TARIF = arr[13];
-                        ub.SERI_BARANG = Convert.ToInt32(arr[14]);
-                        ub.BM_TARIF = Convert.ToDouble(arr[15]);
-                        ub.CUKAI_TARIF = Convert.ToDouble(arr[16]);
-                        ub.PPN_TARIF = Convert.ToDouble(arr[17]);
-                        ub.PPNBM_TARIF = Convert.ToDouble(arr[18]);
-                        ub.PPH_TARIF = Convert.ToDouble(arr[19]);
-                        ub.URAIAN = arr[20];
-
-                        CIF_Items = Math.Round((double)ub.ASURANSI * ub.NDPBM, 2) + Math.Round((double)ub.FOB * ub.NDPBM, 2) + Math.Round((double)ub.FREIGHT * ub.NDPBM, 2);
-                        BM_Items = ((double)CIF_Items * ub.BM_TARIF / 100);
-                        CUKAI_Items = Math.Round((double)(CIF_Items + BM_Items) * ub.CUKAI_TARIF / 100, 2);
-                        PPN_Items = Math.Round((double)(CIF_Items + BM_Items) * ub.PPN_TARIF / 100, 2);
-                        PPNBM_Items = Math.Round((double)(CIF_Items + BM_Items) * ub.PPNBM_TARIF / 100, 2);
-                        PPH_Items = Math.Round((double)(CIF_Items + BM_Items) * ub.PPH_TARIF / 100, 2);
-
-                        listQuery.Add($@"insert into dhl_cs_barang values (
-                                        '{ub.HAWB}',
-                                        '{GetDateJson(ub.TGL_HAWB)}',
-                                        '{ub.ASURANSI}',
-                                        '0',
-                                        '{ub.CIF}',
-                                        '{ub.CIF_RUPIAH}',
-                                        '0',
-                                        '{ub.FOB}',
-                                        '{ub.FREIGHT}',
-                                        '0','0','0','0',
-                                        '{ub.HARGA_SATUAN}',
-                                        '0','0','0','0','1','0','0',
-                                        '{ub.JUMLAH_SATUAN}',
-                                        '0','PK','1',
-                                        '{ub.KODE_NEGARA_ASAL}',
-                                        '{ub.KODE_SATUAN_BARANG}',
-                                        '-',
-                                        '{ub.NDPBM}',
-                                        '{ub.NETTO}',
-                                        '0','0','0','0','T','0',
-                                        '{ub.POS_TARIF}',
-                                        '0','0',
-                                        '{ub.SERI_BARANG}',
-                                        '0','0','0','0','-',
-                                        '{ub.URAIAN}',
-                                        '0'
-                                        )");
-
-                        for (int i = 0; i < 5; i++)
-                        {
-                            switch (i)
-                            {
-                                case 1: //cukai
-                                    listQuery.Add($@"insert into dhl_cs_barang_tarif values (
-                                        '{ub.HAWB}',
-                                        '{GetDateJson(ub.TGL_HAWB)}',
-                                        '1','1','1','CUKAI','{CUKAI_Items}',
-                                        '{ub.SERI_BARANG}',
-                                        '{ub.CUKAI_TARIF}',
-                                        '0','0'
-                                        )");
-                                    break;
-                                case 2: //ppn
-                                    listQuery.Add($@"insert into dhl_cs_barang_tarif values (
-                                        '{ub.HAWB}',
-                                        '{GetDateJson(ub.TGL_HAWB)}',
-                                        '1','1','1','PPN','{PPN_Items}',
-                                        '{ub.SERI_BARANG}',
-                                        '{ub.PPN_TARIF}',
-                                        '0','0'
-                                        )");
-                                    break;
-                                case 3: //ppnbm
-                                    listQuery.Add($@"insert into dhl_cs_barang_tarif values (
-                                        '{ub.HAWB}',
-                                        '{GetDateJson(ub.TGL_HAWB)}',
-                                        '1','1','1','PPNBM','{PPNBM_Items}',
-                                        '{ub.SERI_BARANG}',
-                                        '{ub.PPNBM_TARIF}',
-                                        '0','0'
-                                        )");
-                                    break;
-                                case 4: //pph
-                                    listQuery.Add($@"insert into dhl_cs_barang_tarif values (
-                                        '{ub.HAWB}',
-                                        '{GetDateJson(ub.TGL_HAWB)}',
-                                        '1','1','1','PPH','{PPH_Items}',
-                                        '{ub.SERI_BARANG}',
-                                        '{ub.PPH_TARIF}',
-                                        '0','0'
-                                        )");
-                                    break;
-                                default: //bm
-                                    listQuery.Add($@"insert into dhl_cs_barang_tarif values (
-                                        '{ub.HAWB}',
-                                        '{GetDateJson(ub.TGL_HAWB)}',
-                                        '1','1','1','BM','{BM_Items}',
-                                        '{ub.SERI_BARANG}',
-                                        '{ub.BM_TARIF}',
-                                        '0','0'
-                                        )");
-                                    break;
-                            }
-                        }
-
-                        HAWB = ub.HAWB;
-                        TGL_HAWB = GetDateJson(ub.TGL_HAWB);
-
-                        asuransi += Math.Round(ub.ASURANSI, 2);
-                        fob += Math.Round(ub.FOB, 2);
-                        freight += Math.Round(ub.FREIGHT, 2);
-                        #endregion
-                    }
-                }
-                else
-                {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('Upload CSV Failed, Invalid Format Value');", true);
-                    return;
-                }
-            }
-            #endregion
-
-            string query = $@"delete from dhl_cs_barang where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}'";
-            DbOfficialCeisa.runCommand(query);
-
-            query = $@"delete from dhl_cs_barang_tarif where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}'";
-            DbOfficialCeisa.runCommand(query);
-
-            query = $@"update dhl_cs_header set asuransi = '{asuransi}', fob = '{fob}', freight = '{freight}'
-                    where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}'";
-            DbOfficialCeisa.runCommand(query);
-
-            if (listQuery.Count > 0)
-            {
-                if (DbOfficialCeisa.runCommand(listQuery) == 0)
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('Upload CSV Success.');", true);
-            }
-
-            query = $@"select
-                    HAWB, convert(char(10),TGL_HAWB,126) as TGL_HAWB,
-                    asuransi as [ASURANSI], 
-                    cif as [CIF], 
-                    cifRupiah as [CIF RUPIAH],
-                    fob as [FOB],
-                    freight as [FREIGHT],
-                    hargaSatuan as [HARGA SATUAN],
-                    jumlahSatuan as [JUMLAH SATUAN],
-                    kodeNegaraAsal as [KODE NEGARA ASAL],
-                    kodeSatuanBarang as [KODE SATUAN BARANG],
-                    jumlahKemasan as [JUMLAH KEMASAN],
-                    kodeJenisKemasan as [KODE KEMASAN],
-                    case
-                        when kodeBarang = '' then '-'
-                        else kodeBarang
-                    end as [KODE BARANG],
-                    ndpbm as [NDPBM],
-                    (select top 1 kodeValuta from dhl_cs_tpb_header
-                    where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}') as [KODE VALUTA],
-                    netto as [NETTO],
-                    kodeKategoriBarang as [KATEGORI BARANG],
-                    posTarif as [POS TARIF],
-                    seriBarang as [SERI BARANG],
-                    (select tarif from dhl_cs_tpb_barang_tarif
-                    where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}'
-                    and kodeJenisPungutan = 'BM' and seriBarang = barang.seriBarang) as [BM TARIF],
-                    (select tarif from dhl_cs_tpb_barang_tarif
-                    where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}'
-                    and kodeJenisPungutan = 'BMTP' and seriBarang = barang.seriBarang) as [BMTP TARIF],
-                    (select tarif from dhl_cs_tpb_barang_tarif
-                    where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}'
-                    and kodeJenisPungutan = 'CUKAI' and seriBarang = barang.seriBarang) as [CUKAI TARIF],
-                    (select tarif from dhl_cs_tpb_barang_tarif
-                    where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}'
-                    and kodeJenisPungutan = 'PPN' and seriBarang = barang.seriBarang) as [PPN TARIF],
-                    (select tarif from dhl_cs_tpb_barang_tarif
-                    where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}'
-                    and kodeJenisPungutan = 'PPNBM' and seriBarang = barang.seriBarang) as [PPNBM TARIF],
-                    (select tarif from dhl_cs_tpb_barang_tarif
-                    where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}'
-                    and kodeJenisPungutan = 'PPH' and seriBarang = barang.seriBarang) as [PPH TARIF],
-                    uraian as [URAIAN],
-                    merk as [MEREK],
-                    tipe as [TIPE],
-                    case 
-                        when ukuran = '' then '-' 
-                        else ukuran
-                    end as [UKURAN],
-                    case 
-                        when spesifikasiLain = '' then '-'
-                        else spesifikasiLain
-                    end as [SPESIFIKASI LAINNYA]
-                    from dhl_cs_tpb_barang barang
-                    where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}'
-                    order by seriBarang asc";
-            DataTable tblBarang = DbOfficialCeisa.getRecords(query);
-            ViewState["ListBarang"] = tblBarang;
-            GV_Barang.DataSource = tblBarang;
-            GV_Barang.DataBind();
-
-            query = $@"select
-                    HAWB, convert(char(10),TGL_HAWB,126) as TGL_HAWB,
-                    kodeJenisPungutan as [KODE JENIS PUNGUTAN],
-                    nilaiBayar as [NILAI BAYAR],
-                    seriBarang as [SERI BARANG],
-                    tarif as [TARIF]
-                    from dhl_cs_barang_tarif
-                    where HAWB = '{HAWB}' and TGL_HAWB = '{TGL_HAWB}'
-                    order by seriBarang asc";
-            DataTable tblDokumen = DbOfficialCeisa.getRecords(query);
-            ViewState["ListDokumen"] = tblDokumen;
-            GV_Dokumen.DataSource = tblDokumen;
-            GV_Dokumen.DataBind();
-        }
-        private void ProcessExcelBarang(string filePath, string fileName)
+        private void ProcessExcelBarang(string filePath, string fileName, string updateBy)
         {
             try
             {
@@ -5313,11 +4736,11 @@ namespace OfficialCeisaLite.Views
                 var range = summary.Cells["A2:AE500"];
                 string type = "brg";
                 tbl = GetDataTableFromRange(range, type);
-                InsertToDb(tbl, type);
+                InsertToDb(tbl, type, updateBy, filePath);
             }
             catch { }
         }
-        private void ProcessExcelDokumen(string filePath, string fileName)
+        private void ProcessExcelDokumen(string filePath, string fileName, string updateBy)
         {
             try
             {
@@ -5328,7 +4751,7 @@ namespace OfficialCeisaLite.Views
                 var range = summary.Cells["A2:E99"];
                 string type = "dok";
                 tbl = GetDataTableFromRange(range, type);
-                InsertToDb(tbl, type);
+                InsertToDb(tbl, type, updateBy, filePath);
             }
             catch { }
         }
@@ -5457,7 +4880,7 @@ namespace OfficialCeisaLite.Views
 
             return tbl;
         }
-        private void InsertToDb(DataTable tbl, string type)
+        private void InsertToDb(DataTable tbl, string type, string updateBy, string filePath)
         {
             try
             {
@@ -5855,9 +5278,16 @@ namespace OfficialCeisaLite.Views
                         if (listQuery.Count > 0)
                         {
                             if (DbOfficialCeisa.runCommand(listQuery) == 0)
+                            {
                                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('Upload Excel Success.');", true);
+
+                                string fileName = Path.GetFileName(filePath);
+                                logger.Log($"Upload Excel Barang Success. HAWB {HAWB} | FileName : {fileName} | UploadBy : {updateBy}");
+                            }                                
                             else
+                            {
                                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('Upload excel gagal, silahkan cek kembali column pada excel yang belum terisi!');", true);
+                            }                                
 
                             //foreach (var item in listQuery)
                             //{
@@ -5956,7 +5386,12 @@ namespace OfficialCeisaLite.Views
                         if (listQuery.Count > 0)
                         {
                             if (DbOfficialCeisa.runCommand(listQuery) == 0)
+                            {
                                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", $"alert('Upload Excel Success.');", true);
+
+                                string fileName = Path.GetFileName(filePath);
+                                logger.Log($"Upload Excel Dokumen Success. HAWB {HAWB} | FileName : {fileName} | UploadBy : {updateBy}");
+                            }                                
                         }
 
                         query = $@"select
@@ -6063,8 +5498,6 @@ namespace OfficialCeisaLite.Views
                 logger.Log(ex.Message);
             }
         }
-
-
         #endregion
 
         #region GridView Report
@@ -6079,7 +5512,6 @@ namespace OfficialCeisaLite.Views
             ScriptManager.RegisterStartupScript(this, GetType(), "Open PreviewReport.aspx", js, true);
             //Response.Write("<script>window.open('PreviewPDF.aspx/Views/PreviewReport?HAWB=" + HAWB + "&TGL=" + TGL_HAWB +"','_blank');</script>");
         }
-
         #endregion
     }
 }
