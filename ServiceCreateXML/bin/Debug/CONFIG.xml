@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Configuration>	
-	<LocalServerDCI>mykulws1836,1525</LocalServerDCI>
-	<LocalDatabaseDCI>DHL</LocalDatabaseDCI>
-	<LocalUserDCI>dhlid</LocalUserDCI>
-	<LocalPasswordDCI>dEQtjBt?MhQoRpFKnYJT</LocalPasswordDCI>
-	<Integrated>false</Integrated>
-</Configuration>

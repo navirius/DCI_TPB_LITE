@@ -398,3 +398,10 @@ obj/Release/TempPE/Templates.BC23.Pajak.cs.dll
 obj/Release/TempPE/Templates.BC23.SingleDraft.cs.dll
 obj/Release/TempPE/Templates.BC23.SingleRelease.cs.dll
 obj/Release/TempPE/Templates.Reports.Designer.cs.dll
+
+bin/
+obj/
+ServiceCreateXML/bin/
+obj
+bin
+obj
