@@ -1,4 +1,4 @@
-﻿using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.CrystalReports.Engine;
 using Octopus.Library.Utils;
 using OfficialCeisaLite.App_Start;
 using OfficialCeisaLite.Models;
@@ -519,10 +519,10 @@ namespace OfficialCeisaLite.Views
                         KetegoriBarang = sdr["KetegoriBarang"].ToString(),
                         kodeNegaraAsal = sdr["kodeNegaraAsal"].ToString(),
                         NegaraAsal = sdr["NegaraAsal"].ToString(),
-                        JumlahSatuan = sdr["JumlahSatuan"].ToString(),
+                        JumlahSatuan = Convert.ToInt32(sdr["JumlahSatuan"].ToString()).ToString("F4"),
                         kodeSatuanBarang = sdr["kodeSatuanBarang"].ToString(),
                         netto = sdr["netto"].ToString(),
-                        cif = sdr["cif"].ToString(),
+                        cif = Convert.ToDecimal(sdr["cif"].ToString()).ToString("F2"),
                         cifRupiah = sdr["cifRupiah"].ToString(),
                         Pajak = pajakStatus(hawb, date)
                     });
@@ -544,12 +544,12 @@ namespace OfficialCeisaLite.Views
                         KetegoriBarang = sdr["KetegoriBarang"].ToString(),
                         kodeNegaraAsal = sdr["kodeNegaraAsal"].ToString(),
                         NegaraAsal = sdr["NegaraAsal"].ToString(),
-                        JumlahSatuan = sdr["JumlahSatuan"].ToString(),
+                        JumlahSatuan = Convert.ToInt32(sdr["JumlahSatuan"].ToString()).ToString("F4"),
                         kodeSatuanBarang = sdr["kodeSatuanBarang"].ToString(),
                         netto = sdr["netto"].ToString(),
-                        cif = sdr["cif"].ToString(),
+                        cif = Convert.ToDecimal(sdr["cif"].ToString()).ToString("F2"),
                         cifRupiah = sdr["cifRupiah"].ToString(),
-                        Pajak = pajakStatus(hawb,date)
+                        Pajak = pajakStatus(hawb, date)
                     });
 
                     _context.SaveChanges();
