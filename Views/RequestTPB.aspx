@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RequestTPB.aspx.cs" Inherits="OfficialCeisaLite.Views.RequestTPB" MasterPageFile="~/Site.Master"%>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RequestTPB.aspx.cs" Inherits="OfficialCeisaLite.Views.RequestTPB" MasterPageFile="~/Site.Master"%>
 
 <asp:Content ID="FilterContent" ContentPlaceHolderID="Head" runat="server">
     <div class="col-md-12">
@@ -97,6 +97,133 @@
 </asp:Content>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">    
+
+    <style>
+        .btn-spinner {
+            display: inline-block;
+            width: 14px; height: 14px;
+            border: 2px solid rgba(255,255,255,0.35);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: btnSpin 0.7s linear infinite;
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+        @keyframes btnSpin { to { transform: rotate(360deg); } }
+
+        .loading-overlay {
+            display: none;
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.75);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            border-radius: 4px;
+        }
+        .loading-overlay.active { display: flex; }
+        .loading-overlay .overlay-spinner {
+            width: 32px; height: 32px;
+            border: 3px solid #d0dae8;
+            border-top-color: #337ab7;
+            border-radius: 50%;
+            animation: btnSpin 0.8s linear infinite;
+        }
+        .loading-overlay .overlay-text {
+            font-size: 13px; color: #555;
+        }
+        /* Success Popup */
+        .success-backdrop {
+            display: flex;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.35);
+            z-index: 99999;              /* lebih tinggi dari modal Bootstrap (z-index: 1050) */
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+        }
+        .success-backdrop.show { 
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+        }
+        @keyframes spFadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .success-popup {
+            position: relative;          /* bukan fixed/absolute */
+            background: #fff;
+            border-radius: 12px;
+            padding: 2rem 2.5rem;
+            text-align: center;
+            width: 320px;
+            margin: auto;                /* fallback centering */
+        }
+        @keyframes spPopIn {
+          from { transform: scale(0.8); opacity: 0; }
+          to   { transform: scale(1);   opacity: 1; }
+        }
+        .success-icon-wrap {
+            width: 64px; height: 64px; border-radius: 50%;
+            background: #eaf3de;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        .success-checkmark {
+            width: 32px; height: 32px;
+            stroke: #3B6D11; stroke-width: 3;
+            stroke-linecap: round; stroke-linejoin: round; fill: none;
+            stroke-dasharray: 50; stroke-dashoffset: 50;
+            animation: spDrawCheck 0.4s ease 0.15s forwards;
+        }
+        @keyframes spDrawCheck { to { stroke-dashoffset: 0; } }
+        .success-title { font-size: 17px; font-weight: 500; margin: 0 0 6px; color: #222; }
+        .success-msg   { font-size: 13px; color: #666; margin: 0 0 1.5rem; line-height: 1.6; }
+        .btn-ok {
+          padding: 8px 32px; background: #337ab7; color: #fff;
+          border: none; border-radius: 6px;
+          font-size: 14px; font-weight: 500; cursor: pointer;
+        }
+        .btn-ok:hover { background: #2368a2; }
+
+        /* --- FIX JQUERY UI AUTOCOMPLETE DI DALAM MODAL --- */
+        .ui-autocomplete {
+            background: #ffffff !important; /* Menimpa error 404 gambar background hilang */
+            border: 1px solid #ccc;
+            z-index: 99999 !important; /* Memastikan dropdown tidak tertutup Modal */
+            max-height: 200px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+            top: 100% !important; /* Paksa turun tepat ke bawah TextBox */
+            left: 15px !important; /* Kompensasi padding kiri bawaan Bootstrap col-sm-9 */
+            width: calc(100% - 30px) !important; /* Samakan lebarnya dengan TextBox */
+        }
+        .ui-autocomplete .ui-menu-item {
+            padding: 8px 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+            font-size: 13px;
+        }
+        .ui-autocomplete .ui-state-active, 
+        .ui-autocomplete .ui-state-focus {
+            background: #337ab7 !important;
+            color: white !important;
+            border: none !important;
+            margin: 0 !important;
+        }
+    </style>
 
     <asp:UpdatePanel ID="UpdatePanel12" UpdateMode="Always" runat="server">
         <ContentTemplate>
@@ -424,8 +551,6 @@
         </ContentTemplate>
     </asp:UpdatePanel>
 
-    
-
     <div class="modal" id="myModalDCI">
         <asp:UpdatePanel ID="UpdatePanelLoad" runat="server" UpdateMode="Always">
             <ContentTemplate>
@@ -694,7 +819,7 @@
         </asp:UpdatePanel>
     </div>
 
-    <div class="modal" id="myModalBarang">
+    <div class="modal" id="myModalBarang" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -708,12 +833,14 @@
                         <ul class="nav nav-tabs" style="text-align: left;">
                             <li class="active"><a href="#barang" data-toggle="tab" id="tab_barang">List Barang</a></li>
                             <li><a href="#dokumen" data-toggle="tab" id="tab_dokumen">List Dokumen</a></li>
-                            <li><a href="#entitas" data-toggle="tab" id="tab_entitas">Entitas Importir/Pengusaha TPB</a></li>
+                            <li><a href="#kemasan" data-toggle="tab" id="tab_kemasan">Kemasan</a></li>
+                            <li><a href="#entitas" data-toggle="tab" id="tab_entitas">Entitas</a></li>
+                            <li><a href="#transaksi" data-toggle="tab" id="tab_transaksi">Transaksi & Pelabuhan</a></li>
                         </ul>
 
                         <div class="tab-content">
                             <div id="barang" class="tab-pane fade in active">
-                                <div class="table-responsive">
+                                <div class="table-responsive">                                    
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <div class="input-group">
@@ -732,7 +859,8 @@
                                         <asp:LinkButton ID="btnSubmitBarang" 
                                             CssClass="btn btn-primary btn-block"
                                             runat="server"
-                                            OnClick="btnSubmitBarang_Click">
+                                            OnClick="btnSubmitBarang_Click"
+                                            OnClientClick="setButtonLoading(this, 'Mengupload...');">
                                             <i class="fa fa-send"></i> &nbsp;
                                             Submit
                                         </asp:LinkButton>
@@ -762,51 +890,133 @@
                             </div>
                             
                             <div id="dokumen" class="tab-pane fade in">
-                                <div class="table-responsive">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <label class="input-group-btn">
-                                                    <span class="btn btn-primary">
-                                                        <i class="fa fa-upload"></i>
-                                                        Upload Excel <asp:FileUpload ID="uploadDokumen" style="display:none;"  CssClass="form-control"  runat="server"/> 
-                                                    </span>
+                                <div class="table-responsive" style="overflow-x: hidden;">
+                                    <div class="row" style="margin-bottom: 15px; margin-top: 10px;">
+                                        <div class="col-md-4">
+                                            <div class="form-group" style="margin-bottom: 0;">
+                                                <div class="input-group">
+                                                    <label class="input-group-btn">
+                                                        <span class="btn btn-primary">
+                                                            <i class="fa fa-upload"></i>
+                                                            Upload Excel <asp:FileUpload ID="uploadDokumen" style="display:none;"  CssClass="form-control"  runat="server"/> 
+                                                        </span>
                                 
-                                                </label>   
-                                                <asp:TextBox runat="server" CssClass="form-control" Disabled="true"/>  
+                                                    </label>   
+                                                    <asp:TextBox runat="server" CssClass="form-control" Disabled="true"/>  
+                                                </div>
                                             </div>
+                                        </div> 
+                                        <div class="col-md-2">   
+                                            <asp:LinkButton ID="btnSubmitDokumen" 
+                                                CssClass="btn btn-primary btn-block"
+                                                runat="server"
+                                                OnClick="btnSubmitDokumen_Click"
+                                                OnClientClick="setButtonLoading(this, 'Mengupload...');">
+                                                <i class="fa fa-send"></i> &nbsp;
+                                                Submit
+                                            </asp:LinkButton>
+                                        </div>                                                  
+                                        <div class="col-md-6">   
+                                            <asp:LinkButton ID="btnDownloadDokumen" 
+                                                CssClass="btn btn-primary" 
+                                                runat="server"
+                                                OnClick="btnDownloadDokumen_Click">
+                                                <i class="fa fa-download"></i>
+                                                Download Excel
+                                            </asp:LinkButton>
                                         </div>
-                                    </div> 
-                                    <div class="col-md-2">   
-                                        <asp:LinkButton ID="btnSubmitDokumen" 
-                                            CssClass="btn btn-primary btn-block"
-                                            runat="server"
-                                            OnClick="btnSubmitDokumen_Click">
-                                            <i class="fa fa-send"></i> &nbsp;
-                                            Submit
-                                        </asp:LinkButton>
-                                    </div>                                                  
-                                    <div class="col-md-6">   
-                                        <asp:LinkButton ID="btnDownloadDokumen" 
-                                            CssClass="btn btn-primary" 
-                                            runat="server"
-                                            OnClick="btnDownloadDokumen_Click">
-                                            <i class="fa fa-download"></i>
-                                            Download Excel
-                                        </asp:LinkButton>
                                     </div>
+                                    
+                                    <hr style="margin-top: 10px; margin-bottom: 15px; border-top: 1px solid #ddd;" />
+
                                     <asp:UpdatePanel runat="server" UpdateMode="Always">
                                         <ContentTemplate>
+                                            <div class="row" style="margin-bottom: 15px;">
+                                                <div class="col-md-3">
+                                                    <asp:TextBox ID="txtNewKodeDokumen" runat="server" CssClass="form-control" Placeholder="Kode (cth: 380)"></asp:TextBox>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <asp:TextBox ID="txtNewNomorDokumen" runat="server" CssClass="form-control" Placeholder="Nomor Dokumen"></asp:TextBox>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <asp:TextBox ID="txtNewTanggalDokumen" runat="server" CssClass="form-control" Placeholder="Tgl (yyyy-mm-dd)"></asp:TextBox>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <asp:LinkButton ID="btnTambahDokumenManual" runat="server" CssClass="btn btn-success btn-block" OnClick="btnTambahDokumenManual_Click">
+                                                        <i class="fa fa-plus"></i> Tambah
+                                                    </asp:LinkButton>
+                                                </div>
+                                            </div>
+
                                             <asp:GridView ID="GV_Dokumen" runat="server"
                                                 AllowPaging="true"
                                                 AllowSorting="false"
                                                 PageSize="5"
                                                 PagerStyle-CssClass="arn-pagination"
                                                 OnPageIndexChanging="GV_Dokumen_PageIndexChanging"
+                                                OnRowEditing="GV_Dokumen_RowEditing"
+                                                OnRowCancelingEdit="GV_Dokumen_RowCancelingEdit"
+                                                OnRowUpdating="GV_Dokumen_RowUpdating"
+                                                OnRowDeleting="GV_Dokumen_RowDeleting"
+                                                AutoGenerateColumns="false"
+                                                DataKeyNames="HAWB,TGL_HAWB,seriDokumen"
                                                 CssClass="table box table-hover table-striped table-bordered">
+                                                <Columns>
+                                                    <asp:CommandField ShowEditButton="True" 
+                                                        ControlStyle-CssClass="btn btn-xs btn-primary" 
+                                                        CancelText="Batal" EditText="Edit" UpdateText="Simpan" />
+
+                                                    <asp:TemplateField HeaderText="Aksi">
+                                                        <ItemTemplate>
+                                                            <asp:LinkButton runat="server" CommandName="Delete" CssClass="btn btn-xs btn-danger"
+                                                                OnClientClick="if (!confirm('Apakah Anda yakin ingin menghapus dokumen ini?')) return false;">
+                                                                <i class="fa fa-trash"></i> Hapus
+                                                            </asp:LinkButton>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+
+                                                    <asp:BoundField DataField="kodeDokumen" HeaderText="Kode Dokumen" ControlStyle-CssClass="form-control input-sm" />
+                                                    <asp:BoundField DataField="nomorDokumen" HeaderText="Nomor Dokumen" ControlStyle-CssClass="form-control input-sm" />
+                                                    <asp:BoundField DataField="tanggalDokumen" HeaderText="Tgl Dokumen (yyyy-mm-dd)" ControlStyle-CssClass="form-control input-sm" />
+                                                </Columns>
                                             </asp:GridView>
                                         </ContentTemplate>
                                 </asp:UpdatePanel> 
+                                </div>
+                            </div>
+
+                            <div id="kemasan" class="tab-pane fade in">
+                                <div class="table-responsive" style="overflow-x: hidden; padding: 15px;">
+                                    <asp:UpdatePanel runat="server" UpdateMode="Always">
+                                        <ContentTemplate>
+                
+                                            <asp:GridView ID="GV_Kemasan" runat="server"
+                                                AllowPaging="true"
+                                                AllowSorting="false"
+                                                PageSize="5"
+                                                PagerStyle-CssClass="arn-pagination"
+                                                OnPageIndexChanging="GV_Kemasan_PageIndexChanging"
+                                                OnRowEditing="GV_Kemasan_RowEditing"
+                                                OnRowCancelingEdit="GV_Kemasan_RowCancelingEdit"
+                                                OnRowUpdating="GV_Kemasan_RowUpdating"
+                                                AutoGenerateColumns="false"
+                                                DataKeyNames="HAWB,TGL_HAWB,seriKemasan"
+                                                CssClass="table box table-hover table-striped table-bordered">
+                                                <Columns>
+                                                    <asp:CommandField ShowEditButton="True" 
+                                                        ControlStyle-CssClass="btn btn-xs btn-primary" 
+                                                        CancelText="Batal" EditText="Edit" UpdateText="Simpan" />
+                        
+                                                    <asp:BoundField DataField="seriKemasan" HeaderText="Seri" ReadOnly="true" ControlStyle-CssClass="form-control input-sm" />
+                        
+                                                    <asp:BoundField DataField="jumlahKemasan" HeaderText="Jumlah Kemasan" ControlStyle-CssClass="form-control input-sm" />
+                                                    <asp:BoundField DataField="kodeJenisKemasan" HeaderText="Kode Jenis (cth: PK)" ControlStyle-CssClass="form-control input-sm" />
+                                                    <asp:BoundField DataField="merkKemasan" HeaderText="Merk" ControlStyle-CssClass="form-control input-sm" />
+                                                </Columns>
+                                            </asp:GridView>
+
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 </div>
                             </div>
 
@@ -816,6 +1026,7 @@
                                         <ContentTemplate>
                                     
                                             <div class="box-body">
+                                                <h3 style="text-align:center; padding-bottom:5px;">Importir/Pengusaha TPB</h3>
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label">NPWP</label>
 
@@ -842,7 +1053,7 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Nama</label>
+                                                    <label class="col-sm-3 control-label">Nama Importir</label>
 
                                                     <div class="col-sm-9">
                                                         <asp:TextBox ID="inputNamaEntitas" runat="server" CssClass="form-control" MaxLength="100"></asp:TextBox>
@@ -850,7 +1061,7 @@
                                                 </div>                                                
 
                                                 <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Alamat</label>
+                                                    <label class="col-sm-3 control-label">Alamat Importir</label>
 
                                                     <div class="col-sm-9">
                                                         <asp:TextBox ID="inputAlamatEntitas" runat="server" CssClass="form-control" MaxLength="250" TextMode="MultiLine"></asp:TextBox>
@@ -872,20 +1083,109 @@
                                                         <asp:DropDownList ID="ddlJasaKenaPajak" CssClass="form-control select2" runat="server"></asp:DropDownList>
                                                     </div>
                                                 </div>
+                                                <hr />
+                                                <h3 style="text-align:center; padding-bottom:5px;">Pemasok</h3>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Nama Pemasok</label>
 
+                                                    <div class="col-sm-9">
+                                                        <asp:TextBox ID="inputNamaPemasokEntitas" runat="server" CssClass="form-control" MaxLength="100"></asp:TextBox>
+                                                    </div>
+                                                </div>                                                
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Alamat Pemasok</label>
+
+                                                    <div class="col-sm-9">
+                                                        <asp:TextBox ID="inputAlamatPemasokEntitas" runat="server" CssClass="form-control" MaxLength="250" TextMode="MultiLine"></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Negara</label>
+
+                                                    <div class="col-sm-9" id="wrapNegara" style="position: relative;">
+        
+                                                        <asp:TextBox ClientIDMode="Static" ID="inputNegaraIdentitas" runat="server" CssClass="form-control" Placeholder="Ketik min. 2 huruf (cth: ID)..."></asp:TextBox>
+                                                        <asp:HiddenField ClientIDMode="Static" ID="hfNegaraIdentitas" runat="server" />
+                                                        <small class="text-muted" style="font-style:italic;">*Ketik minimal 2 karakter kode atau nama negara.</small>
+                                                    </div>
+                                                </div>
                                             </div>
 
                                             <div class="box-footer">
                                                 <asp:LinkButton ID="btnSubmitEntitas" 
                                                     CssClass="btn btn-primary pull-right"
                                                     runat="server"
-                                                    OnClick="btnSubmitEntitas_Click">
+                                                    OnClick="btnSubmitEntitas_Click"
+                                                    OnClientClick="setButtonLoading(this, 'Menyimpan...');">
                                                     <i class="fa fa-send"></i> &nbsp;
                                                     Submit
                                                 </asp:LinkButton>
                                                 <%--<asp:Button ID="btnSubmitEntitas" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btnSavePrintFP_Click" UseSubmitBehavior="false"/>--%>
                                             </div>
                                         
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </div>
+                            </div>
+
+                            <div id="transaksi" class="tab-pane fade in">
+                                <div class="form-horizontal">
+                                    <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Always">
+                                        <ContentTemplate>
+        
+                                            <div class="box-body">
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Jenis Valuta</label>
+
+                                                    <div class="col-sm-3">
+                                                        <asp:DropDownList ClientIDMode="Static" ID="ddlJenisValuta" runat="server" CssClass="form-control select2"></asp:DropDownList>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <asp:TextBox ClientIDMode="Static" ID="txtNdpbm" runat="server" CssClass="form-control" MaxLength="20" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"></asp:TextBox>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div style="display: flex; align-items: center;">
+                                                            <asp:LinkButton ID="btnReloadKurs" runat="server" CssClass="btn-refresh" 
+                                                                OnClick="btnReloadKurs_Click" style="padding: 8px 12px; display: inline-block;">
+                                                                <i class="fa fa-refresh"></i>
+                                                            </asp:LinkButton>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Incoterm</label>
+
+                                                    <div class="col-sm-9">
+                                                        <asp:DropDownList ClientIDMode="Static" ID="ddlKodeIncoterm" CssClass="form-control select2" runat="server"></asp:DropDownList>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Pelabuhan Muat</label>
+
+                                                    <div class="col-sm-9" id="wrapPelabuhanMuat" style="position: relative;">
+        
+                                                        <asp:TextBox ClientIDMode="Static" ID="txtPelabuhanMuat" runat="server" CssClass="form-control" Placeholder="Ketik min. 2 huruf (cth: AMQ)..."></asp:TextBox>
+                                                        <asp:HiddenField ClientIDMode="Static" ID="hfPelabuhanMuat" runat="server" />
+                                                        <small class="text-muted" style="font-style:italic;">*Ketik minimal 2 karakter kode atau nama pelabuhan.</small>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="box-footer">
+                                                <asp:LinkButton ID="btnSubmitTransaksi" 
+                                                    CssClass="btn btn-primary pull-right"
+                                                    runat="server"
+                                                    OnClick="btnSubmitTransaksi_Click"
+                                                    OnClientClick="setButtonLoading(this, 'Menyimpan...');">
+                                                    <i class="fa fa-send"></i> &nbsp;
+                                                    Submit
+                                                </asp:LinkButton>                                                
+                                            </div>
+            
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
                                 </div>
@@ -902,6 +1202,19 @@
         </div>
         <!-- /.modal-dialog -->            
     </div>
+
+    <%--<div class="success-backdrop" id="successBackdrop">
+        <div class="success-popup">
+            <div class="success-icon-wrap">
+                <svg class="success-checkmark" viewBox="0 0 24 24">
+                    <polyline points="4,13 9,18 20,6"/>
+                </svg>
+            </div>
+            <div class="success-title">Berhasil!</div>
+            <div class="success-msg" id="successMsgText">Data berhasil disimpan.</div>
+            <button class="btn-ok" onclick="closeSuccessPopup(event)">OK</button>
+        </div>
+    </div>--%>
     
     <div class="modal" id="Loader">
         <asp:UpdatePanel ID="UpdatePanel7" runat="server" UpdateMode="Always">
@@ -944,9 +1257,13 @@
                     autoclose: true
                 });
 
-                $('#<%=btnSendDCI.ClientID %>').click(function () {
-
-                    $('#Loader').modal();
+                $('#<%=btnSendDCI.ClientID %>').click(function (e) {
+                    if ($(this).hasClass('disabled')) {
+                        e.preventDefault();
+                        return false;
+                    }
+                    $(this).addClass('disabled'); // Disable klik selanjutnya
+                    $('#Loader').modal({ backdrop: 'static', keyboard: false }); // Tampilkan loader
                 });
 
                 $('#<%=btnRefresh.ClientID %>').click(function () {
@@ -989,9 +1306,134 @@
                 var lastTab = localStorage.getItem('lastTab');
                 if (lastTab) {
                     $('[href="' + lastTab + '"]').tab('show');
-                }                
-            })
+                }
+
+                // --- TAMBAHAN UNTUK PELABUHAN ---
+                // cek dulu apakah textboxnya sedang dirender di layar
+                if ($("#txtPelabuhanMuat").length > 0) {
+                    $("#txtPelabuhanMuat").autocomplete({
+                        source: "RequestTPB.aspx?action=getpelabuhan",
+                        minLength: 2,
+                        // KUNCI FIX ERROR getClientRects: paksa nempel ke modal, bukan ke window/body
+                        appendTo: "#wrapPelabuhanMuat",
+                        select: function (event, ui) {
+                            $('#txtPelabuhanMuat').val(ui.item.label);
+                            $('#hfPelabuhanMuat').val(ui.item.value);
+                            return false;
+                        }
+                    });
+                }
+                // ---------------------------------------
+
+                // --- TAMBAHAN UNTUK NEGARA ---
+                if ($("#inputNegaraIdentitas").length > 0) {
+                    $("#inputNegaraIdentitas").autocomplete({
+                        source: "RequestTPB.aspx?action=getnegara",
+                        minLength: 2,
+                        // KUNCI FIX ERROR getClientRects: paksa nempel ke modal, bukan ke window/body                        
+                        appendTo: "#wrapNegara",
+                        select: function (event, ui) {
+                            $('#inputNegaraIdentitas').val(ui.item.label);
+                            $('#hfNegaraIdentitas').val(ui.item.value);
+                            return false;
+                        }
+                    });
+                }
+                // ---------------------------------------
+            });
         }
+
+        // Tampilkan loading pada button
+        function setButtonLoading(btn, loadingText) {
+            btn.disabled = true;
+            btn.setAttribute('data-original-html', btn.innerHTML);
+            btn.innerHTML = '<span class="btn-spinner"></span> ' + (loadingText || 'Memproses...');
+        }
+
+        // Kembalikan button ke semula (dipanggil setelah proses selesai)
+        function resetButton(btn) {
+            btn.disabled = false;
+            btn.innerHTML = btn.getAttribute('data-original-html');
+        }
+
+        // Tampilkan overlay pada container tertentu
+        function showOverlay(containerId, text) {
+            var container = document.getElementById(containerId);
+            if (!container) return;
+            container.style.position = 'relative';
+            var overlay = document.createElement('div');
+            overlay.className = 'loading-overlay active';
+            overlay.id = containerId + '_overlay';
+            overlay.innerHTML = '<div class="overlay-spinner"></div>'
+                + '<div class="overlay-text">' + (text || 'Sedang memproses...') + '</div>';
+            container.appendChild(overlay);
+        }
+
+        function hideOverlay(containerId) {
+            var el = document.getElementById(containerId + '_overlay');
+            if (el) el.remove();
+        }
+        function showSuccessPopup(msg) {
+            // Hapus popup lama jika ada
+            var existing = document.getElementById('successBackdrop');
+            if (existing) existing.remove();
+
+            // Buat popup langsung di body, di luar modal
+            var backdrop = document.createElement('div');
+            backdrop.id = 'successBackdrop';
+            backdrop.className = 'success-backdrop show';
+            backdrop.innerHTML =
+                '<div class="success-popup" onclick="event.stopPropagation();">' +
+                '<div class="success-icon-wrap">' +
+                '<svg class="success-checkmark" viewBox="0 0 24 24">' +
+                '<polyline points="4,13 9,18 20,6"/>' +
+                '</svg>' +
+                '</div>' +
+                '<div class="success-title">Berhasil!</div>' +
+                '<div class="success-msg">' + (msg || 'Data berhasil disimpan.') + '</div>' +
+                '<button class="btn-ok" onclick="closeSuccessPopup(event)">OK</button>' +
+                '</div>';
+
+            // Append langsung ke body, bukan ke dalam modal
+            document.body.appendChild(backdrop);
+
+            backdrop.onclick = function (e) {
+                e.stopPropagation();
+                if (e.target === backdrop) closeSuccessPopup(e);
+            };
+        }
+
+        function closeSuccessPopup(event) {
+            if (event) {
+                event.stopPropagation();
+                event.preventDefault();
+            }
+            var backdrop = document.getElementById('successBackdrop');
+            if (backdrop) backdrop.remove();
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                // Kalau popup sukses masih buka, Escape hanya tutup popup, bukan modal
+                var backdrop = document.getElementById('successBackdrop');
+                if (backdrop) {
+                    e.stopImmediatePropagation();
+                    closeSuccessPopup();
+                }
+            }
+        });
+
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            // Sembunyikan semua overlay jika masih ada
+            document.querySelectorAll('.loading-overlay').forEach(function (el) { el.remove(); });
+            // Reset semua button yang masih disabled
+            document.querySelectorAll('a[disabled]').forEach(function (btn) {
+                btn.removeAttribute('disabled');
+                if (btn.getAttribute('data-original-html')) {
+                    btn.innerHTML = btn.getAttribute('data-original-html');
+                }
+            });
+        });
 
     </script>
 </asp:Content>

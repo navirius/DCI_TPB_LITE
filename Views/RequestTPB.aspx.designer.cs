@@ -429,6 +429,42 @@ namespace OfficialCeisaLite.Views
         protected global::System.Web.UI.WebControls.LinkButton btnDownloadDokumen;
 
         /// <summary>
+        /// txtNewKodeDokumen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNewKodeDokumen;
+
+        /// <summary>
+        /// txtNewNomorDokumen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNewNomorDokumen;
+
+        /// <summary>
+        /// txtNewTanggalDokumen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNewTanggalDokumen;
+
+        /// <summary>
+        /// btnTambahDokumenManual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnTambahDokumenManual;
+
+        /// <summary>
         /// GV_Dokumen control.
         /// </summary>
         /// <remarks>
@@ -436,6 +472,15 @@ namespace OfficialCeisaLite.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GV_Dokumen;
+
+        /// <summary>
+        /// GV_Kemasan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GV_Kemasan;
 
         /// <summary>
         /// UpdatePanel9 control.
@@ -519,6 +564,42 @@ namespace OfficialCeisaLite.Views
         protected global::System.Web.UI.WebControls.DropDownList ddlJasaKenaPajak;
 
         /// <summary>
+        /// inputNamaPemasokEntitas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox inputNamaPemasokEntitas;
+
+        /// <summary>
+        /// inputAlamatPemasokEntitas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox inputAlamatPemasokEntitas;
+
+        /// <summary>
+        /// inputNegaraIdentitas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox inputNegaraIdentitas;
+
+        /// <summary>
+        /// hfNegaraIdentitas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfNegaraIdentitas;
+
+        /// <summary>
         /// btnSubmitEntitas control.
         /// </summary>
         /// <remarks>
@@ -526,6 +607,78 @@ namespace OfficialCeisaLite.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnSubmitEntitas;
+
+        /// <summary>
+        /// UpdatePanel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
+
+        /// <summary>
+        /// ddlJenisValuta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlJenisValuta;
+
+        /// <summary>
+        /// txtNdpbm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNdpbm;
+
+        /// <summary>
+        /// btnReloadKurs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnReloadKurs;
+
+        /// <summary>
+        /// ddlKodeIncoterm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlKodeIncoterm;
+
+        /// <summary>
+        /// txtPelabuhanMuat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPelabuhanMuat;
+
+        /// <summary>
+        /// hfPelabuhanMuat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfPelabuhanMuat;
+
+        /// <summary>
+        /// btnSubmitTransaksi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnSubmitTransaksi;
 
         /// <summary>
         /// UpdatePanel7 control.

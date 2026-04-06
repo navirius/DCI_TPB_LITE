@@ -92,7 +92,7 @@
                                     OnPageIndexChanged="GV_ReportData_PageIndexChanged"
                                     PagerStyle-CssClass="arn-pagination"
                                     CssClass="table box table-hover table-striped table-bordered"
-                                    PageSize="15"
+                                    PageSize="50"
                                     DataKeyNames="HAWB, Tgl HAWB, No Aju">
                                     <Columns>
                                         <asp:TemplateField>
