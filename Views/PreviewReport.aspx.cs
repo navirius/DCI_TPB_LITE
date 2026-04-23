@@ -350,9 +350,9 @@ namespace OfficialCeisaLite.Views
                 $"(SELECT DISTINCT FORMAT(tanggalDokumen,'dd-MM-yyyy') from dhl_cs_tpb_dokumen WHERE kodeDokumen = 741 AND HAWB = a.HAWB) AS TGL_MAWB, " +
                 $"(SELECT COUNT(*) FROM dhl_cs_tpb_barang WHERE HAWB = a.HAWB AND TGL_HAWB = a.TGL_HAWB ) AS TotalItem, u.description AS KodePajak " +
                 $"FROM dhl_cs_tpb_header AS a INNER JOIN dhl_cs_document AS b ON a.kodeDokumen = b.kode " +
-                $"INNER JOIN dhl_cs_pelabuhan AS c ON RIGHT(a.kodePelBongkar,3) = c.IATA " +
-                $"INNER JOIN dhl_cs_pelabuhan AS d ON RIGHT(a.kodePelTransit,3) = d.IATA " +
-                $"INNER JOIN dhl_cs_pelabuhan AS e ON RIGHT(a.kodePelMuat,3) = e.IATA " +
+                $"INNER JOIN dhl_cs_pelabuhan AS c ON RIGHT(a.kodePelBongkar,3) = c.IATA AND LEFT(a.kodePelBongkar,2) = c.Country " +
+                $"INNER JOIN dhl_cs_pelabuhan AS d ON RIGHT(a.kodePelTransit,3) = d.IATA AND LEFT(a.kodePelTransit,2) = d.Country " +
+                $"INNER JOIN dhl_cs_pelabuhan AS e ON RIGHT(a.kodePelMuat,3) = e.IATA AND LEFT(a.kodePelMuat,2) = e.Country " +
                 $"INNER JOIN dhl_cs_kantor_pabean AS f ON a.kodeKantorBongkar = f.Kode " +
                 $"INNER JOIN dhl_cs_kantor_pabean AS g ON a.kodeKantor = g.Kode " +
                 $"INNER JOIN dhl_ceisa_pemasok AS h ON a.HAWB = h.HAWB " +
